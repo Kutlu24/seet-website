@@ -2,9 +2,42 @@
 <html lang="de">
 <head>
 <meta charset="UTF-8">
-<!-- 404.html is served for any depth, so relative assets need a base.
-     Match it to the deploy path (change to "/" if hosted at the domain root). -->
-<base href="/seet-website/">
+<!-- 404.html is served for any depth: GitHub Pages (/seet-website/...), Render
+     (domain root) or a local server. A fixed <base> would break one of them, so
+     find the site root at runtime (the folder that really serves style.css) and
+     set <base> before the stylesheet below is parsed. -->
+<script>
+(function () {
+  function isCss(base) {
+    try {
+      var x = new XMLHttpRequest();
+      x.open('GET', base + 'style.css', false);
+      x.send(null);
+      var body = x.responseText || '';
+      // A rewrite rule or an error page may answer 200 with HTML — CSS may not.
+      return x.status === 200 && body.indexOf('<') === -1;
+    } catch (e) { return false; }
+  }
+
+  var dir = location.pathname.replace(/[^/]*$/, '');
+  var parts = dir.split('/').filter(Boolean);
+  var base = dir; // the current directory is the right default
+
+  if (parts.length) { // we are below the root: find the folder that serves CSS
+    var found = null;
+    var candidates = ['/'];
+    for (var i = 1; i <= parts.length; i++) candidates.push('/' + parts.slice(0, i).join('/') + '/');
+    for (var j = 0; j < candidates.length && !found; j++) {
+      if (isCss(candidates[j])) found = candidates[j];
+    }
+    base = found || '/' + parts[0] + '/';
+  }
+
+  var el = document.createElement('base');
+  el.setAttribute('href', base);
+  document.head.appendChild(el);
+})();
+</script>
 <meta name="robots" content="noindex, follow">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title data-i18n="title_404">Seite nicht gefunden — SEET</title>
