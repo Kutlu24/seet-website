@@ -960,3 +960,284 @@ section { padding: 5rem 0; }
   .card, .btn { transition: none; }
   .card:hover, .btn:hover { transform: none; }
 }
+
+/* ===== PHASE 1: VISUAL ENHANCEMENTS ===== */
+
+/* Hero blob animations - more dynamic */
+@keyframes float-blob-1 {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  33% { transform: translate(30px, -30px) rotate(120deg); }
+  66% { transform: translate(-20px, 20px) rotate(240deg); }
+}
+
+@keyframes float-blob-2 {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  33% { transform: translate(-25px, 25px) rotate(-120deg); }
+  66% { transform: translate(35px, -15px) rotate(-240deg); }
+}
+
+.hero-blob.b1 {
+  animation: float-blob-1 25s ease-in-out infinite;
+  opacity: 0.4;
+}
+
+.hero-blob.b2 {
+  animation: float-blob-2 30s ease-in-out infinite;
+  opacity: 0.3;
+}
+
+/* Enhanced card hover effects */
+.card {
+  position: relative;
+  z-index: 1;
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  border-radius: var(--radius);
+  pointer-events: none;
+}
+
+.card:hover::after {
+  opacity: 0.6;
+}
+
+.card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 30px 60px rgba(109, 92, 247, 0.25);
+  border-color: rgba(109, 92, 247, 0.4);
+}
+
+/* Typography enhancements - bold headings */
+h1 {
+  background: linear-gradient(135deg, var(--ink) 0%, var(--violet) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+}
+
+h2 {
+  background: linear-gradient(135deg, var(--ink) 0%, var(--violet) 60%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
+}
+
+/* Improved button interactions */
+.btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+  pointer-events: none;
+}
+
+.btn:active::after {
+  width: 300px;
+  height: 300px;
+}
+
+.btn:hover {
+  transform: translateY(-4px) scale(1.06);
+  box-shadow: 0 20px 40px currentColor;
+}
+
+.btn:active {
+  transform: translateY(-2px) scale(1.04);
+}
+
+/* Section alternation for better visual rhythm */
+section:nth-child(odd) {
+  background: var(--card);
+}
+
+section:nth-child(even) {
+  background: linear-gradient(180deg, var(--bg) 0%, var(--card) 100%);
+}
+
+/* Link animations with gradient underline */
+a {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--grad);
+  transition: width 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+/* Stat card enhancements */
+.stat {
+  position: relative;
+  overflow: hidden;
+}
+
+.stat::after {
+  content: '';
+  position: absolute;
+  inset: -50%;
+  background: radial-gradient(circle at center, rgba(109, 92, 247, 0.15) 0%, transparent 70%);
+  opacity: 0;
+  transition: all 0.5s ease;
+  z-index: 0;
+}
+
+.stat:hover::after {
+  opacity: 1;
+  transform: scale(1.5);
+}
+
+.stat > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Social card hover lift */
+.social-card {
+  position: relative;
+  z-index: 1;
+}
+
+.social-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 24px 48px rgba(109, 92, 247, 0.2);
+  border-color: rgba(109, 92, 247, 0.5);
+}
+
+/* Quote band enhancement */
+.quote-band {
+  position: relative;
+  overflow: hidden;
+}
+
+.quote-band::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.8s ease;
+  pointer-events: none;
+}
+
+.quote-band:hover::after {
+  left: 100%;
+}
+
+.quote-band:hover {
+  transform: translateY(-6px);
+}
+
+/* Hero image parallax effect */
+.hero-photo img {
+  transition: transform 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.hero-photo:hover img {
+  transform: scale(1.05);
+}
+
+/* Image reveal animation */
+.media {
+  overflow: hidden;
+}
+
+.media img {
+  transition: filter 0.4s ease, transform 0.4s ease;
+}
+
+.media:hover img {
+  filter: brightness(1.08) contrast(1.05);
+  transform: scale(1.03);
+}
+
+/* Staggered reveal timing for grids */
+.grid .reveal:nth-child(1) {
+  transition-delay: 0ms;
+}
+
+.grid .reveal:nth-child(2) {
+  transition-delay: 80ms;
+}
+
+.grid .reveal:nth-child(3) {
+  transition-delay: 160ms;
+}
+
+.grid .reveal:nth-child(4) {
+  transition-delay: 240ms;
+}
+
+.grid .reveal:nth-child(5) {
+  transition-delay: 320ms;
+}
+
+.grid .reveal:nth-child(6) {
+  transition-delay: 400ms;
+}
+
+/* Input focus enhancement */
+input:focus {
+  outline: none;
+  border-color: var(--violet);
+  box-shadow: 0 0 0 3px rgba(109, 92, 247, 0.1);
+}
+
+textarea:focus {
+  outline: none;
+  border-color: var(--violet);
+  box-shadow: 0 0 0 3px rgba(109, 92, 247, 0.1);
+}
+
+/* Newsletter form enhancement */
+.newsletter-form {
+  position: relative;
+}
+
+.newsletter-form input,
+.newsletter-form button {
+  transition: all 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 32px rgba(109, 92, 247, 0.3);
+}
+
+/* Glassmorphic effect on header */
+.site-header {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
