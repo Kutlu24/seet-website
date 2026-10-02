@@ -84,52 +84,52 @@
         {
           "name": "Alberto Filipuzzi",
           "photo": "/img/team/alberto-filipuzzi.jpg",
-          "role_key": "area_program"
+          "role_key": "role_member"
         },
         {
           "name": "Maria Hanswijk",
           "photo": "/img/team/maria-hanswijk.png",
-          "role_key": "area_program"
+          "role_key": "role_member"
         },
         {
           "name": "Julia Gruvö",
           "photo": "/img/team/julia-gruvoe.png",
-          "role_key": "area_program"
+          "role_key": "role_member"
         },
         {
           "name": "Camila Fontoura",
           "photo": "/img/team/camila-fontoura.png",
-          "role_key": "area_program"
+          "role_key": "role_member"
         },
         {
           "name": "Marco La Fortezza",
           "photo": "/img/team/marco-la-fortezza.png",
-          "role_key": "area_program"
+          "role_key": "role_member"
         },
         {
           "name": "Agatha Iva Grlic-Radman",
           "photo": "/img/team/agatha-grlic-radman.jpg",
-          "role_key": "area_program"
+          "role_key": "role_member"
         },
         {
           "name": "Malaurie Boyre",
           "photo": "/img/team/malaurie-boyre.jpg",
-          "role_key": "area_program"
+          "role_key": "role_member"
         },
         {
           "name": "Yurena Garcia",
           "photo": "/img/team/yurena-garcia.png",
-          "role_key": "area_program"
+          "role_key": "role_member"
         },
         {
           "name": "Cara Au",
           "photo": "/img/team/cara-au.jpg",
-          "role_key": "area_program"
+          "role_key": "role_member"
         },
         {
           "name": "Ana Perez Recatalà",
           "photo": "/img/team/ana-perez-recatala.jpg",
-          "role_key": "area_program"
+          "role_key": "role_member"
         }
       ]
     },
@@ -144,12 +144,12 @@
         {
           "name": "Crista Schnell",
           "photo": "/img/team/crista-schnell.jpg",
-          "role_key": "area_comm"
+          "role_key": "role_member"
         },
         {
           "name": "Gisele Stamm",
           "photo": "/img/team/gisele-stamm.jpeg",
-          "role_key": "area_comm"
+          "role_key": "role_member"
         }
       ]
     },
@@ -164,12 +164,12 @@
         {
           "name": "Suzanne Leighton",
           "photo": "/img/team/suzanne-leighton.jpg",
-          "role_key": "area_finance"
+          "role_key": "role_member"
         },
         {
           "name": "Ken Hjeltnes",
           "photo": "/img/team/ken-hjeltnes.jpg",
-          "role_key": "area_finance"
+          "role_key": "role_member"
         }
       ]
     },
@@ -184,7 +184,7 @@
         {
           "name": "Fabienne Gretener",
           "photo": "/img/team/fabienne-gretener.jpeg",
-          "role_key": "area_fundraising"
+          "role_key": "role_member"
         }
       ]
     },
@@ -194,12 +194,12 @@
         {
           "name": "Marlies Reher",
           "photo": "/img/team/marlies-reher.jpg",
-          "role_key": "area_it"
+          "role_key": "role_member"
         },
         {
           "name": "Kerry Saunders",
           "photo": "/img/team/kerry-saunders.jpg",
-          "role_key": "area_it"
+          "role_key": "role_member"
         }
       ]
     },
@@ -209,12 +209,12 @@
         {
           "name": "Valmira Krrakaj",
           "photo": "/img/team/valmira-krrakaj.jpg",
-          "role_key": "area_strategy"
+          "role_key": "role_member"
         },
         {
           "name": "Giorgia Alessia Casanova",
           "photo": "/img/team/giorgia-casanova.jpg",
-          "role_key": "area_strategy"
+          "role_key": "role_member"
         }
       ]
     },
@@ -229,7 +229,7 @@
         {
           "name": "Stella Kubasch",
           "photo": "/img/team/stella-kubasch.jpeg",
-          "role_key": "area_legal"
+          "role_key": "role_member"
         }
       ]
     }

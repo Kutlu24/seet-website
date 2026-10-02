@@ -51,7 +51,8 @@
         html += '<div class="member">'
           + '<div class="member-photo"><img src="' + m.photo + '" alt="' + m.name + '" loading="lazy"></div>'
           + '<span class="member-name">' + m.name + '</span>'
-          + '<span class="member-role">' + (m.role || I18N.get(m.role_key)) + '</span>'
+          + '<span class="member-role"' + (m.role ? '' : ' data-i18n="' + m.role_key + '"') + '>'
+          + (m.role || I18N.get(m.role_key)) + '</span>'
           + '</div>';
       });
       html += '</div></div>';

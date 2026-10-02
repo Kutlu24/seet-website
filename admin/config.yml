@@ -73,5 +73,5 @@ collections:
                 fields:
                   - { name: name, label: "Ad Soyad", widget: string }
                   - { name: photo, label: "Fotoğraf", widget: image }
-                  - { name: role_key, label: "Rol anahtarı", widget: string, required: false, hint: "Çeviri dosyasındaki rol anahtarı (örn. role_board). Boş bırakılırsa 'role' alanındaki düz metin kullanılır." }
+                  - { name: role_key, label: "Rol anahtarı", widget: string, required: false, hint: "Çeviri dosyasındaki rol anahtarı (liderler: role_head_program gibi, sıradan üyeler: role_member). Boş bırakılırsa 'role' alanındaki düz metin kullanılır." }
                   - { name: role, label: "Rol (düz metin — çevirisiz)", widget: string, required: false }
