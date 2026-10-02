@@ -30,6 +30,31 @@
         a.setAttribute('href', c.apply_url);
       });
     }
+
+    // Render team groups from CMS content, replacing the static markup.
+    var groups = c.team_groups;
+    if (!groups || !groups.length) return;
+    var container = document.getElementById('team-groups');
+    if (!container) return;
+    var html = '';
+    groups.forEach(function (g, gi) {
+      html += '<div class="team-group reveal">';
+      html += '<h3 data-i18n="' + g.id + '">' + I18N.get(g.id) + '</h3><div class="team-grid">';
+      (g.members || []).forEach(function (m) {
+        html += '<div class="member">'
+          + '<div class="member-photo"><img src="' + m.photo + '" alt="' + m.name + '" loading="lazy"></div>'
+          + '<span class="member-name">' + m.name + '</span>'
+          + '<span class="member-role">' + (m.role || I18N.get(m.role_key)) + '</span>'
+          + '</div>';
+      });
+      html += '</div></div>';
+    });
+    container.innerHTML = html;
+    if (window.I18N) I18N.setLanguage(I18N.getLang());
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    container.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
   }
 
   fetch(siteUrl('/content/site.json'))

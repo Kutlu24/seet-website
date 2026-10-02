@@ -20,11 +20,218 @@
     "social_desc": "Neuigkeiten, Einblicke und Geschichten aus dem Programm — folge uns und bleib auf dem Laufenden."
   },
   "stats": [
-    { "label": "Mentees", "value": 41 },
-    { "label": "Mentor:innen", "value": 35 },
-    { "label": "Kantone", "value": 9 },
-    { "label": "Nationalitäten", "value": 7 },
-    { "label": "seit", "value": 2018 }
+    {
+      "label": "Mentees",
+      "value": 41
+    },
+    {
+      "label": "Mentor:innen",
+      "value": 35
+    },
+    {
+      "label": "Kantone",
+      "value": 9
+    },
+    {
+      "label": "Nationalitäten",
+      "value": 7
+    },
+    {
+      "label": "seit",
+      "value": 2018
+    }
   ],
-  "apply_url": "https://purrfect-dinghy-c9d.notion.site/af01d5173a9983afa73881874f3f7a74?pvs=105"
+  "apply_url": "https://purrfect-dinghy-c9d.notion.site/af01d5173a9983afa73881874f3f7a74?pvs=105",
+  "team_groups": [
+    {
+      "id": "team_board",
+      "members": [
+        {
+          "name": "Nora Diethelm",
+          "photo": "/img/team/nora-diethelm.jpg",
+          "role_key": "role_president"
+        },
+        {
+          "name": "Jacqueline Sun",
+          "photo": "/img/team/jacqueline-sun.jpg",
+          "role_key": "role_vice"
+        },
+        {
+          "name": "Noemi Santamaria de Souza",
+          "photo": "/img/team/noemi-santamaria.jpg",
+          "role_key": "role_board"
+        },
+        {
+          "name": "Constantin Kilcher",
+          "photo": "/img/team/constantin-kilcher.jpg",
+          "role_key": "role_board"
+        },
+        {
+          "name": "Batoul Tak",
+          "photo": "/img/team/batoul-tak.jpeg",
+          "role_key": "role_board"
+        }
+      ]
+    },
+    {
+      "id": "team_program",
+      "members": [
+        {
+          "name": "Nora Diethelm",
+          "photo": "/img/team/nora-diethelm.jpg",
+          "role_key": "role_head_program"
+        },
+        {
+          "name": "Alberto Filipuzzi",
+          "photo": "/img/team/alberto-filipuzzi.jpg",
+          "role_key": "area_program"
+        },
+        {
+          "name": "Maria Hanswijk",
+          "photo": "/img/team/maria-hanswijk.png",
+          "role_key": "area_program"
+        },
+        {
+          "name": "Julia Gruvö",
+          "photo": "/img/team/julia-gruvoe.png",
+          "role_key": "area_program"
+        },
+        {
+          "name": "Camila Fontoura",
+          "photo": "/img/team/camila-fontoura.png",
+          "role_key": "area_program"
+        },
+        {
+          "name": "Marco La Fortezza",
+          "photo": "/img/team/marco-la-fortezza.png",
+          "role_key": "area_program"
+        },
+        {
+          "name": "Agatha Iva Grlic-Radman",
+          "photo": "/img/team/agatha-grlic-radman.jpg",
+          "role_key": "area_program"
+        },
+        {
+          "name": "Malaurie Boyre",
+          "photo": "/img/team/malaurie-boyre.jpg",
+          "role_key": "area_program"
+        },
+        {
+          "name": "Yurena Garcia",
+          "photo": "/img/team/yurena-garcia.png",
+          "role_key": "area_program"
+        },
+        {
+          "name": "Cara Au",
+          "photo": "/img/team/cara-au.jpg",
+          "role_key": "area_program"
+        },
+        {
+          "name": "Ana Perez Recatalà",
+          "photo": "/img/team/ana-perez-recatala.jpg",
+          "role_key": "area_program"
+        }
+      ]
+    },
+    {
+      "id": "team_comm",
+      "members": [
+        {
+          "name": "Alex Stone",
+          "photo": "/img/team/alex-stone.jpg",
+          "role_key": "role_head_comm"
+        },
+        {
+          "name": "Crista Schnell",
+          "photo": "/img/team/crista-schnell.jpg",
+          "role_key": "area_comm"
+        },
+        {
+          "name": "Gisele Stamm",
+          "photo": "/img/team/gisele-stamm.jpeg",
+          "role_key": "area_comm"
+        }
+      ]
+    },
+    {
+      "id": "team_finance",
+      "members": [
+        {
+          "name": "Charlotte Eder",
+          "photo": "/img/team/charlotte-eder.jpg",
+          "role_key": "role_head_finance"
+        },
+        {
+          "name": "Suzanne Leighton",
+          "photo": "/img/team/suzanne-leighton.jpg",
+          "role_key": "area_finance"
+        },
+        {
+          "name": "Ken Hjeltnes",
+          "photo": "/img/team/ken-hjeltnes.jpg",
+          "role_key": "area_finance"
+        }
+      ]
+    },
+    {
+      "id": "team_fundraising",
+      "members": [
+        {
+          "name": "Jacqueline Sun",
+          "photo": "/img/team/jacqueline-sun.jpg",
+          "role_key": "role_head_fundraising"
+        },
+        {
+          "name": "Fabienne Gretener",
+          "photo": "/img/team/fabienne-gretener.jpeg",
+          "role_key": "area_fundraising"
+        }
+      ]
+    },
+    {
+      "id": "team_it",
+      "members": [
+        {
+          "name": "Marlies Reher",
+          "photo": "/img/team/marlies-reher.jpg",
+          "role_key": "area_it"
+        },
+        {
+          "name": "Kerry Saunders",
+          "photo": "/img/team/kerry-saunders.jpg",
+          "role_key": "area_it"
+        }
+      ]
+    },
+    {
+      "id": "team_strategy",
+      "members": [
+        {
+          "name": "Valmira Krrakaj",
+          "photo": "/img/team/valmira-krrakaj.jpg",
+          "role_key": "area_strategy"
+        },
+        {
+          "name": "Giorgia Alessia Casanova",
+          "photo": "/img/team/giorgia-casanova.jpg",
+          "role_key": "area_strategy"
+        }
+      ]
+    },
+    {
+      "id": "team_legal",
+      "members": [
+        {
+          "name": "Kirsten Teichmann",
+          "photo": "/img/team/kirsten-teichmann.jpg",
+          "role_key": "role_head_legal"
+        },
+        {
+          "name": "Stella Kubasch",
+          "photo": "/img/team/stella-kubasch.jpeg",
+          "role_key": "area_legal"
+        }
+      ]
+    }
+  ]
 }
