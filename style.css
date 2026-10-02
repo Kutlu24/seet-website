@@ -62,14 +62,14 @@ a:hover { text-decoration: underline; }
   position: sticky;
   top: 0;
   z-index: 40;
-  background: linear-gradient(180deg, #0f0a1a 0%, #1a1333 100%);
+  background: linear-gradient(180deg, #0a1128 0%, #121d3f 100%);
   backdrop-filter: blur(16px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   transition: var(--transition);
 }
 .site-header:hover {
-  background: linear-gradient(180deg, #1a1333 0%, #251b47 100%);
-  border-bottom-color: rgba(109, 92, 247, 0.3);
+  background: linear-gradient(180deg, #121d3f 0%, #1a2852 100%);
+  border-bottom-color: rgba(125, 155, 255, 0.35);
 }
 .header-inner {
   max-width: var(--max);
@@ -213,7 +213,7 @@ a:hover { text-decoration: underline; }
   gap: 0.2rem;
   padding: 0.6rem 1.4rem 1.2rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  background: #1a1333;
+  background: #121d3f;
 }
 .mobile-panel.open { display: flex; }
 .mobile-panel a {
