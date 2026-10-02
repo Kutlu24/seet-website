@@ -335,14 +335,5 @@
 <script src="/i18n.js"></script>
 <script src="/script.js"></script>
 <script src="/content.js"></script>
-<script>
-  // Language switcher
-  window.__seetLangBound = true;
-  document.querySelectorAll('.lang-switch button').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      if (window.I18N) I18N.setLanguage(btn.getAttribute('data-lang'));
-    });
-  });
-</script>
 </body>
 </html>
