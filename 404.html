@@ -2,12 +2,15 @@
 <html lang="de">
 <head>
 <meta charset="UTF-8">
-<link rel="canonical" href="https://kutlu24.github.io/seet-website/ueber-uns.html">
+<!-- 404.html is served for any depth, so relative assets need a base.
+     Match it to the deploy path (change to "/" if hosted at the domain root). -->
+<base href="/seet-website/">
+<meta name="robots" content="noindex, follow">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title data-i18n="title_about">Über uns — SEET</title>
-<meta name="description" content="Eine Brücke zwischen Talent und Hochschule: Mission, Geschichte und Team des gemeinnützigen Vereins SEET.">
-<meta property="og:title" content="Über uns — SEET">
-<meta property="og:description" content="Eine Brücke zwischen Talent und Hochschule.">
+<title data-i18n="title_404">Seite nicht gefunden — SEET</title>
+<meta name="description" content="Diese Seite gibt es nicht (mehr). Zurück zur Startseite von SEET.">
+<meta property="og:title" content="Seite nicht gefunden — SEET">
+<meta property="og:description" content="Diese Seite gibt es nicht (mehr). Zurück zur Startseite von SEET.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://kutlu24.github.io/seet-website/img/og-cover.jpg">
 <meta property="og:image:width" content="1200">
@@ -20,28 +23,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "NGO",
-  "name": "SEET — Support Education, Empower Together",
-  "alternateName": "Verein SEET",
-  "url": "https://kutlu24.github.io/seet-website/",
-  "logo": "https://kutlu24.github.io/seet-website/img/logo-official.png",
-  "image": "https://kutlu24.github.io/seet-website/img/og-cover.jpg",
-  "email": "seet@seet.ch",
-  "address": { "@type": "PostalAddress", "addressLocality": "Thalwil", "postalCode": "8800", "addressCountry": "CH" },
-  "sameAs": [
-    "https://www.instagram.com/seet_zuerich/",
-    "https://www.facebook.com/seetzh",
-    "https://www.linkedin.com/company/seetzh/"
-  ],
-  "founder": { "@type": "Organization", "name": "SAO Association" },
-  "foundingDate": "2018",
-  "areaServed": "CH",
-  "knowsLanguage": ["de", "en", "fr"]
-}
-</script>
 </head>
 <body>
 
@@ -77,78 +58,19 @@
 </header>
 <!-- header:end -->
 
-<section class="hero">
-  <div class="hero-blob b1"></div>
-  <div class="hero-blob b2"></div>
-  <div class="wrap">
-    <span class="kicker">Über uns</span>
-    <h1>Eine Brücke zwischen Talent und Hochschule.</h1>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="kicker">Unsere Mission</span>
-      <h2>Die Lücke, die wir schliessen</h2>
-    </div>
-    <div class="grid grid-2">
-      <div class="reveal">
-        <p>Geflüchtete scheitern oft an kulturellen, institutionellen und finanziellen Hürden — etwa Kosten für Sprachkurse, Zertifikate oder Übersetzungen. SEET schliesst genau diese Versorgungslücke und stärkt die Selbstbestimmtheit: für gelingende Integration und echte Chancengleichheit.</p>
-        <p>Wir verstehen Bildung als fundamentales Recht und als Schlüssel zu Integration, Perspektiven und Selbstverwirklichung.</p>
-      </div>
-      <div class="reveal">
-        <div class="media tall">
-          <picture><source type="image/webp" srcset="img/group.webp"><img src="img/group.jpg" alt="Die SEET-Community bei einem Ausflug in der Schweiz" width="1400" height="1064" loading="lazy"></picture>
-        </div>
+<main>
+  <section class="error-page">
+    <div class="wrap">
+      <span class="kicker" data-i18n="error404_kicker">Hoppla</span>
+      <div class="error-code">404</div>
+      <p data-i18n="error404_text">Diese Seite gibt es nicht (mehr) — vielleicht führt einer dieser Wege weiter.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="./" data-i18n="error404_home">Zur Startseite</a>
+        <a class="btn btn-ghost" href="kontakt.html" data-i18n="nav_contact">Kontakt</a>
       </div>
     </div>
-  </div>
-</section>
-
-<section class="section-alt">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="kicker">Unsere Geschichte</span>
-      <h2>Von der Idee zum Netzwerk</h2>
-    </div>
-    <div class="timeline">
-      <div class="tl-item reveal"><span class="tl-year">2018</span><p>Start als Pilotprojekt «Back on Track Zürich» der SAO Association.</p></div>
-      <div class="tl-item reveal"><span class="tl-year">2020</span><p>Gründung des eigenständigen Vereins SEET — Young Caritas Award, 8 Mentoring-Paare.</p></div>
-      <div class="tl-item reveal"><span class="tl-year">2021</span><p>10 Mentoring-Paare.</p></div>
-      <div class="tl-item reveal"><span class="tl-year">2022</span><p>13 Mentoring-Teams; erste Erfolge: Praktika, Festanstellungen, Studienaufnahmen.</p></div>
-      <div class="tl-item reveal"><span class="tl-year">2023</span><p>18 Mentoring-Teams.</p></div>
-      <div class="tl-item reveal"><span class="tl-year">2024</span><p>33 Mentoring-Paare — das Programm öffnet sich für Frauen, Männer und non-binäre Personen.</p></div>
-      <div class="tl-item reveal"><span class="tl-year">2025</span><p>38 Mentees, erste Evaluations- und Wirkungsstudie.</p></div>
-      <div class="tl-item reveal"><span class="tl-year">2026</span><p>41 Mentees, 35 Mentor:innen, neues Alumni-Netzwerk.</p></div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="kicker">Unser Team</span>
-      <h2>Wer hinter SEET steht</h2>
-      <p>Studierende, Doktorierende und Young Professionals — unterschiedlich alt, aus verschiedenen Ländern, grösstenteils ehrenamtlich.</p>
-      <p><a href="team.html" data-i18n="team_detail_link">Das Team im Detail ansehen →</a></p>
-    </div>
-    <div class="reveal">
-      <h3 data-i18n="team_areas">Fachbereiche</h3>
-      <div class="chips">
-        <span class="chip" data-i18n="area_program">Programm</span>
-        <span class="chip" data-i18n="area_comm">Kommunikation</span>
-        <span class="chip" data-i18n="area_finance">Finanzen</span>
-        <span class="chip" data-i18n="area_it">IT &amp; Knowledge Management</span>
-        <span class="chip" data-i18n="area_fundraising">Fundraising &amp; Partnership</span>
-        <span class="chip" data-i18n="area_strategy">Strategie</span>
-        <span class="chip" data-i18n="area_legal">Human Capital &amp; Legal Compliance</span>
-      </div>
-    </div>
-
-    <div id="team-groups"></div>
-  </div>
-</section>
+  </section>
+</main>
 
 <!-- footer:begin (generated — edit partials/footer.html) -->
 <footer class="site-footer">

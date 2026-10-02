@@ -2,8 +2,10 @@
 var I18N = (function() {
   var lang = localStorage.getItem('seet_lang') || 'de';
   var translations = {};
+  var cmsTexts = {};      // overrides from content/site.json (CMS), language-agnostic
   var ready = false;
   var pending = [];
+  var readyCallbacks = [];
 
   // Resolve a path relative to the site root, so the site works both at
   // a domain root and under a GitHub Pages project subpath (/seet-website/).
@@ -20,19 +22,41 @@ var I18N = (function() {
     return path;
   }
 
+  // A key resolves to the CMS override first, then to the translation.
+  function lookup(key) {
+    if (Object.prototype.hasOwnProperty.call(cmsTexts, key) && cmsTexts[key] !== '') {
+      return cmsTexts[key];
+    }
+    return translations[lang] ? translations[lang][key] : undefined;
+  }
+
+  function markReady() {
+    ready = true;
+    pending.forEach(function (fn) { fn(); });
+    pending = [];
+    readyCallbacks.forEach(function (fn) { fn(); });
+    readyCallbacks = [];
+  }
+
   function init() {
     fetch(siteUrl('/i18n.json'))
       .then(function (r) { return r.json(); })
       .then(function (data) {
         translations = data;
-        ready = true;
         setLanguage(lang);
-        pending.forEach(function (fn) { fn(); });
-        pending = [];
+        markReady();
       })
       .catch(function (err) {
         console.error('i18n: could not load translations', err);
+        // Still mark ready so dependent scripts (CMS content) can run.
+        markReady();
       });
+  }
+
+  // Run fn once translations are available (immediately if they already are).
+  function onReady(fn) {
+    if (ready) fn();
+    else readyCallbacks.push(fn);
   }
 
   function setLanguage(newLang) {
@@ -50,8 +74,7 @@ var I18N = (function() {
 
     // Update all data-i18n elements
     document.querySelectorAll('[data-i18n]').forEach(function (el) {
-      var key = el.getAttribute('data-i18n');
-      var text = translations[lang][key];
+      var text = lookup(el.getAttribute('data-i18n'));
       if (text === undefined) return;
       if (el.tagName === 'A' && el.getAttribute('data-i18n-title')) {
         el.setAttribute('title', text);
@@ -60,15 +83,31 @@ var I18N = (function() {
       }
     });
 
+    // Update aria-labels
+    document.querySelectorAll('[data-i18n-aria]').forEach(function (el) {
+      var text = lookup(el.getAttribute('data-i18n-aria'));
+      if (text !== undefined) el.setAttribute('aria-label', text);
+    });
+
     // Update image alt texts
     document.querySelectorAll('[data-i18n-alt]').forEach(function (el) {
-      var text = translations[lang][el.getAttribute('data-i18n-alt')];
+      var text = lookup(el.getAttribute('data-i18n-alt'));
       if (text !== undefined) el.setAttribute('alt', text);
     });
 
-    // Update page title
-    if (translations[lang]['site_title']) {
-      document.title = translations[lang]['site_title'];
+    // Update input placeholders
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(function (el) {
+      var text = lookup(el.getAttribute('data-i18n-placeholder'));
+      if (text !== undefined) el.setAttribute('placeholder', text);
+    });
+
+    // Update the page title (pages declare data-i18n on <title>)
+    var titleEl = document.querySelector('title[data-i18n]');
+    if (titleEl) {
+      var pageTitle = lookup(titleEl.getAttribute('data-i18n'));
+      if (pageTitle) document.title = pageTitle;
+    } else if (lookup('site_title')) {
+      document.title = lookup('site_title');
     }
 
     // Update html lang attribute
@@ -80,11 +119,26 @@ var I18N = (function() {
     });
   }
 
-  function get(key) {
-    return translations[lang] && translations[lang][key] || key;
+  // Register texts edited through the CMS; they win over i18n.json and are
+  // re-applied on every language switch.
+  function setCmsTexts(obj) {
+    cmsTexts = obj || {};
   }
 
-  return { init: init, setLanguage: setLanguage, get: get, getLang: function () { return lang; } };
+  function get(key) {
+    var text = lookup(key);
+    return text === undefined || text === null || text === '' ? key : text;
+  }
+
+  return {
+    init: init,
+    setLanguage: setLanguage,
+    setCmsTexts: setCmsTexts,
+    onReady: onReady,
+    get: get,
+    getLang: function () { return lang; },
+    isReady: function () { return ready; }
+  };
 })();
 
 // Initialize on load

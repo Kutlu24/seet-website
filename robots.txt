@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /seet-website/admin/
+Disallow: /seet-website/partials/
+Disallow: /seet-website/tools/
+Disallow: /seet-website/content/
+
+Sitemap: https://kutlu24.github.io/seet-website/sitemap.xml
