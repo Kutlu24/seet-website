@@ -28,15 +28,17 @@
     }
   });
 
-  /* ---- scroll reveal ---- */
+  /* ---- scroll reveal with stagger ---- */
   var revealables = document.querySelectorAll('.reveal');
   if (reduceMotion || !('IntersectionObserver' in window)) {
     revealables.forEach(function (el) { el.classList.add('in'); });
   } else {
     var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
+      entries.forEach(function (entry, index) {
         if (entry.isIntersecting) {
-          entry.target.classList.add('in');
+          setTimeout(function () {
+            entry.target.classList.add('in');
+          }, index * 40);
           io.unobserve(entry.target);
         }
       });
