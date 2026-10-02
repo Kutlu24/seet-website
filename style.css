@@ -133,7 +133,9 @@ a:hover { text-decoration: underline; }
   height: 56px;
   width: auto;
   display: block;
-  filter: brightness(2) invert(0.15);
+  /* The source logo is dark navy (#060E56); flatten it to bright white so it
+     reads on the dark navy header and footer (alpha is preserved). */
+  filter: brightness(0) invert(1);
 }
 
 /* ---------- team section ---------- */
