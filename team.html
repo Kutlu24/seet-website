@@ -12,37 +12,37 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="site-header">
   <div class="header-inner">
-    <a class="logo" href="/">
-      <img src="/img/logo-official.png" alt="SEET Logo" class="logo-image">
+    <a class="logo" href="./">
+      <img src="img/logo-official.png" alt="SEET Logo" class="logo-image">
     </a>
     <nav class="nav">
-      <a data-i18n="nav_start" href="/">Start</a>
-      <a data-i18n="nav_program" href="/programm.html">Programm</a>
-      <a data-i18n="nav_about" href="/ueber-uns.html">Über uns</a>
-      <a data-i18n="nav_join" href="/mitmachen.html">Mitmachen</a>
-      <a data-i18n="nav_contact" href="/kontakt.html">Kontakt</a>
+      <a data-i18n="nav_start" href="./">Start</a>
+      <a data-i18n="nav_program" href="programm.html">Programm</a>
+      <a data-i18n="nav_about" href="ueber-uns.html">Über uns</a>
+      <a data-i18n="nav_join" href="mitmachen.html">Mitmachen</a>
+      <a data-i18n="nav_contact" href="kontakt.html">Kontakt</a>
     </nav>
     <div class="lang-switch">
       <button data-lang="de" class="active">DE</button>
       <button data-lang="en">EN</button>
       <button data-lang="fr">FR</button>
     </div>
-    <a class="btn btn-primary btn-sm header-cta" data-i18n="nav_donate" href="/mitmachen.html#spenden">Spenden</a>
+    <a class="btn btn-primary btn-sm header-cta" data-i18n="nav_donate" href="mitmachen.html#spenden">Spenden</a>
     <button class="burger" aria-label="Menü öffnen" aria-expanded="false">☰</button>
   </div>
   <div class="mobile-panel">
-    <a data-i18n="nav_start" href="/">Start</a>
-    <a data-i18n="nav_program" href="/programm.html">Programm</a>
-    <a data-i18n="nav_about" href="/ueber-uns.html">Über uns</a>
-    <a data-i18n="nav_join" href="/mitmachen.html">Mitmachen</a>
-    <a data-i18n="nav_contact" href="/kontakt.html">Kontakt</a>
-    <a data-i18n="nav_donate" href="/mitmachen.html#spenden">Spenden</a>
+    <a data-i18n="nav_start" href="./">Start</a>
+    <a data-i18n="nav_program" href="programm.html">Programm</a>
+    <a data-i18n="nav_about" href="ueber-uns.html">Über uns</a>
+    <a data-i18n="nav_join" href="mitmachen.html">Mitmachen</a>
+    <a data-i18n="nav_contact" href="kontakt.html">Kontakt</a>
+    <a data-i18n="nav_donate" href="mitmachen.html#spenden">Spenden</a>
   </div>
 </header>
 
@@ -150,18 +150,18 @@
   <div class="wrap">
     <div class="footer-grid">
       <div>
-        <a class="logo" href="/"><img src="/img/logo-official.png" alt="SEET Logo" class="logo-image"></a>
+        <a class="logo" href="./"><img src="img/logo-official.png" alt="SEET Logo" class="logo-image"></a>
         <p style="margin-top:0.8rem;">Support Education, Empower Together — Bildung als Schlüssel zu Integration und Selbstbestimmung.</p>
         <p>Verein SEET · 8800 Thalwil, Schweiz</p>
       </div>
       <div>
         <h4>Navigation</h4>
         <div class="footer-links">
-          <a href="/">Start</a>
-          <a href="/programm.html">Programm</a>
-          <a href="/ueber-uns.html">Über uns</a>
-          <a href="/mitmachen.html">Mitmachen</a>
-          <a href="/kontakt.html">Kontakt</a>
+          <a href="./">Start</a>
+          <a href="programm.html">Programm</a>
+          <a href="ueber-uns.html">Über uns</a>
+          <a href="mitmachen.html">Mitmachen</a>
+          <a href="kontakt.html">Kontakt</a>
         </div>
       </div>
       <div>
@@ -179,20 +179,12 @@
     </div>
     <div class="footer-bottom">
       <span>© 2026 Verein SEET — Support Education, Empower Together</span>
-      <a href="/kontakt.html#impressum">Impressum &amp; Datenschutz</a>
+      <a href="kontakt.html#impressum">Impressum &amp; Datenschutz</a>
     </div>
   </div>
 </footer>
 
-<script src="/i18n.js"></script>
-<script src="/script.js"></script>
-<script>
-  window.__seetLangBound = true;
-  document.querySelectorAll('.lang-switch button').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      if (window.I18N) I18N.setLanguage(btn.getAttribute('data-lang'));
-    });
-  });
-</script>
+<script src="i18n.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

@@ -19,11 +19,19 @@
     });
   }
 
-  /* ---- active nav link ---- */
-  var here = window.location.pathname.replace(/\/$/, '') || '/index.html';
+  /* ---- active nav link ----
+     Links are relative so the site works at a domain root and under a
+     project subpath, so compare the last path segment of each href with
+     the last segment of the current pathname. */
+  function pageName(path) {
+    var last = path.split('/').pop();
+    return (last === '' || last === '.' || last === '..') ? 'index.html' : last;
+  }
+  var here = pageName(window.location.pathname);
   document.querySelectorAll('.nav a, .mobile-panel a').forEach(function (a) {
-    var target = a.getAttribute('href').split('#')[0].replace(/\/$/, '');
-    if (target === here || (here === '/' && target === '/index.html')) {
+    var href = a.getAttribute('href') || '';
+    if (href.split('#')[0].indexOf(':') !== -1) return; // mailto:, http(s):
+    if (pageName(href.split('#')[0]) === here) {
       a.classList.add('active');
     }
   });
@@ -134,31 +142,23 @@
 
   /* ---- PHASE 2: SCROLL EFFECTS ---- */
 
-  /* Scroll progress indicator */
+  /* Scroll progress indicator (rAF-throttled) */
   var scrollProgress = document.createElement('div');
   scrollProgress.className = 'scroll-progress';
   document.body.appendChild(scrollProgress);
 
-  window.addEventListener('scroll', function () {
-    var scrollPercentage = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+  var progressTicking = false;
+  function updateProgress() {
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    var scrollPercentage = max > 0 ? (window.scrollY / max) * 100 : 0;
     scrollProgress.style.width = scrollPercentage + '%';
-  });
-
-  /* Parallax effect on scroll */
-  var parallaxElements = document.querySelectorAll('.parallax-image img, .hero-photo img');
-  if ('IntersectionObserver' in window && parallaxElements.length > 0) {
-    parallaxElements.forEach(function (el) {
-      window.addEventListener('scroll', function () {
-        var elementTop = el.getBoundingClientRect().top;
-        var windowHeight = window.innerHeight;
-
-        if (elementTop < windowHeight && elementTop > -window.innerHeight) {
-          var scrollAmount = (windowHeight - elementTop) * 0.1;
-          el.style.transform = 'translateY(' + scrollAmount + 'px)';
-        }
-      });
-    });
+    progressTicking = false;
   }
+  window.addEventListener('scroll', function () {
+    if (progressTicking) return;
+    progressTicking = true;
+    requestAnimationFrame(updateProgress);
+  }, { passive: true });
 
   /* Scroll-triggered reveal animations */
   var observerOptions = {

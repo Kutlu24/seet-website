@@ -1066,12 +1066,12 @@ h2 {
   transform: translateY(-2px) scale(1.04);
 }
 
-/* Section alternation for better visual rhythm */
-section:nth-child(odd) {
+/* Section alternation for better visual rhythm (.hero keeps its own gradient) */
+section:not(.hero):nth-child(odd) {
   background: var(--card);
 }
 
-section:nth-child(even) {
+section:not(.hero):nth-child(even) {
   background: linear-gradient(180deg, var(--bg) 0%, var(--card) 100%);
 }
 
