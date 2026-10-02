@@ -440,6 +440,71 @@ section { padding: 4rem 0; }
   font-size: 0.85rem;
 }
 
+/* ---------- imagery ---------- */
+.hero-split {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 3rem;
+  align-items: center;
+}
+.hero-photo {
+  position: relative;
+  border-radius: 26px;
+  overflow: hidden;
+  box-shadow: 0 30px 70px rgba(24, 18, 48, 0.22);
+  aspect-ratio: 4 / 3;
+}
+.hero-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.hero-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(160deg, rgba(91, 61, 245, 0.18), rgba(24, 18, 48, 0.05) 60%);
+}
+.hero-badge {
+  position: absolute;
+  left: 1.2rem;
+  bottom: 1.2rem;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  padding: 0.8rem 1.1rem;
+  box-shadow: 0 12px 30px rgba(24, 18, 48, 0.18);
+}
+.hero-badge strong {
+  display: block;
+  font-family: "Sora", sans-serif;
+  font-size: 1.5rem;
+  color: var(--violet);
+  line-height: 1.1;
+}
+.hero-badge span { font-size: 0.8rem; color: var(--body); }
+
+.media {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  aspect-ratio: 16 / 10;
+}
+.media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.media.tall { aspect-ratio: 4 / 5; }
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+.split.reverse .split-media { order: 2; }
+
+.photo-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.photo-strip .media { aspect-ratio: 1 / 1; }
+
 /* ---------- reveal ---------- */
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
 .reveal.in { opacity: 1; transform: none; }
@@ -454,6 +519,10 @@ section { padding: 4rem 0; }
   .hero-cap { display: none; }
   .pillar { grid-template-columns: 1fr; gap: 0.4rem; }
   .contact-row .role { min-width: 0; }
+  .hero-split, .split { grid-template-columns: 1fr; gap: 2rem; }
+  .split.reverse .split-media { order: 0; }
+  .photo-strip { grid-template-columns: 1fr 1fr; }
+  .photo-strip .media:last-child { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
