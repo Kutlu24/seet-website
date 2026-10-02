@@ -742,6 +742,43 @@ section { padding: 5rem 0; }
 }
 .photo-strip .media { aspect-ratio: 1 / 1; }
 
+/* ---------- team ---------- */
+.team-group { margin-bottom: 3rem; }
+.team-group h3 {
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--violet);
+  margin-bottom: 1.2rem;
+}
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 1.4rem;
+}
+.member { text-align: center; }
+.member-photo {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #ece9f8;
+  box-shadow: var(--shadow);
+  margin-bottom: 0.7rem;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+.member:hover .member-photo { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+.member-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; display: block; }
+.member-name {
+  font-family: "Sora", sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--ink);
+  line-height: 1.3;
+  display: block;
+}
+.member-role { font-size: 0.82rem; color: var(--body); display: block; margin-top: 0.15rem; }
+
 /* ---------- reveal ---------- */
 .reveal {
   opacity: 0;
