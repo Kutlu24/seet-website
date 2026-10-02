@@ -137,6 +137,64 @@ a:hover { text-decoration: underline; }
   display: block;
 }
 
+/* ---------- team section ---------- */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.8rem;
+  margin-top: 2.4rem;
+}
+
+.team-member {
+  background: var(--card);
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  text-align: center;
+}
+
+.team-member:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(109, 92, 247, 0.2);
+}
+
+.team-photo {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  display: block;
+  background: linear-gradient(135deg, #f0e6ff, #e6d9ff);
+}
+
+.team-info {
+  padding: 1.6rem 1.4rem;
+}
+
+.team-name {
+  font-family: "Sora", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0 0 0.3rem;
+}
+
+.team-role {
+  font-size: 0.9rem;
+  color: var(--violet);
+  font-weight: 600;
+  margin: 0 0 0.6rem;
+}
+
+.team-desc {
+  font-size: 0.85rem;
+  color: var(--body);
+  line-height: 1.5;
+  margin: 0;
+}
+
 .burger {
   display: none;
   margin-left: auto;
@@ -691,7 +749,7 @@ section { padding: 4rem 0; }
 @media (max-width: 860px) {
   .nav, .header-cta { display: none; }
   .burger { display: block; }
-  .logo-tag { display: none; }
+  .lang-switch { margin-left: auto; margin-right: 0.5rem; }
   .footer-grid { grid-template-columns: 1fr; }
   .hero { padding: 3.4rem 0 3rem; }
   .hero-cap { display: none; }
@@ -701,6 +759,18 @@ section { padding: 4rem 0; }
   .split.reverse .split-media { order: 0; }
   .photo-strip { grid-template-columns: 1fr 1fr; }
   .photo-strip .media:last-child { display: none; }
+  .team-grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+  .logo-image { height: 32px; }
+}
+
+@media (max-width: 480px) {
+  .logo-image { height: 28px; }
+  .lang-switch button { padding: 0.35rem 0.6rem; font-size: 0.75rem; }
+  .stats { grid-template-columns: 1fr 1fr; }
+  .grid-3 { grid-template-columns: 1fr; }
+  .team-grid { grid-template-columns: 1fr; }
+  section { padding: 2.5rem 0; }
+  .hero { padding: 3rem 0 2.5rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
