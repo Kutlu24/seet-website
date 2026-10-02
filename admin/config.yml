@@ -1,0 +1,64 @@
+# Decap CMS configuration
+# Setup: create a GitHub OAuth App at https://github.com/settings/developers
+#   Homepage URL:        https://kutlu24.github.io/seet-website/
+#   Authorization callback URL: https://kutlu24.github.io/seet-website/admin/
+# Then paste the app's Client ID below (replace the placeholder).
+backend:
+  name: github
+  repo: Kutlu24/seet-website
+  branch: master
+  auth_type: pkce
+  app_id: PASTE_GITHUB_OAUTH_APP_CLIENT_ID
+
+site_url: https://kutlu24.github.io/seet-website/
+base_url: https://kutlu24.github.io/seet-website
+logo_url: /seet-website/img/logo-official.png
+
+media_folder: img/uploads
+public_path: /seet-website/img/uploads
+
+locale: de
+
+collections:
+  - name: content
+    label: Ana sayfa içerikleri
+    editor:
+      preview: false
+    files:
+      - name: site
+        label: Haberler, istatistikler, başvuru ve sosyal medya
+        file: content/site.json
+        format: json
+        fields:
+          - name: texts
+            label: Metinler
+            hint: Bu metinler üç dilde de (DE/EN/FR) aynı şekilde görünür. Dil bazında ayrı metin için sonra ayırırız.
+            widget: object
+            collapsed: false
+            fields:
+              - { name: card1_tag,   label: "Haber 1 — etiket",   widget: string, required: false }
+              - { name: card1_title, label: "Haber 1 — başlık",   widget: string, required: false }
+              - { name: card1_desc,  label: "Haber 1 — açıklama", widget: text,   required: false }
+              - { name: card2_tag,   label: "Haber 2 — etiket",   widget: string, required: false }
+              - { name: card2_title, label: "Haber 2 — başlık",   widget: string, required: false }
+              - { name: card2_desc,  label: "Haber 2 — açıklama", widget: text,   required: false }
+              - { name: card3_tag,   label: "Haber 3 — etiket",   widget: string, required: false }
+              - { name: card3_title, label: "Haber 3 — başlık",   widget: string, required: false }
+              - { name: card3_desc,  label: "Haber 3 — açıklama", widget: text,   required: false }
+              - { name: apply_status,     label: "Başvuru — durum rozeti", widget: string, required: false }
+              - { name: apply_title,      label: "Başvuru — başlık",       widget: string, required: false }
+              - { name: apply_desc,       label: "Başvuru — açıklama",     widget: text,   required: false }
+              - { name: apply_deadline,   label: "Başvuru — tarih (HTML destekler, ör. <strong>…</strong>)", widget: string, required: false }
+              - { name: apply_btn,        label: "Başvuru — buton metni",  widget: string, required: false }
+              - { name: apply_qr_caption, label: "Başvuru — QR açıklaması", widget: string, required: false }
+              - { name: social_kicker, label: "Sosyal medya — üst etiket", widget: string, required: false }
+              - { name: social_title,  label: "Sosyal medya — başlık",     widget: string, required: false }
+              - { name: social_desc,   label: "Sosyal medya — açıklama",   widget: text,   required: false }
+          - name: stats
+            label: Ana sayfa istatistikleri
+            widget: list
+            max: 5
+            fields:
+              - { name: label, label: "Etiket", widget: string }
+              - { name: value, label: "Sayı", widget: number, value_type: int, min: 0 }
+          - { name: apply_url, label: "Başvuru formu linki", widget: string }

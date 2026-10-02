@@ -1,0 +1,30 @@
+{
+  "texts": {
+    "card1_tag": "Jahrgang 2026–27",
+    "card1_title": "Jahrgang 2026–27 gestartet",
+    "card1_desc": "Im Mai 2026 sind 41 Mentees mit 35 Mentor:innen in die neue Mentoring-Runde gestartet.",
+    "card2_tag": "Bericht",
+    "card2_title": "Jahresbericht 2025 erschienen",
+    "card2_desc": "Unser Jahresbericht dokumentiert Wirkung, Zahlen und Geschichten aus dem Programm.",
+    "card3_tag": "Netzwerk",
+    "card3_title": "Alumni-Netzwerk gegründet",
+    "card3_desc": "Ehemalige Mentees blicken nun selbst zurück — und geben etwas weiter.",
+    "apply_status": "Bewerbungen laufen",
+    "apply_title": "Bewerbungsfenster ist geöffnet",
+    "apply_desc": "Mentees und Mentor:innen können sich jetzt für den nächsten Jahrgang bewerben. Das Formular dauert rund 15 Minuten.",
+    "apply_deadline": "Bewerbungsfrist: <strong>Mitte September 2026</strong>",
+    "apply_btn": "Zum Bewerbungsformular",
+    "apply_qr_caption": "QR-Code scannen und direkt bewerben",
+    "social_kicker": "Social Media",
+    "social_title": "SEET in den sozialen Medien",
+    "social_desc": "Neuigkeiten, Einblicke und Geschichten aus dem Programm — folge uns und bleib auf dem Laufenden."
+  },
+  "stats": [
+    { "label": "Mentees", "value": 41 },
+    { "label": "Mentor:innen", "value": 35 },
+    { "label": "Kantone", "value": 9 },
+    { "label": "Nationalitäten", "value": 7 },
+    { "label": "seit", "value": 2018 }
+  ],
+  "apply_url": "https://purrfect-dinghy-c9d.notion.site/af01d5173a9983afa73881874f3f7a74?pvs=105"
+}
