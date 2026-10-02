@@ -75,6 +75,18 @@
     counters.forEach(function (el) { cio.observe(el); });
   }
 
+  /* ---- language switcher (pages without their own inline handler) ---- */
+  if (!window.__seetLangBound) {
+    document.querySelectorAll('.lang-switch button').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var lang = btn.getAttribute('data-lang');
+        if (window.I18N && typeof window.I18N.setLanguage === 'function') {
+          window.I18N.setLanguage(lang);
+        }
+      });
+    });
+  }
+
   /* ---- copy to clipboard ---- */
   document.querySelectorAll('[data-copy]').forEach(function (btn) {
     btn.addEventListener('click', function () {

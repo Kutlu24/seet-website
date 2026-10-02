@@ -43,16 +43,16 @@
   <div class="hero-blob b1"></div>
   <div class="hero-blob b2"></div>
   <div class="wrap">
-    <span class="kicker">Kontakt</span>
-    <h1>Schreib uns.</h1>
-    <p class="hero-sub">Für jede Anliegen gibt es die passende Adresse — damit deine Nachricht schnell ankommt.</p>
+    <span class="kicker" data-i18n="contact_kicker">Kontakt</span>
+    <h1 data-i18n="contact_title">Schreib uns.</h1>
+    <p class="hero-sub" data-i18n="contact_hero_sub">Für jede Anliegen gibt es die passende Adresse — damit deine Nachricht schnell ankommt.</p>
   </div>
 </section>
 
 <section style="padding-top:0;">
   <div class="wrap">
     <div class="media reveal">
-      <img src="/img/library.jpg" alt="SEET-Veranstaltung mit Mentees, Mentor:innen und Team" width="1400" height="875">
+      <img src="/img/library.jpg" alt="SEET-Veranstaltung mit Mentees, Mentor:innen und Team" data-i18n-alt="contact_img_alt" width="1400" height="875">
     </div>
   </div>
 </section>
@@ -60,15 +60,15 @@
 <section>
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="kicker">E-Mail</span>
-      <h2>Direkte Ansprechstellen</h2>
+      <span class="kicker" data-i18n="contact_email_kicker">E-Mail</span>
+      <h2 data-i18n="contact_email_title">Direkte Ansprechstellen</h2>
     </div>
     <div class="contact-list reveal">
-      <div class="contact-row"><span class="role">Verein &amp; Kooperationen</span><a href="mailto:seet@seet.ch">seet@seet.ch</a></div>
-      <div class="contact-row"><span class="role">Programm</span><a href="mailto:program@seet.ch">program@seet.ch</a></div>
-      <div class="contact-row"><span class="role">Mentees &amp; Mentor:innen</span><a href="mailto:mentoring@seet.ch">mentoring@seet.ch</a></div>
-      <div class="contact-row"><span class="role">Finanzen &amp; Strategie</span><a href="mailto:finances@seet.ch">finances@seet.ch</a></div>
-      <div class="contact-row"><span class="role">Kommunikation</span><a href="mailto:communication@seet.ch">communication@seet.ch</a></div>
+      <div class="contact-row"><span class="role" data-i18n="role_general">Verein &amp; Kooperationen</span><a href="mailto:seet@seet.ch">seet@seet.ch</a></div>
+      <div class="contact-row"><span class="role" data-i18n="role_program">Programm</span><a href="mailto:program@seet.ch">program@seet.ch</a></div>
+      <div class="contact-row"><span class="role" data-i18n="role_mentoring">Mentees &amp; Mentor:innen</span><a href="mailto:mentoring@seet.ch">mentoring@seet.ch</a></div>
+      <div class="contact-row"><span class="role" data-i18n="role_finances">Finanzen &amp; Strategie</span><a href="mailto:finances@seet.ch">finances@seet.ch</a></div>
+      <div class="contact-row"><span class="role" data-i18n="role_communication">Kommunikation</span><a href="mailto:communication@seet.ch">communication@seet.ch</a></div>
     </div>
   </div>
 </section>
@@ -77,17 +77,17 @@
   <div class="wrap">
     <div class="grid grid-2">
       <div class="reveal">
-        <span class="kicker">Adresse</span>
-        <h2>Wo wir zu Hause sind</h2>
+        <span class="kicker" data-i18n="contact_addr_kicker">Adresse</span>
+        <h2 data-i18n="contact_addr_title">Wo wir zu Hause sind</h2>
         <p><strong>Verein SEET</strong><br>8800 Thalwil<br>Schweiz</p>
       </div>
       <div class="reveal">
-        <span class="kicker">Spenden</span>
-        <h2>Bankverbindung</h2>
-        <p>Spenden sind einmalig oder regelmässig möglich.</p>
+        <span class="kicker" data-i18n="contact_donate_kicker">Spenden</span>
+        <h2 data-i18n="contact_donate_title">Bankverbindung</h2>
+        <p data-i18n="contact_donate_desc">Spenden sind einmalig oder regelmässig möglich.</p>
         <div class="iban-box">
           <code>IBAN CH43 0839 0037 2219 1000 3 · BIC ABSOCH21</code>
-          <button class="copy-btn" type="button" data-copy="CH43 0839 0037 2219 1000 3">Kopieren</button>
+          <button class="copy-btn" type="button" data-copy="CH43 0839 0037 2219 1000 3" data-i18n="copy_btn">Kopieren</button>
         </div>
       </div>
     </div>
@@ -97,9 +97,9 @@
 <section id="impressum">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="kicker">Rechtliches</span>
-      <h2>Impressum &amp; Datenschutz</h2>
-      <p>Verein SEET, 8800 Thalwil, Schweiz. Verantwortlich für den Inhalt dieser Website ist der Verein SEET. Die ausführliche Datenschutzerklärung stellen wir auf Anfrage gerne zur Verfügung — schreib uns dazu an <a href="mailto:seet@seet.ch">seet@seet.ch</a>.</p>
+      <span class="kicker" data-i18n="contact_legal_kicker">Rechtliches</span>
+      <h2 data-i18n="contact_legal_title">Impressum &amp; Datenschutz</h2>
+      <p data-i18n="contact_legal_text">Verein SEET, 8800 Thalwil, Schweiz. Verantwortlich für den Inhalt dieser Website ist der Verein SEET. Die ausführliche Datenschutzerklärung stellen wir auf Anfrage gerne zur Verfügung — schreib uns dazu an <a href="mailto:seet@seet.ch">seet@seet.ch</a>.</p>
     </div>
   </div>
 </section>
@@ -145,6 +145,7 @@
 <script src="/i18n.js"></script>
 <script src="/script.js"></script>
 <script>
+  window.__seetLangBound = true;
   document.querySelectorAll(".lang-switch button").forEach(btn => {
     btn.addEventListener("click", () => I18N.setLanguage(btn.getAttribute("data-lang")));
   });

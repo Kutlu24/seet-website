@@ -21,11 +21,18 @@ var I18N = (function() {
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');
       const text = translations[lang][key];
+      if (text === undefined) return;
       if (el.tagName === 'A' && el.getAttribute('data-i18n-title')) {
         el.setAttribute('title', text);
       } else {
         el.innerHTML = text;
       }
+    });
+
+    // Update image alt texts
+    document.querySelectorAll('[data-i18n-alt]').forEach(el => {
+      const text = translations[lang][el.getAttribute('data-i18n-alt')];
+      if (text !== undefined) el.setAttribute('alt', text);
     });
 
     // Update page title
