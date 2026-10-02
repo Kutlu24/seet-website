@@ -87,15 +87,32 @@ a:hover { text-decoration: underline; }
   letter-spacing: -0.03em;
   display: inline-flex;
   align-items: center;
-  gap: 0.15rem;
+  gap: 0.7rem;
 }
 .logo:hover { text-decoration: none; }
 .logo .dot { color: var(--violet); }
+/* Slogan beside the wordmark: rendered as text (the original logo file drew it
+   so thin it disappeared on the navy bar). Pure white, wraps to two lines, and
+   is dropped below 1160px (--max) so it can never collide with the nav. */
+.logo-tagline {
+  flex: 0 0 auto;
+  font-family: "Inter", sans-serif;
+  font-size: 0.74rem;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+  max-width: 11.5em;
+}
+@media (max-width: 1160px) {
+  .logo-tagline { display: none; }
+}
 .nav { margin-left: auto; display: flex; align-items: center; gap: 1.5rem; }
 .nav a {
   color: rgba(255, 255, 255, 0.85);
   font-weight: 500;
   font-size: 0.95rem;
+  white-space: nowrap;
 }
 .nav a:hover { color: #ffffff; text-decoration: none; }
 .nav a.active { color: #ffffff; font-weight: 600; }
@@ -902,10 +919,12 @@ section { padding: 5rem 0; }
 }
 
 /* ---------- responsive ---------- */
-@media (max-width: 860px) {
+@media (max-width: 940px) {
   .nav, .header-cta { display: none; }
   .burger { display: block; }
   .lang-switch { margin-left: auto; margin-right: 0.5rem; }
+}
+@media (max-width: 860px) {
   .footer-grid { grid-template-columns: 1fr; }
   .hero { padding: 3.4rem 0 3rem; }
   .hero-cap { display: none; }
