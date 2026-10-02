@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Häufig Gestellte Fragen — SEET</title>
+<meta name="description" content="Antworten auf häufig gestellte Fragen zum SEET-Programm, Bewerbungsverfahren und wie du dich einbringen kannst.">
+<meta property="og:title" content="FAQ — SEET">
+<meta property="og:description" content="Häufig gestellte Fragen zu SEET">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%235b3df5'/%3E%3Cstop offset='1' stop-color='%23c084fc'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='45' font-family='Arial,sans-serif' font-size='38' font-weight='bold' fill='white' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<style>
+  .faq-item { margin-bottom: 1.2rem; border-radius: 0.8rem; border: 1px solid var(--line); overflow: hidden; }
+  .faq-question { padding: 1.2rem; background: var(--bg-alt); cursor: pointer; font-weight: 600; display: flex; justify-content: space-between; align-items: center; user-select: none; transition: background 200ms; }
+  .faq-question:hover { background: #f3f0ff; }
+  .faq-question.open { background: var(--bg); }
+  .faq-icon { font-size: 1.4rem; transition: transform 200ms; }
+  .faq-question.open .faq-icon { transform: rotate(180deg); }
+  .faq-answer { max-height: 0; overflow: hidden; transition: max-height 300ms; }
+  .faq-answer.open { max-height: 500px; }
+  .faq-answer-content { padding: 0 1.2rem 1.2rem; line-height: 1.7; color: var(--text-secondary); }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="/">
+      <img src="/img/logo-official.png" alt="SEET Logo" class="logo-image">
+    </a>
+    <nav class="nav">
+      <a data-i18n="nav_start" href="/">Start</a>
+      <a data-i18n="nav_program" href="/programm.html">Programm</a>
+      <a data-i18n="nav_about" href="/ueber-uns.html">Über uns</a>
+      <a data-i18n="nav_join" href="/mitmachen.html">Mitmachen</a>
+      <a data-i18n="nav_contact" href="/kontakt.html">Kontakt</a>
+    </nav>
+    <div class="lang-switch">
+      <button data-lang="de" class="active">DE</button>
+      <button data-lang="en">EN</button>
+      <button data-lang="fr">FR</button>
+    </div>
+    <a class="btn btn-primary btn-sm header-cta" data-i18n="nav_donate" href="/mitmachen.html#spenden">Spenden</a>
+    <button class="burger" aria-label="Menü öffnen" aria-expanded="false">☰</button>
+  </div>
+  <div class="mobile-panel">
+    <a data-i18n="nav_start" href="/">Start</a>
+    <a data-i18n="nav_program" href="/programm.html">Programm</a>
+    <a data-i18n="nav_about" href="/ueber-uns.html">Über uns</a>
+    <a data-i18n="nav_join" href="/mitmachen.html">Mitmachen</a>
+    <a data-i18n="nav_contact" href="/kontakt.html">Kontakt</a>
+    <a data-i18n="nav_donate" href="/mitmachen.html#spenden">Spenden</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-blob b1"></div>
+  <div class="hero-blob b2"></div>
+  <div class="wrap">
+    <span class="kicker" data-i18n="faq_kicker">Fragen?</span>
+    <h1 data-i18n="faq_title">Häufig Gestellte Fragen</h1>
+    <p class="hero-sub" data-i18n="faq_sub">Antworten zu unserem Programm, dem Bewerbungsverfahren und wie du dich einbringen kannst.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap" style="max-width:700px;">
+    <div class="faq-section reveal">
+      <h2 style="margin-top:3rem;margin-bottom:2rem;" data-i18n="faq_section1">Zum Programm</h2>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="this.parentElement.querySelector('.faq-answer').classList.toggle('open'); this.classList.toggle('open');">
+          <span data-i18n="faq_q1">Für wen ist das SEET-Programm?</span>
+          <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-content" data-i18n="faq_a1">
+            Das Programm richtet sich an geflüchtete Menschen, die ein Studium beginnen oder wiedernehmen möchten. Wichtig sind Motivation und die Bereitschaft, von der Unterstützung Gebrauch zu machen.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="this.parentElement.querySelector('.faq-answer').classList.toggle('open'); this.classList.toggle('open');">
+          <span data-i18n="faq_q2">Wie lange dauert das Mentoring?</span>
+          <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-content" data-i18n="faq_a2">
+            Das Mentoring dauert ein Jahr. In dieser Zeit treffen sich Mentor und Mentee regelmäßig (ca. 1 Stunde pro Woche) und arbeiten gemeinsam an den Zielen.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="this.parentElement.querySelector('.faq-answer').classList.toggle('open'); this.classList.toggle('open');">
+          <span data-i18n="faq_q3">Kostet die Teilnahme etwas?</span>
+          <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-content" data-i18n="faq_a3">
+            Nein, das SEET-Programm ist kostenlos. Alle Kosten werden durch Spenden und Partnerschaften finanziert.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-section reveal">
+      <h2 style="margin-top:3rem;margin-bottom:2rem;" data-i18n="faq_section2">Bewerbung</h2>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="this.parentElement.querySelector('.faq-answer').classList.toggle('open'); this.classList.toggle('open');">
+          <span data-i18n="faq_q4">Wann kann ich mich bewerben?</span>
+          <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-content" data-i18n="faq_a4">
+            Bewerbungen sind jeweils im Frühjahr möglich. Die genauen Fristen findest du auf der Startseite und im Bewerbungsformular.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="this.parentElement.querySelector('.faq-answer').classList.toggle('open'); this.classList.toggle('open');">
+          <span data-i18n="faq_q5">Wie lange dauert das Bewerbungsverfahren?</span>
+          <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-content" data-i18n="faq_a5">
+            Das Verfahren dauert etwa 3-4 Wochen: Fragebogen, Auswahlgespräch und dann die Entscheidung.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="this.parentElement.querySelector('.faq-answer').classList.toggle('open'); this.classList.toggle('open');">
+          <span data-i18n="faq_q6">Welche Unterlagen brauche ich für die Bewerbung?</span>
+          <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-content" data-i18n="faq_a6">
+            Du brauchst vor allem Zeit für den Fragebogen (ca. 15 Minuten). Weitere Unterlagen sind nicht notwendig — der Fragebogen gibt uns ausreichend Informationen.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-section reveal">
+      <h2 style="margin-top:3rem;margin-bottom:2rem;" data-i18n="faq_section3">Mitmachen</h2>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="this.parentElement.querySelector('.faq-answer').classList.toggle('open'); this.classList.toggle('open');">
+          <span data-i18n="faq_q7">Kann ich als Mentor mitarbeiten?</span>
+          <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-content" data-i18n="faq_a7">
+            Ja! Kontaktiere uns unter mentoring@seet.ch. Wichtig ist, dass du an einer Schweizer Hochschule studierst oder studiert hast und regelmäßig Zeit zur Verfügung stehst.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="this.parentElement.querySelector('.faq-answer').classList.toggle('open'); this.classList.toggle('open');">
+          <span data-i18n="faq_q8">Wie kann ich SEET finanziell unterstützen?</span>
+          <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-content" data-i18n="faq_a8">
+            Du kannst eine einmalige oder regelmäßige Spende machen. Die Bankverbindung findest du unter Mitmachen → Gönner werden. Vielen Dank!
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="this.parentElement.querySelector('.faq-answer').classList.toggle('open'); this.classList.toggle('open');">
+          <span data-i18n="faq_q9">Kann ich als Freiwilliger mithelfen?</span>
+          <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-content" data-i18n="faq_a9">
+            Gerne! Wir suchen Unterstützung in vielen Bereichen: Fundraising, IT, Kommunikation, Event-Management. Schreib uns unter seet@seet.ch.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:3rem;padding:1.6rem;background:var(--bg-alt);border-radius:0.8rem;text-align:center;">
+      <p data-i18n="faq_more">Weitere Fragen?</p>
+      <a href="/kontakt.html" class="btn btn-primary btn-sm" data-i18n="faq_contact">Kontakt aufnehmen</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="logo" href="/"><img src="/img/logo-official.png" alt="SEET Logo" class="logo-image"></a>
+        <p style="margin-top:0.8rem;">Support Education, Empower Together — Bildung als Schlüssel zu Integration und Selbstbestimmung.</p>
+        <p>Verein SEET · 8800 Thalwil, Schweiz</p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <div class="footer-links">
+          <a href="/">Start</a>
+          <a href="/programm.html">Programm</a>
+          <a href="/ueber-uns.html">Über uns</a>
+          <a href="/mitmachen.html">Mitmachen</a>
+          <a href="/kontakt.html">Kontakt</a>
+        </div>
+      </div>
+      <div>
+        <h4>Kontakt</h4>
+        <div class="footer-links">
+          <a href="mailto:seet@seet.ch">seet@seet.ch</a>
+          <a href="mailto:program@seet.ch">program@seet.ch</a>
+          <a href="mailto:mentoring@seet.ch">mentoring@seet.ch</a>
+          <a href="mailto:finances@seet.ch">finances@seet.ch</a>
+          <a href="mailto:communication@seet.ch">communication@seet.ch</a>
+          <a href="https://www.facebook.com/seetzh" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.linkedin.com/company/seetzh/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Verein SEET — Support Education, Empower Together</span>
+      <a href="/kontakt.html#impressum">Impressum &amp; Datenschutz</a>
+    </div>
+  </div>
+</footer>
+
+<script src="/i18n.js"></script>
+<script src="/script.js"></script>
+<script>
+  window.__seetLangBound = true;
+  document.querySelectorAll('.lang-switch button').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      if (window.I18N) I18N.setLanguage(btn.getAttribute('data-lang'));
+    });
+  });
+</script>
+</body>
+</html>

@@ -109,4 +109,26 @@
       }
     });
   });
+
+  /* ---- newsletter form ---- */
+  var form = document.getElementById('newsletter-form');
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var name = form.querySelector('input[name="name"]').value;
+      var email = form.querySelector('input[name="email"]').value;
+      var msg = document.getElementById('form-message');
+
+      if (!name || !email) return;
+
+      form.style.display = 'none';
+      msg.style.display = 'block';
+      msg.textContent = 'Vielen Dank! Du erhältst in Kürze eine Bestätigungsmail.';
+      setTimeout(function () {
+        form.reset();
+        form.style.display = 'flex';
+        msg.style.display = 'none';
+      }, 3000);
+    });
+  }
 })();
