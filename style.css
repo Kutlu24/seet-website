@@ -1831,3 +1831,148 @@ section {
     transition-delay: 0ms !important;
   }
 }
+
+/* ===== PHASE 4: VISUAL CONTENT (cards, pillars, photos, resources) ===== */
+
+/* Aktuell cards with gradient banner headers */
+.card-visual { padding: 0; }
+.card-visual .card-body { padding: 1.6rem 2rem 2rem; }
+.card-banner {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius) var(--radius) 0 0;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+}
+.card-banner::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.25) 0%, transparent 45%),
+    radial-gradient(circle at 15% 85%, rgba(255, 255, 255, 0.12) 0%, transparent 40%);
+  pointer-events: none;
+}
+.card-banner svg { width: 52px; height: 52px; position: relative; z-index: 1; filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.25)); }
+.card-banner.b-violet { background: linear-gradient(135deg, #6d5cf7 0%, #9577f0 55%, #c084fc 100%); }
+.card-banner.b-amber { background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 55%, #f97316 100%); }
+.card-banner.b-teal { background: linear-gradient(135deg, #0d9488 0%, #2dd4bf 55%, #0ea5e9 100%); }
+
+/* Drei Säulen as visual mini-cards */
+.pillars-visual {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1.6rem;
+}
+.pillar-mini {
+  background: linear-gradient(160deg, #ffffff 0%, #f6f2ff 100%);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 1.4rem 1.2rem;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--ink);
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition);
+}
+.pillar-mini:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(109, 92, 247, 0.35);
+}
+.pillar-mini .pv-num {
+  font-family: "Sora", sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  background: var(--grad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: block;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+.pillar-mini .pv-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(109, 92, 247, 0.14), rgba(192, 132, 252, 0.18));
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--violet);
+  margin-bottom: 0.7rem;
+}
+.pillar-mini .pv-icon svg { width: 22px; height: 22px; }
+
+/* Photo strip with hover captions */
+.media-captioned { position: relative; margin: 0; }
+.media-captioned img { transition: transform 0.5s cubic-bezier(0.23, 1, 0.320, 1), filter 0.4s ease; }
+.media-captioned figcaption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 2.2rem 1.1rem 0.95rem;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(180deg, transparent 0%, rgba(15, 10, 26, 0.78) 100%);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.media-captioned:hover img, .media-captioned:focus-within img { transform: scale(1.06); }
+.media-captioned:hover figcaption, .media-captioned:focus-within figcaption { opacity: 1; transform: translateY(0); }
+@media (hover: none) {
+  .media-captioned figcaption { opacity: 1; transform: none; }
+}
+
+/* Resource cards with icons */
+.resource-card {
+  border: 1px solid var(--line);
+  padding: 1.8rem 1.6rem;
+  border-radius: 0.8rem;
+  background: linear-gradient(165deg, #ffffff 0%, #faf8ff 100%);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+.resource-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--grad);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.resource-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); border-color: rgba(109, 92, 247, 0.3); }
+.resource-card:hover::before { transform: scaleX(1); }
+.resource-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  background: var(--grad);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  box-shadow: 0 8px 20px rgba(109, 92, 247, 0.3);
+}
+.resource-icon svg { width: 24px; height: 24px; }
+
+@media (max-width: 860px) {
+  .pillars-visual { grid-template-columns: 1fr; }
+  .card-banner { height: 100px; }
+  .card-banner svg { width: 42px; height: 42px; }
+}
