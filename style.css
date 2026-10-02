@@ -20,12 +20,12 @@
 
 * { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; font-size: 18px; }
 
 body {
   margin: 0;
   font-family: "Inter", system-ui, -apple-system, sans-serif;
-  font-size: 17px;
+  font-size: 19px;
   line-height: 1.65;
   color: var(--body);
   background: var(--bg);
@@ -45,9 +45,9 @@ h1, h2, h3, h4 {
   letter-spacing: -0.02em;
 }
 
-h1 { font-size: clamp(2.1rem, 5vw, 3.4rem); font-weight: 800; }
-h2 { font-size: clamp(1.6rem, 3.4vw, 2.3rem); font-weight: 700; }
-h3 { font-size: 1.2rem; font-weight: 600; }
+h1 { font-size: clamp(2.4rem, 5.5vw, 3.8rem); font-weight: 800; }
+h2 { font-size: clamp(1.8rem, 3.8vw, 2.6rem); font-weight: 700; }
+h3 { font-size: 1.35rem; font-weight: 600; }
 
 p { margin: 0 0 1rem; }
 a { color: var(--violet); text-decoration: none; }
@@ -323,7 +323,7 @@ a:hover { text-decoration: underline; }
   border-bottom: 2px solid var(--violet);
   line-height: 1;
 }
-.hero-sub { font-size: 1.12rem; max-width: 46ch; }
+.hero-sub { font-size: 1.25rem; max-width: 46ch; }
 .hero-cta { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 1.8rem; }
 
 /* ---------- sections ---------- */
