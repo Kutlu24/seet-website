@@ -103,6 +103,40 @@ a:hover { text-decoration: underline; }
 .nav a.active { color: var(--violet); font-weight: 600; }
 .header-cta { margin-left: 0.4rem; }
 
+/* ---------- language switch ---------- */
+.lang-switch {
+  display: flex;
+  gap: 0.4rem;
+  margin-left: 1rem;
+}
+.lang-switch button {
+  background: transparent;
+  border: 1.5px solid var(--line);
+  border-radius: 8px;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--body);
+  cursor: pointer;
+  transition: var(--transition);
+}
+.lang-switch button:hover {
+  border-color: var(--violet);
+  color: var(--violet);
+  background: rgba(109, 92, 247, 0.05);
+}
+.lang-switch button.active {
+  background: var(--grad);
+  color: #fff;
+  border-color: transparent;
+}
+
+.logo-image {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
 .burger {
   display: none;
   margin-left: auto;
