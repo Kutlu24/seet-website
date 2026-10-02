@@ -37,12 +37,12 @@
     <button class="burger" aria-label="Menü öffnen" aria-expanded="false">☰</button>
   </div>
   <div class="mobile-panel">
-    <a href="/">Start</a>
-    <a href="/programm.html">Programm</a>
-    <a href="/ueber-uns.html">Über uns</a>
-    <a href="/mitmachen.html">Mitmachen</a>
-    <a href="/kontakt.html">Kontakt</a>
-    <a href="/mitmachen.html#spenden">Spenden</a>
+    <a data-i18n="nav_start" href="/">Start</a>
+    <a data-i18n="nav_program" href="/programm.html">Programm</a>
+    <a data-i18n="nav_about" href="/ueber-uns.html">Über uns</a>
+    <a data-i18n="nav_join" href="/mitmachen.html">Mitmachen</a>
+    <a data-i18n="nav_contact" href="/kontakt.html">Kontakt</a>
+    <a data-i18n="nav_donate" href="/mitmachen.html#spenden">Spenden</a>
   </div>
 </header>
 
@@ -84,24 +84,24 @@
 <section>
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="kicker">Aktuell</span>
-      <h2>Was gerade passiert</h2>
+      <span class="kicker" data-i18n="section_current">Aktuell</span>
+      <h2 data-i18n="section_happening">Was gerade passiert</h2>
     </div>
     <div class="grid grid-3">
       <article class="card reveal">
-        <span class="tag">Jahrgang 2026–27</span>
-        <h3>Jahrgang 2026–27 gestartet</h3>
-        <p>Im Mai 2026 sind 41 Mentees mit 35 Mentor:innen in die neue Mentoring-Runde gestartet.</p>
+        <span class="tag" data-i18n="card1_tag">Jahrgang 2026–27</span>
+        <h3 data-i18n="card1_title">Jahrgang 2026–27 gestartet</h3>
+        <p data-i18n="card1_desc">Im Mai 2026 sind 41 Mentees mit 35 Mentor:innen in die neue Mentoring-Runde gestartet.</p>
       </article>
       <article class="card reveal">
-        <span class="tag">Bericht</span>
-        <h3>Jahresbericht 2025 erschienen</h3>
-        <p>Unser Jahresbericht dokumentiert Wirkung, Zahlen und Geschichten aus dem Programm.</p>
+        <span class="tag" data-i18n="card2_tag">Bericht</span>
+        <h3 data-i18n="card2_title">Jahresbericht 2025 erschienen</h3>
+        <p data-i18n="card2_desc">Unser Jahresbericht dokumentiert Wirkung, Zahlen und Geschichten aus dem Programm.</p>
       </article>
       <article class="card reveal">
-        <span class="tag">Netzwerk</span>
-        <h3>Alumni-Netzwerk gegründet</h3>
-        <p>Ehemalige Mentees blicken nun selbst zurück — und geben etwas weiter.</p>
+        <span class="tag" data-i18n="card3_tag">Netzwerk</span>
+        <h3 data-i18n="card3_title">Alumni-Netzwerk gegründet</h3>
+        <p data-i18n="card3_desc">Ehemalige Mentees blicken nun selbst zurück — und geben etwas weiter.</p>
       </article>
     </div>
   </div>
@@ -116,15 +116,15 @@
         </div>
       </div>
       <div>
-        <span class="kicker">Das Programm</span>
-        <h2>Drei Säulen, die tragen</h2>
-        <p>Das Studienförderprogramm begleitet geflüchtete Menschen bei der (Wieder-)Aufnahme eines Studiums an einer Schweizer Hochschule.</p>
+        <span class="kicker" data-i18n="section_program">Das Programm</span>
+        <h2 data-i18n="section_pillars">Drei Säulen, die tragen</h2>
+        <p data-i18n="pillars_desc">Das Studienförderprogramm begleitet geflüchtete Menschen bei der (Wieder-)Aufnahme eines Studiums an einer Schweizer Hochschule.</p>
         <ul class="card-feats" style="list-style:none;padding:0;margin:1.2rem 0 0;">
-          <li style="padding-left:1.6rem;position:relative;margin-bottom:0.6rem;"><span style="position:absolute;left:0;color:var(--violet);font-weight:700;">✓</span> Individuelles Mentoring — ein Jahr, eine feste Begleitperson</li>
-          <li style="padding-left:1.6rem;position:relative;margin-bottom:0.6rem;"><span style="position:absolute;left:0;color:var(--violet);font-weight:700;">✓</span> Netzwerk &amp; Skills — Workshops, Kontakte, Orientierung</li>
-          <li style="padding-left:1.6rem;position:relative;"><span style="position:absolute;left:0;color:var(--violet);font-weight:700;">✓</span> Finanzielle Unterstützung — Sprachkurse, Zertifikate, Übersetzungen</li>
+          <li style="padding-left:1.6rem;position:relative;margin-bottom:0.6rem;"><span style="position:absolute;left:0;color:var(--violet);font-weight:700;">✓</span> <span data-i18n="pillar1">Individuelles Mentoring — ein Jahr, eine feste Begleitperson</span></li>
+          <li style="padding-left:1.6rem;position:relative;margin-bottom:0.6rem;"><span style="position:absolute;left:0;color:var(--violet);font-weight:700;">✓</span> <span data-i18n="pillar2">Netzwerk &amp; Skills — Workshops, Kontakte, Orientierung</span></li>
+          <li style="padding-left:1.6rem;position:relative;"><span style="position:absolute;left:0;color:var(--violet);font-weight:700;">✓</span> <span data-i18n="pillar3">Finanzielle Unterstützung — Sprachkurse, Zertifikate, Übersetzungen</span></li>
         </ul>
-        <p style="margin-top:1.6rem;"><a class="btn btn-primary" href="/programm.html">Mehr erfahren</a></p>
+        <p style="margin-top:1.6rem;"><a class="btn btn-primary" data-i18n="learn_more" href="/programm.html">Mehr erfahren</a></p>
       </div>
     </div>
   </div>
@@ -134,19 +134,19 @@
   <div class="wrap">
     <div class="grid grid-2" style="align-items:center;">
       <div class="reveal">
-        <span class="kicker">Mitmachen</span>
-        <h2>Dein Einsatz verändert Wege</h2>
-        <p>Ob als Mentor:in, Gönner:in oder Vereinsmitglied — jede Form der Unterstützung bringt einen Menschen näher an sein Studium.</p>
+        <span class="kicker" data-i18n="section_join">Mitmachen</span>
+        <h2 data-i18n="section_impact">Dein Einsatz verändert Wege</h2>
+        <p data-i18n="join_desc">Ob als Mentor:in, Gönner:in oder Vereinsmitglied — jede Form der Unterstützung bringt einen Menschen näher an sein Studium.</p>
         <div class="hero-cta">
-          <a class="btn btn-primary" href="/mitmachen.html#mentoring">Mentor:in werden</a>
-          <a class="btn btn-amber" href="/mitmachen.html#spenden">Gönner:in werden</a>
-          <a class="btn btn-ghost" href="/mitmachen.html#mitglied">Vereinsmitglied werden</a>
+          <a class="btn btn-primary" data-i18n="btn_mentor" href="/mitmachen.html#mentoring">Mentor:in werden</a>
+          <a class="btn btn-amber" data-i18n="btn_donor" href="/mitmachen.html#spenden">Gönner:in werden</a>
+          <a class="btn btn-ghost" data-i18n="btn_member" href="/mitmachen.html#mitglied">Vereinsmitglied werden</a>
         </div>
       </div>
       <div class="reveal">
         <div class="quote-band">
-          <blockquote>„SEET steht für Chancengleichheit und das unantastbare Recht auf Bildung ein."</blockquote>
-          <cite>Unser Leitbild</cite>
+          <blockquote data-i18n="quote">„SEET steht für Chancengleichheit und das unantastbare Recht auf Bildung ein."</blockquote>
+          <cite data-i18n="quote_attr">Unser Leitbild</cite>
         </div>
       </div>
     </div>
