@@ -131,4 +131,146 @@
       }, 3000);
     });
   }
+
+  /* ---- PHASE 2: SCROLL EFFECTS ---- */
+
+  /* Scroll progress indicator */
+  var scrollProgress = document.createElement('div');
+  scrollProgress.className = 'scroll-progress';
+  document.body.appendChild(scrollProgress);
+
+  window.addEventListener('scroll', function () {
+    var scrollPercentage = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+    scrollProgress.style.width = scrollPercentage + '%';
+  });
+
+  /* Parallax effect on scroll */
+  var parallaxElements = document.querySelectorAll('.parallax-image img, .hero-photo img');
+  if ('IntersectionObserver' in window && parallaxElements.length > 0) {
+    parallaxElements.forEach(function (el) {
+      window.addEventListener('scroll', function () {
+        var elementTop = el.getBoundingClientRect().top;
+        var windowHeight = window.innerHeight;
+
+        if (elementTop < windowHeight && elementTop > -window.innerHeight) {
+          var scrollAmount = (windowHeight - elementTop) * 0.1;
+          el.style.transform = 'translateY(' + scrollAmount + 'px)';
+        }
+      });
+    });
+  }
+
+  /* Scroll-triggered reveal animations */
+  var observerOptions = {
+    threshold: 0.15,
+    rootMargin: '0px 0px -80px 0px'
+  };
+
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+      }
+    });
+  }, observerOptions);
+
+  /* Observe elements for scroll reveal */
+  document.querySelectorAll('.section-fade-in, .card.gradient-animate, .image-mask-reveal, .blur-reveal').forEach(function (el) {
+    observer.observe(el);
+  });
+
+  /* Text reveal animation */
+  var textReveals = document.querySelectorAll('.text-reveal');
+  textReveals.forEach(function (el) {
+    var text = el.textContent;
+    el.textContent = '';
+    var words = text.split(' ');
+    words.forEach(function (word, index) {
+      var span = document.createElement('span');
+      span.textContent = word + ' ';
+      span.style.display = 'inline-block';
+      el.appendChild(span);
+    });
+  });
+
+  var textObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animated');
+      }
+    });
+  }, observerOptions);
+
+  textReveals.forEach(function (el) {
+    textObserver.observe(el);
+  });
+
+  /* Header underline animation */
+  var headerUnderlines = document.querySelectorAll('.header-underline');
+  var underlineObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        setTimeout(function () {
+          entry.target.classList.add('animated');
+        }, 200);
+      }
+    });
+  }, observerOptions);
+
+  headerUnderlines.forEach(function (el) {
+    underlineObserver.observe(el);
+  });
+
+  /* Staggered list animation */
+  var staggerLists = document.querySelectorAll('.stagger-list');
+  var listObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animated');
+      }
+    });
+  }, observerOptions);
+
+  staggerLists.forEach(function (el) {
+    listObserver.observe(el);
+  });
+
+  /* Tilt effect on cards (advanced) */
+  var tiltCards = document.querySelectorAll('.card.tilt-effect');
+  tiltCards.forEach(function (card) {
+    card.addEventListener('mousemove', function (e) {
+      var rect = card.getBoundingClientRect();
+      var x = e.clientX - rect.left;
+      var y = e.clientY - rect.top;
+
+      var centerX = rect.width / 2;
+      var centerY = rect.height / 2;
+
+      var rotateX = (y - centerY) / 10;
+      var rotateY = (centerX - x) / 10;
+
+      card.style.transform = 'translateY(-12px) scale(1.02) rotateX(' + rotateX + 'deg) rotateY(' + rotateY + 'deg)';
+    });
+
+    card.addEventListener('mouseleave', function () {
+      card.style.transform = 'translateY(-12px) scale(1.02) rotateX(0deg) rotateY(0deg)';
+    });
+  });
+
+  /* Smooth scroll for anchor links */
+  document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+    anchor.addEventListener('click', function (e) {
+      var href = this.getAttribute('href');
+      if (href && href !== '#') {
+        e.preventDefault();
+        var target = document.querySelector(href);
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      }
+    });
+  });
 })();

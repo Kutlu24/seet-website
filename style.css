@@ -1241,3 +1241,239 @@ textarea:focus {
   -webkit-backdrop-filter: blur(20px);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
+
+/* ===== PHASE 2: SCROLL & PARALLAX EFFECTS ===== */
+
+/* Scroll-triggered image parallax */
+.hero-photo img {
+  will-change: transform;
+}
+
+.parallax-image {
+  position: relative;
+}
+
+.parallax-image img {
+  transition: transform 0.3s ease-out;
+}
+
+/* Diagonal section dividers */
+section.diagonal-top {
+  clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
+  padding-bottom: 4rem;
+}
+
+section.diagonal-bottom {
+  clip-path: polygon(0 8%, 100% 0, 100% 100%, 0 100%);
+  padding-top: 4rem;
+}
+
+/* Floating elements with parallax */
+.float-parallax {
+  will-change: transform;
+  transition: transform 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+/* Text reveal on scroll */
+.text-reveal {
+  position: relative;
+  overflow: hidden;
+}
+
+.text-reveal span {
+  display: inline-block;
+  animation: none;
+}
+
+.text-reveal.animated span {
+  animation: text-slide-up 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+.text-reveal span:nth-child(1) { animation-delay: 0ms; }
+.text-reveal span:nth-child(2) { animation-delay: 50ms; }
+.text-reveal span:nth-child(3) { animation-delay: 100ms; }
+.text-reveal span:nth-child(4) { animation-delay: 150ms; }
+.text-reveal span:nth-child(5) { animation-delay: 200ms; }
+
+@keyframes text-slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+/* Advanced card tilt effect */
+.card.tilt-effect {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.card.tilt-effect:hover {
+  transform: translateY(-12px) scale(1.02) rotateX(2deg) rotateY(2deg);
+}
+
+/* Gradient shift animation on cards */
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.card.gradient-animate {
+  background: linear-gradient(-45deg, var(--card), rgba(109, 92, 247, 0.05), var(--card));
+  background-size: 200% 200%;
+  animation: gradient-shift 6s ease infinite;
+  opacity: 0;
+}
+
+.card.gradient-animate.in-view {
+  animation: gradient-shift 6s ease infinite, fade-in 0.8s ease forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Staggered parallax for photo strips */
+.photo-strip .media {
+  will-change: transform;
+}
+
+.photo-strip .media:nth-child(1) {
+  transition-delay: 0ms;
+}
+
+.photo-strip .media:nth-child(2) {
+  transition-delay: 100ms;
+}
+
+.photo-strip .media:nth-child(3) {
+  transition-delay: 200ms;
+}
+
+.photo-strip:hover .media {
+  transform: scale(1.05);
+}
+
+/* Section fade-in on scroll */
+.section-fade-in {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 1s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.section-fade-in.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animated underline for headers */
+.header-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.header-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background: var(--grad);
+  transition: width 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.header-underline.animated::after {
+  width: 100%;
+}
+
+/* Staggered list animations */
+.stagger-list {
+  list-style: none;
+  padding: 0;
+}
+
+.stagger-list li {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.stagger-list.animated li {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.stagger-list li:nth-child(1) { transition-delay: 0ms; }
+.stagger-list li:nth-child(2) { transition-delay: 100ms; }
+.stagger-list li:nth-child(3) { transition-delay: 200ms; }
+.stagger-list li:nth-child(4) { transition-delay: 300ms; }
+.stagger-list li:nth-child(5) { transition-delay: 400ms; }
+
+/* Scroll progress indicator */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: var(--grad);
+  width: 0%;
+  z-index: 100;
+  transition: width 0.1s ease;
+}
+
+/* Counting animation for numbers */
+.count-up {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Smooth section transitions */
+section {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Image mask reveal on scroll */
+.image-mask-reveal {
+  -webkit-mask-image: linear-gradient(to right, transparent, black);
+  mask-image: linear-gradient(to right, transparent, black);
+  -webkit-mask-size: 200% 100%;
+  mask-size: 200% 100%;
+  -webkit-mask-position: 100% 0;
+  mask-position: 100% 0;
+  transition: -webkit-mask-position 0.8s ease, mask-position 0.8s ease;
+}
+
+.image-mask-reveal.in-view {
+  -webkit-mask-position: 0 0;
+  mask-position: 0 0;
+}
+
+/* Blurred background reveal */
+.blur-reveal {
+  filter: blur(10px);
+  transition: filter 0.8s ease;
+}
+
+.blur-reveal.in-view {
+  filter: blur(0);
+}
