@@ -140,6 +140,7 @@ a:hover { text-decoration: underline; }
   height: 56px;
   width: auto;
   display: block;
+  filter: brightness(2) invert(0.15);
 }
 
 /* ---------- team section ---------- */
