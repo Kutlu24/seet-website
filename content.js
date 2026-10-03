@@ -51,8 +51,9 @@
 
   function isSafeUrl(url) {
     if (!url) return false;
-    var lower = String(url).toLowerCase();
-    return lower.indexOf('http://') === 0 || lower.indexOf('https://') === 0 || lower.indexOf('/') === 0;
+    var u = String(url).trim();
+    if (/^(https?:|mailto:|tel:)/i.test(u)) return true;
+    return !/^[a-z][a-z0-9+.\-]*:/i.test(u) && u.indexOf('//') !== 0;
   }
 
   function lang() {

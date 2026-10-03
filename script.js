@@ -11,12 +11,6 @@
     return fallback;
   }
 
-  function esc(s) {
-    return String(s == null ? '' : s)
-      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
-      .replace(/"/g, '&quot;');
-  }
-
   /* ---- mobile navigation ---- */
   var burger = document.querySelector('.burger');
   var panel = document.querySelector('.mobile-panel');
@@ -142,6 +136,18 @@
     var msg = document.getElementById('form-message');
     var endpoint = form.getAttribute('data-endpoint') || window.SEET_NEWSLETTER_ENDPOINT || '';
 
+    function showMessage(html) {
+      if (!msg) return;
+      form.style.display = 'none';
+      msg.style.display = 'block';
+      msg.innerHTML = html;
+      setTimeout(function () {
+        form.reset();
+        form.style.display = 'flex';
+        msg.style.display = 'none';
+      }, 6000);
+    }
+
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       var name = form.querySelector('input[name="name"]');
@@ -149,21 +155,8 @@
       if (!name.value.trim() || !email.value.trim()) return;
 
       if (!endpoint) {
-        msg.innerHTML = '';
-        var hint = document.createElement('span');
-        hint.textContent = t('newsletter_hint', 'Für den Newsletter schreib uns einfach: ');
-        var link = document.createElement('a');
-        link.href = 'mailto:communication@seet.ch';
-        link.textContent = 'communication@seet.ch';
-        msg.appendChild(hint);
-        msg.appendChild(link);
-        form.style.display = 'none';
-        msg.style.display = 'block';
-        setTimeout(function () {
-          form.reset();
-          form.style.display = 'flex';
-          msg.style.display = 'none';
-        }, 6000);
+        showMessage(t('newsletter_hint',
+          'Für den Newsletter schreib uns einfach: <a href="mailto:communication@seet.ch">communication@seet.ch</a>'));
         return;
       }
 
@@ -177,32 +170,11 @@
       })
         .then(function (res) {
           if (!res.ok) throw new Error('HTTP ' + res.status);
-          msg.innerHTML = '';
-          msg.textContent = t('newsletter_ok', 'Vielen Dank! Du erhältst in Kürze eine Bestätigungsmail.');
-          form.style.display = 'none';
-          msg.style.display = 'block';
-          setTimeout(function () {
-            form.reset();
-            form.style.display = 'flex';
-            msg.style.display = 'none';
-          }, 6000);
+          showMessage(t('newsletter_ok', 'Vielen Dank! Du erhältst in Kürze eine Bestätigungsmail.'));
         })
         .catch(function () {
-          msg.innerHTML = '';
-          var fail = document.createElement('span');
-          fail.textContent = t('newsletter_fail', 'Das hat leider nicht geklappt — schreib uns an ');
-          var link2 = document.createElement('a');
-          link2.href = 'mailto:communication@seet.ch';
-          link2.textContent = 'communication@seet.ch';
-          msg.appendChild(fail);
-          msg.appendChild(link2);
-          form.style.display = 'none';
-          msg.style.display = 'block';
-          setTimeout(function () {
-            form.reset();
-            form.style.display = 'flex';
-            msg.style.display = 'none';
-          }, 6000);
+          showMessage(t('newsletter_fail',
+            'Das hat leider nicht geklappt — schreib uns an <a href="mailto:communication@seet.ch">communication@seet.ch</a>.'));
         })
         .then(function () {
           if (button) button.disabled = false;

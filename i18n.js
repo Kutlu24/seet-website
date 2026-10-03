@@ -103,7 +103,7 @@ var I18N = (function() {
       if (el.tagName === 'A' && el.getAttribute('data-i18n-title')) {
         el.setAttribute('title', text);
       } else {
-        el.textContent = text;
+        el.innerHTML = text;
       }
     });
 
