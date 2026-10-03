@@ -14,6 +14,38 @@
     return path;
   }
 
+  // Path prefix of the deployment, without the origin: "/seet-website/" on
+  // GitHub Pages, "/" (or "" for a relative script) on a root deployment.
+  var SITE_BASE = (function () {
+    var scripts = document.getElementsByTagName('script');
+    for (var i = 0; i < scripts.length; i++) {
+      var src = scripts[i].getAttribute('src') || '';
+      if (/(^|\/)content\.js(\?|$)/.test(src)) {
+        return src.replace(/content\.js(\?.*)?$/, '').replace(/^[a-z]+:\/\/[^/]+/, '');
+      }
+    }
+    var base = document.querySelector('base[href]');
+    if (base) return base.getAttribute('href').replace(/^[a-z]+:\/\/[^/]+/, '');
+    return '';
+  })();
+
+  // The CMS stores media paths as site-rooted ("/img/…", or "/seet-website/
+  // img/…" for uploads), which resolves to a 404 when the site is served from
+  // a subpath. Re-root every media path at the current deployment instead.
+  function resolvePath(path) {
+    if (!path) return path;
+    if (/^(https?:)?\/\//.test(path) || path.indexOf('data:') === 0) return path;
+    var p = path.charAt(0) === '/' ? path : '/' + path;
+    if (SITE_BASE && p.indexOf(SITE_BASE) === 0) return p;
+    return SITE_BASE + p.slice(1);
+  }
+
+  function esc(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
   function apply(c) {
     if (!c) return;
 
@@ -46,13 +78,14 @@
     var html = '';
     groups.forEach(function (g) {
       html += '<div class="team-group reveal">';
-      html += '<h3 data-i18n="' + g.id + '">' + I18N.get(g.id) + '</h3><div class="team-grid">';
+      html += '<h3 data-i18n="' + esc(g.id) + '">' + esc(I18N.get(g.id)) + '</h3><div class="team-grid">';
       (g.members || []).forEach(function (m) {
+        var roleAttr = (!m.role && m.role_key) ? ' data-i18n="' + esc(m.role_key) + '"' : '';
         html += '<div class="member">'
-          + '<div class="member-photo"><img src="' + m.photo + '" alt="' + m.name + '" loading="lazy"></div>'
-          + '<span class="member-name">' + m.name + '</span>'
-          + '<span class="member-role"' + (m.role ? '' : ' data-i18n="' + m.role_key + '"') + '>'
-          + (m.role || I18N.get(m.role_key)) + '</span>'
+          + '<div class="member-photo"><img src="' + esc(resolvePath(m.photo)) + '" alt="' + esc(m.name) + '" loading="lazy"></div>'
+          + '<span class="member-name">' + esc(m.name) + '</span>'
+          + '<span class="member-role"' + roleAttr + '>'
+          + esc(m.role || (m.role_key ? I18N.get(m.role_key) : '')) + '</span>'
           + '</div>';
       });
       html += '</div></div>';
