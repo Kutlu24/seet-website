@@ -1,0 +1,43 @@
+{
+  "posts": [
+    {
+      "id": "artikel-1",
+      "date": "2026-10-01",
+      "image": "img/mentor.jpg",
+      "webp": "img/mentor.webp",
+      "link": "",
+      "title": "Jahrgang 2026–27 gestartet: Neue Mentoring-Paare nehmen Fahrt auf",
+      "title_en": "2026–27 Cohort Started: New Mentor-Mentee Pairs Get Going",
+      "title_fr": "Promotion 2026–27 lancée : Nouveaux duos de mentorat se mettent en route",
+      "excerpt": "Mit dem Kick-off-Event am 18. Mai haben 41 Mentees und 35 Mentoren ihre Mentoring-Reise begonnen. Wir erzählen von den ersten Wochen und neuen Perspektiven.",
+      "excerpt_en": "With the kick-off event on May 18, 41 mentees and 35 mentors started their mentoring journey. We share stories from the first weeks and new perspectives.",
+      "excerpt_fr": "Avec l'événement de lancement le 18 mai, 41 étudiants et 35 mentors ont commencé leur voyage de mentorat. Nous partageons les histoires des premières semaines et les nouvelles perspectives."
+    },
+    {
+      "id": "artikel-2",
+      "date": "2026-09-15",
+      "image": "img/group.jpg",
+      "webp": "img/group.webp",
+      "link": "",
+      "title": "Alumni-Netzwerk gegründet: Mentees unterstützen Mentees",
+      "title_en": "Alumni Network Launched: Mentees Supporting Mentees",
+      "title_fr": "Réseau Alumni créé : Les étudiants soutiennent les étudiants",
+      "excerpt": "Ehemalige Teilnehmende gründen neues Netzwerk zur gegenseitigen Unterstützung. Erfahrt, wie die Alumni-Community SEET verstärkt.",
+      "excerpt_en": "Former participants launch a new network for mutual support. Learn how the SEET alumni community strengthens our mission.",
+      "excerpt_fr": "Les anciens participants créent un nouveau réseau d'entraide. Découvrez comment la communauté des anciens élèves de SEET renforce notre mission."
+    },
+    {
+      "id": "artikel-3",
+      "date": "2026-08-20",
+      "image": "img/study.jpg",
+      "webp": "img/study.webp",
+      "link": "",
+      "title": "Erfolgsgeschichte: Von der Flucht zum Studienplatz",
+      "title_en": "Success Story: From Flight to University",
+      "title_fr": "Histoire de Succès : De la Fuite au Semestre Universitaire",
+      "excerpt": "Porträt einer Mentee, die durch SEET einen Studienplatz an der Universität Zürich erhielt. Ihre Geschichte zeigt, wie Bildung Leben verändert.",
+      "excerpt_en": "A portrait of a mentee who gained admission to the University of Zurich through SEET. Her story shows how education can transform lives.",
+      "excerpt_fr": "Portrait d'une étudiante qui a obtenu son admission à l'Université de Zurich grâce à SEET. Son histoire montre comment l'éducation peut transformer des vies."
+    }
+  ]
+}

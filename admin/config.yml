@@ -1658,6 +1658,69 @@ collections:
 
 
 
+  - name: blog
+    label: Blog-Beiträge
+    label_singular: Beitrag
+    editor:
+      preview: false
+    files:
+      - name: posts
+        label: Beiträge der Blog-Seite
+        file: content/blog.json
+        format: json
+        fields:
+          - name: posts
+            label: "Beiträge (Reihenfolge = Anzeige-Reihenfolge)"
+            widget: list
+            summary: "{{fields.date}} — {{fields.title}}"
+            fields:
+              - { name: id, label: "ID (einzigartig, z.B. artikel-4)", widget: string, hint: "Einmal vergeben und nicht umdefinieren." }
+              - { name: date, label: "Datum (JJJJ-MM-TT)", widget: string }
+              - { name: image, label: "Bild", widget: image }
+              - { name: webp, label: "WebP-Bild (optional)", widget: image, required: false }
+              - { name: width, label: "Breite in px (optional, gegen Layout-Verschiebung)", widget: string, required: false }
+              - { name: height, label: "Höhe in px (optional)", widget: string, required: false }
+              - { name: link, label: "Weiterführender Link (optional)", widget: string, required: false }
+              - { name: title, label: "Titel (DE)", widget: string }
+              - { name: title_en, label: "Titel (EN)", widget: string, required: false, hint: "Leer lassen = DE-Text wird verwendet." }
+              - { name: title_fr, label: "Titel (FR)", widget: string, required: false, hint: "Leer lassen = DE-Text wird verwendet." }
+              - { name: excerpt, label: "Anrisstext (DE)", widget: text }
+              - { name: excerpt_en, label: "Anrisstext (EN)", widget: text, required: false, hint: "Leer lassen = DE-Text wird verwendet." }
+              - { name: excerpt_fr, label: "Anrisstext (FR)", widget: text, required: false, hint: "Leer lassen = DE-Text wird verwendet." }
+
+  - name: faq
+    label: FAQ (Häufige Fragen)
+    label_singular: Abschnitt
+    editor:
+      preview: false
+    files:
+      - name: faq
+        label: Fragen & Antworten
+        file: content/faq.json
+        format: json
+        fields:
+          - name: sections
+            label: Abschnitte (Reihenfolge = Anzeige-Reihenfolge)
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { name: id, label: "ID (z.B. faq_section1)", widget: string, required: false }
+              - { name: title, label: "Abschnittstitel (DE)", widget: string }
+              - { name: title_en, label: "Abschnittstitel (EN)", widget: string, required: false, hint: "Leer lassen = DE-Text wird verwendet." }
+              - { name: title_fr, label: "Abschnittstitel (FR)", widget: string, required: false, hint: "Leer lassen = DE-Text wird verwendet." }
+              - name: items
+                label: Fragen
+                widget: list
+                summary: "{{fields.q}}"
+                fields:
+                  - { name: id, label: "ID (z.B. q10)", widget: string, required: false }
+                  - { name: q, label: "Frage (DE)", widget: string }
+                  - { name: q_en, label: "Frage (EN)", widget: string, required: false, hint: "Leer lassen = DE-Text wird verwendet." }
+                  - { name: q_fr, label: "Frage (FR)", widget: string, required: false, hint: "Leer lassen = DE-Text wird verwendet." }
+                  - { name: a, label: "Antwort (DE)", widget: text }
+                  - { name: a_en, label: "Antwort (EN)", widget: text, required: false, hint: "Leer lassen = DE-Text wird verwendet." }
+                  - { name: a_fr, label: "Antwort (FR)", widget: text, required: false, hint: "Leer lassen = DE-Text wird verwendet." }
+
   - name: content
     label: Ana sayfa içerikleri
     editor:
@@ -1700,6 +1763,20 @@ collections:
               - { name: label, label: "Etiket", widget: string }
               - { name: value, label: "Sayı", widget: number, value_type: int, min: 0 }
           - { name: apply_url, label: "Başvuru formu linki", widget: string }
+          - name: photos
+            label: "Fotos-Leiste (Startseite) — Bildunterschriften hier pflegen"
+            hint: "photo1_cap–photo3_cap in den Texten sind nur der Rückfall, falls die Liste leer ist."
+            widget: list
+            required: false
+            summary: "{{fields.caption}}"
+            fields:
+              - { name: image, label: "Bild", widget: image }
+              - { name: webp, label: "WebP (optional)", widget: image, required: false }
+              - { name: width, label: "Breite in px (optional)", widget: string, required: false }
+              - { name: height, label: "Höhe in px (optional)", widget: string, required: false }
+              - { name: caption, label: "Bildunterschrift (DE)", widget: string }
+              - { name: caption_en, label: "Bildunterschrift (EN)", widget: string, required: false, hint: "Leer lassen = DE-Text wird verwendet." }
+              - { name: caption_fr, label: "Bildunterschrift (FR)", widget: string, required: false, hint: "Leer lassen = DE-Text wird verwendet." }
           - name: team_groups
             label: Takım grupları ve üyeler
             widget: list

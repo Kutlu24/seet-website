@@ -1,0 +1,109 @@
+{
+  "sections": [
+    {
+      "id": "faq_section1",
+      "title": "Zum Programm",
+      "title_en": "About the Program",
+      "title_fr": "À Propos du Programme",
+      "items": [
+        {
+          "id": "q1",
+          "q": "Für wen ist das SEET-Programm?",
+          "q_en": "Who is the SEET program for?",
+          "q_fr": "À qui s'adresse le programme SEET ?",
+          "a": "Das Programm richtet sich an geflüchtete Menschen, die ein Studium beginnen oder wiedernehmen möchten. Wichtig sind Motivation und die Bereitschaft, von der Unterstützung Gebrauch zu machen.",
+          "a_en": "The program is designed for refugees who want to start or resume their studies. What matters is motivation and willingness to use our support.",
+          "a_fr": "Le programme s'adresse aux réfugiés qui souhaitent commencer ou reprendre leurs études. L'important est la motivation et la volonté de bénéficier de notre soutien."
+        },
+        {
+          "id": "q2",
+          "q": "Wie lange dauert das Mentoring?",
+          "q_en": "How long does mentoring last?",
+          "q_fr": "Combien de temps dure le mentorat ?",
+          "a": "Das Mentoring dauert ein Jahr. In dieser Zeit treffen sich Mentor und Mentee regelmäßig (ca. 1 Stunde pro Woche) und arbeiten gemeinsam an den Zielen.",
+          "a_en": "Mentoring lasts one year. During this time, mentor and mentee meet regularly (approximately 1 hour per week) and work together on your goals.",
+          "a_fr": "Le mentorat dure un an. Pendant ce temps, le mentor et l'étudiant se rencontrent régulièrement (environ 1 heure par semaine) et travaillent ensemble à vos objectifs."
+        },
+        {
+          "id": "q3",
+          "q": "Kostet die Teilnahme etwas?",
+          "q_en": "Is there a cost to participate?",
+          "q_fr": "Y a-t-il un coût pour participer ?",
+          "a": "Nein, das SEET-Programm ist kostenlos. Alle Kosten werden durch Spenden und Partnerschaften finanziert.",
+          "a_en": "No, the SEET program is free. All costs are financed through donations and partnerships.",
+          "a_fr": "Non, le programme SEET est gratuit. Tous les frais sont financés par des dons et des partenariats."
+        }
+      ]
+    },
+    {
+      "id": "faq_section2",
+      "title": "Bewerbung",
+      "title_en": "Application",
+      "title_fr": "Candidature",
+      "items": [
+        {
+          "id": "q4",
+          "q": "Wann kann ich mich bewerben?",
+          "q_en": "When can I apply?",
+          "q_fr": "Quand puis-je postuler ?",
+          "a": "Bewerbungen sind jeweils im Frühjahr möglich. Die genauen Fristen findest du auf der Startseite und im Bewerbungsformular.",
+          "a_en": "Applications are accepted in spring each year. You can find the exact deadlines on our homepage and in the application form.",
+          "a_fr": "Les candidatures sont acceptées au printemps chaque année. Vous pouvez trouver les délais exacts sur notre page d'accueil et dans le formulaire de candidature."
+        },
+        {
+          "id": "q5",
+          "q": "Wie lange dauert das Bewerbungsverfahren?",
+          "q_en": "How long does the application process take?",
+          "q_fr": "Combien de temps dure le processus de candidature ?",
+          "a": "Das Verfahren dauert etwa 3-4 Wochen: Fragebogen, Auswahlgespräch und dann die Entscheidung.",
+          "a_en": "The process takes approximately 3-4 weeks: questionnaire, interview, and then a decision.",
+          "a_fr": "Le processus prend environ 3-4 semaines : questionnaire, entretien, puis une décision."
+        },
+        {
+          "id": "q6",
+          "q": "Welche Unterlagen brauche ich für die Bewerbung?",
+          "q_en": "What documents do I need for the application?",
+          "q_fr": "Quels documents me faut-il pour postuler ?",
+          "a": "Du brauchst vor allem Zeit für den Fragebogen (ca. 15 Minuten). Weitere Unterlagen sind nicht notwendig — der Fragebogen gibt uns ausreichend Informationen.",
+          "a_en": "You mainly need time for the questionnaire (about 15 minutes). No other documents are required — the questionnaire gives us enough information.",
+          "a_fr": "Vous avez principalement besoin de temps pour le questionnaire (environ 15 minutes). Aucun autre document n'est requis — le questionnaire nous donne suffisamment d'informations."
+        }
+      ]
+    },
+    {
+      "id": "faq_section3",
+      "title": "Mitmachen",
+      "title_en": "Get Involved",
+      "title_fr": "S'Impliquer",
+      "items": [
+        {
+          "id": "q7",
+          "q": "Kann ich als Mentor mitarbeiten?",
+          "q_en": "Can I volunteer as a mentor?",
+          "q_fr": "Puis-je participer en tant que mentor ?",
+          "a": "Ja! Kontaktiere uns unter mentoring@seet.ch. Wichtig ist, dass du an einer Schweizer Hochschule studierst oder studiert hast und regelmäßig Zeit zur Verfügung stehst.",
+          "a_en": "Yes! Contact us at mentoring@seet.ch. It's important that you study or have studied at a Swiss university and have regular time available.",
+          "a_fr": "Oui ! Contactez-nous à mentoring@seet.ch. Il est important que vous étudiez ou ayez étudié à une université suisse et que vous ayez du temps disponible régulièrement."
+        },
+        {
+          "id": "q8",
+          "q": "Wie kann ich SEET finanziell unterstützen?",
+          "q_en": "How can I support SEET financially?",
+          "q_fr": "Comment puis-je soutenir SEET financièrement ?",
+          "a": "Du kannst eine einmalige oder regelmäßige Spende machen. Die Bankverbindung findest du unter Mitmachen → Gönner werden. Vielen Dank!",
+          "a_en": "You can make a one-time or regular donation. You'll find our bank details under Get Involved → Become a Donor. Thank you!",
+          "a_fr": "Vous pouvez faire un don unique ou régulier. Vous trouverez nos coordonnées bancaires sous S'Impliquer → Devenir Donateur. Merci !"
+        },
+        {
+          "id": "q9",
+          "q": "Kann ich als Freiwilliger mithelfen?",
+          "q_en": "Can I volunteer?",
+          "q_fr": "Puis-je être bénévole ?",
+          "a": "Gerne! Wir suchen Unterstützung in vielen Bereichen: Fundraising, IT, Kommunikation, Event-Management. Schreib uns unter seet@seet.ch.",
+          "a_en": "Absolutely! We need support in many areas: fundraising, IT, communications, event management. Write to us at seet@seet.ch.",
+          "a_fr": "Bien sûr ! Nous avons besoin de soutien dans de nombreux domaines : levée de fonds, informatique, communications, gestion d'événements. Écrivez-nous à seet@seet.ch."
+        }
+      ]
+    }
+  ]
+}

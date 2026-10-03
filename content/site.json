@@ -42,6 +42,35 @@
     }
   ],
   "apply_url": "https://purrfect-dinghy-c9d.notion.site/af01d5173a9983afa73881874f3f7a74?pvs=105",
+  "photos": [
+    {
+      "image": "img/group.jpg",
+      "webp": "img/group.webp",
+      "width": 1400,
+      "height": 1064,
+      "caption": "Gemeinschaft — Ausflug in der Schweiz",
+      "caption_en": "Community — outing in Switzerland",
+      "caption_fr": "Communauté — sortie en Suisse"
+    },
+    {
+      "image": "img/study.jpg",
+      "webp": "img/study.webp",
+      "width": 1400,
+      "height": 972,
+      "caption": "Mentoring — Lernen in der Gruppe",
+      "caption_en": "Mentoring — learning together",
+      "caption_fr": "Mentorat — apprendre ensemble"
+    },
+    {
+      "image": "img/library.jpg",
+      "webp": "img/library.webp",
+      "width": 1400,
+      "height": 788,
+      "caption": "Veranstaltung — Miteinander wachsen",
+      "caption_en": "Event — growing together",
+      "caption_fr": "Événement — grandir ensemble"
+    }
+  ],
   "team_groups": [
     {
       "id": "team_board",

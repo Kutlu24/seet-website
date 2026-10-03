@@ -1,7 +1,10 @@
-// CMS content overrides — fetched from content/site.json (edited via /admin/)
-// Falls back silently to the values in i18n.json when the file is missing.
-// Runs after i18n is ready so CMS edits are never overwritten by the
-// translation pass, and re-applies on every language switch.
+// CMS content — fetched from content/*.json (edited via /admin/)
+//   content/site.json  homepage texts, stats, application link, team, gallery
+//   content/blog.json  blog cards
+//   content/faq.json   FAQ sections
+// Each block falls back silently to the static markup / i18n.json when its
+// file is missing. Runs after i18n is ready so the translation pass can never
+// overwrite CMS edits, and rebuilds on every language switch.
 (function () {
   function siteUrl(path) {
     var scripts = document.getElementsByTagName('script');
@@ -46,35 +49,44 @@
       .replace(/"/g, '&quot;');
   }
 
-  function apply(c) {
-    if (!c) return;
+  function lang() {
+    return (window.I18N && typeof I18N.getLang === 'function') ? I18N.getLang() : 'de';
+  }
 
-    // Texts: hand them to the i18n layer so language switches keep them.
-    if (window.I18N && typeof I18N.setCmsTexts === 'function') {
-      I18N.setCmsTexts(c.texts || {});
-      I18N.setLanguage(I18N.getLang());
+  // de / en / fr triple as stored by the CMS, with the German text as fallback.
+  function pick(de, en, fr) {
+    var l = lang();
+    if (l === 'en' && en) return en;
+    if (l === 'fr' && fr) return fr;
+    return de;
+  }
+
+  function observeReveal(container) {
+    var nodes = container.querySelectorAll('.reveal');
+    if (!window.IntersectionObserver) {
+      Array.prototype.forEach.call(nodes, function (el) { el.classList.add('in'); });
+      return;
     }
-
-    // Stats
-    var nums = document.querySelectorAll('.stats .num');
-    (c.stats || []).forEach(function (s, i) {
-      if (!nums[i] || s.value === undefined || s.value === null) return;
-      nums[i].setAttribute('data-count', s.value);
-      nums[i].textContent = s.value;
-    });
-
-    // Application link
-    if (c.apply_url) {
-      document.querySelectorAll('a[data-i18n="apply_btn"]').forEach(function (a) {
-        a.setAttribute('href', c.apply_url);
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
       });
-    }
+    }, { threshold: 0.12 });
+    Array.prototype.forEach.call(nodes, function (el) { io.observe(el); });
+  }
 
-    // Team groups — rendered from CMS content, replacing static markup.
-    var groups = c.team_groups;
-    if (!groups || !groups.length) return;
+  function picture(src, webp, alt, extra) {
+    return '<picture>'
+      + (webp ? '<source type="image/webp" srcset="' + esc(resolvePath(webp)) + '">' : '')
+      + '<img src="' + esc(resolvePath(src)) + '" alt="' + esc(alt) + '"' + (extra || '') + ' loading="lazy">'
+      + '</picture>';
+  }
+
+  // ---- team (static markup on ueber-uns.html is the fallback) ------------
+  function renderTeam(c) {
+    var groups = c && c.team_groups;
     var container = document.getElementById('team-groups');
-    if (!container) return;
+    if (!groups || !groups.length || !container) return;
     var html = '';
     groups.forEach(function (g) {
       html += '<div class="team-group reveal">';
@@ -92,25 +104,149 @@
     });
     container.innerHTML = html;
     I18N.setLanguage(I18N.getLang());
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-    }, { threshold: 0.12 });
-    container.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+    observeReveal(container);
+  }
+
+  // ---- gallery (photo strip on the homepage) -----------------------------
+  function renderPhotos(c) {
+    var host = document.getElementById('photo-strip');
+    if (!host || !c || !c.photos || !c.photos.length) return;
+    host.innerHTML = c.photos.map(function (p) {
+      var cap = pick(p.caption, p.caption_en, p.caption_fr) || '';
+      var size = (p.width ? ' width="' + esc(p.width) + '"' : '')
+        + (p.height ? ' height="' + esc(p.height) + '"' : '');
+      return '<figure class="media media-captioned">'
+        + picture(p.image, p.webp, cap, size)
+        + '<figcaption>' + esc(cap) + '</figcaption></figure>';
+    }).join('');
+    observeReveal(host);
+  }
+
+  // ---- blog cards --------------------------------------------------------
+  function renderBlog() {
+    var grid = document.getElementById('blog-grid');
+    if (!grid || !blogData || !blogData.posts || !blogData.posts.length) return;
+    grid.innerHTML = blogData.posts.map(function (p) {
+      var title = pick(p.title, p.title_en, p.title_fr) || '';
+      var head = p.link
+        ? '<h3><a href="' + esc(p.link) + '">' + esc(title) + '</a></h3>'
+        : '<h3>' + esc(title) + '</h3>';
+      return '<article class="blog-card reveal">'
+        + '<div class="blog-thumb">' + picture(p.image, p.webp, title) + '</div>'
+        + '<div class="blog-body">'
+        + '<span class="blog-date">' + esc(p.date) + '</span>'
+        + head
+        + '<p class="blog-excerpt">' + esc(pick(p.excerpt, p.excerpt_en, p.excerpt_fr) || '') + '</p>'
+        + '</div></article>';
+    }).join('');
+    observeReveal(grid);
+  }
+
+  // ---- FAQ ---------------------------------------------------------------
+  var faqOpen = {};
+
+  function bindFaq(host) {
+    if (host.__bound) return;
+    host.__bound = true;
+    host.addEventListener('click', function (e) {
+      var el = e.target;
+      var q = null;
+      while (el && el !== host) {
+        if (el.className && String(el.className).indexOf('faq-question') !== -1) { q = el; break; }
+        el = el.parentNode;
+      }
+      if (!q) return;
+      q.classList.toggle('open');
+      var item = q.parentNode;
+      var answer = item.querySelector ? item.querySelector('.faq-answer') : null;
+      if (answer) answer.classList.toggle('open');
+      var key = item.getAttribute && item.getAttribute('data-key');
+      if (key) faqOpen[key] = q.classList.contains('open');
+    });
+  }
+
+  function renderFaq() {
+    var host = document.getElementById('faq-sections');
+    if (!host || !faqData || !faqData.sections || !faqData.sections.length) return;
+    bindFaq(host);
+    host.innerHTML = faqData.sections.map(function (s, si) {
+      var html = '<div class="reveal"><h2 class="faq-section-title">'
+        + esc(pick(s.title, s.title_en, s.title_fr) || '') + '</h2>';
+      (s.items || []).forEach(function (it, ii) {
+        var key = si + '-' + ii;
+        var open = faqOpen[key] ? ' open' : '';
+        html += '<div class="faq-item" data-key="' + esc(key) + '">'
+          + '<div class="faq-question' + open + '">'
+          + '<span>' + esc(pick(it.q, it.q_en, it.q_fr) || '') + '</span>'
+          + '<span class="faq-icon">▼</span></div>'
+          + '<div class="faq-answer' + open + '">'
+          + '<div class="faq-answer-content">' + esc(pick(it.a, it.a_en, it.a_fr) || '') + '</div>'
+          + '</div></div>';
+      });
+      return html + '</div>';
+    }).join('');
+    observeReveal(host);
+  }
+
+  // ---- homepage texts, stats, application link ---------------------------
+  function apply(c) {
+    // Texts: hand them to the i18n layer so language switches keep them.
+    if (window.I18N && typeof I18N.setCmsTexts === 'function') {
+      I18N.setCmsTexts(c.texts || {});
+      I18N.setLanguage(I18N.getLang());
+    }
+
+    // Stats
+    var nums = document.querySelectorAll('.stats .num');
+    Array.prototype.forEach.call(nums, function (num, i) {
+      var s = (c.stats || [])[i];
+      if (!s || s.value === undefined || s.value === null) return;
+      num.setAttribute('data-count', s.value);
+      num.textContent = s.value;
+    });
+
+    // Application link
+    if (c.apply_url) {
+      Array.prototype.forEach.call(document.querySelectorAll('a[data-i18n="apply_btn"]'), function (a) {
+        a.setAttribute('href', c.apply_url);
+      });
+    }
+
+    renderTeam(c);
   }
 
   var data = null;
+  var blogData = null;
+  var faqData = null;
   var i18nReady = false;
+
   function maybeApply() {
     if (!i18nReady) return;
     if (data) apply(data);
+    renderPhotos(data);
+    renderBlog();
+    renderFaq();
   }
 
-  // Fetch in parallel with the translations, apply only once i18n is ready
-  // so the translation pass can never overwrite CMS edits.
-  fetch(siteUrl('/content/site.json'))
-    .then(function (r) { return r.ok ? r.json() : null; })
-    .then(function (json) { data = json; maybeApply(); })
-    .catch(function () {});
+  function load(path, assign) {
+    fetch(siteUrl(path))
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (json) { assign(json); maybeApply(); })
+      .catch(function () {});
+  }
+
+  // Fetch in parallel with the translations, apply only once i18n is ready.
+  load('/content/site.json', function (json) { data = json; });
+  load('/content/blog.json', function (json) { blogData = json; });
+  load('/content/faq.json', function (json) { faqData = json; });
+
+  // Blocks that carry no data-i18n attributes build their markup for the
+  // current language themselves, so rebuild them on a language switch.
+  document.addEventListener('seet:langchange', function () {
+    renderPhotos(data);
+    renderBlog();
+    renderFaq();
+  });
 
   if (window.I18N && typeof I18N.onReady === 'function') {
     I18N.onReady(function () { i18nReady = true; maybeApply(); });

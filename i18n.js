@@ -141,6 +141,12 @@ var I18N = (function() {
     document.querySelectorAll('.lang-switch button').forEach(function (btn) {
       btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
     });
+
+    // Blocks rendered from CMS data (blog, FAQ, gallery) build their markup
+    // for the current language themselves — tell them to rebuild.
+    try {
+      document.dispatchEvent(new CustomEvent('seet:langchange', { detail: lang }));
+    } catch (e) { /* very old browsers: those blocks stay in the initial language */ }
   }
 
   // Register texts edited through the CMS; they win over i18n.json and are
