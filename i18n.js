@@ -38,11 +38,35 @@ var I18N = (function() {
     readyCallbacks = [];
   }
 
+  // i18n.json may be grouped for the CMS editor ({ nav: { start: … } }) or flat
+  // ({ nav_start: … }). Either way a key is the underscore-joined path, so both
+  // shapes resolve to the same data-i18n attribute names.
+  function flattenLocale(obj) {
+    var out = {};
+    (function walk(node, prefix) {
+      Object.keys(node).forEach(function (k) {
+        var v = node[k];
+        var key = prefix ? prefix + '_' + k : k;
+        if (v && typeof v === 'object' && !Array.isArray(v)) walk(v, key);
+        else out[key] = v;
+      });
+    })(obj, '');
+    return out;
+  }
+
+  function flattenAll(data) {
+    var out = {};
+    Object.keys(data).forEach(function (loc) {
+      out[loc] = flattenLocale(data[loc]);
+    });
+    return out;
+  }
+
   function init() {
     fetch(siteUrl('/i18n.json'))
       .then(function (r) { return r.json(); })
       .then(function (data) {
-        translations = data;
+        translations = flattenAll(data);
         setLanguage(lang);
         markReady();
       })
