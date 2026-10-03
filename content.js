@@ -49,6 +49,12 @@
       .replace(/"/g, '&quot;');
   }
 
+  function isSafeUrl(url) {
+    if (!url) return false;
+    var lower = String(url).toLowerCase();
+    return lower.indexOf('http://') === 0 || lower.indexOf('https://') === 0 || lower.indexOf('/') === 0;
+  }
+
   function lang() {
     return (window.I18N && typeof I18N.getLang === 'function') ? I18N.getLang() : 'de';
   }
@@ -128,7 +134,7 @@
     if (!grid || !blogData || !blogData.posts || !blogData.posts.length) return;
     grid.innerHTML = blogData.posts.map(function (p) {
       var title = pick(p.title, p.title_en, p.title_fr) || '';
-      var head = p.link
+      var head = (p.link && isSafeUrl(p.link))
         ? '<h3><a href="' + esc(p.link) + '">' + esc(title) + '</a></h3>'
         : '<h3>' + esc(title) + '</h3>';
       return '<article class="blog-card reveal">'
@@ -206,7 +212,7 @@
     });
 
     // Application link
-    if (c.apply_url) {
+    if (c.apply_url && isSafeUrl(c.apply_url)) {
       Array.prototype.forEach.call(document.querySelectorAll('a[data-i18n="apply_btn"]'), function (a) {
         a.setAttribute('href', c.apply_url);
       });
