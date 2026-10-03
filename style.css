@@ -639,7 +639,9 @@ section { padding: 5rem 0; }
 
 /* ---------- footer ---------- */
 .site-footer {
-  background: linear-gradient(135deg, #0f0a1a 0%, #1a1428 100%);
+  /* Same navy as .site-header so the page closes on the colour it opens with
+     (the footer used to be a purple-black that no longer matched the bar). */
+  background: linear-gradient(180deg, #0a1128 0%, #121d3f 100%);
   color: rgba(255, 255, 255, 0.75);
   padding: 3.6rem 0 1.8rem;
   margin-top: 4rem;
@@ -653,7 +655,7 @@ section { padding: 5rem 0; }
   right: -10%;
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, rgba(109, 92, 247, 0.08) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(125, 155, 255, 0.1) 0%, transparent 70%);
   border-radius: 50%;
   pointer-events: none;
 }
@@ -1441,6 +1443,14 @@ section {
 .section-flush { padding-top: 0; }
 .mt-2 { margin-top: 2rem; }
 .mt-3 { margin-top: 3rem; }
+.mt-14 { margin-top: 1.4rem; }
+.mt-24 { margin-top: 2.4rem; }
+.media-loose { margin: 1rem 0 2rem; }
+.cta-band {
+  padding: 1.6rem;
+  background: var(--bg-alt);
+  border-radius: 0.8rem;
+}
 
 /* ---- newsletter ---- */
 .newsletter-box {
