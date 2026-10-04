@@ -891,6 +891,107 @@ collections:
                 widget: string
                 i18n: true
                 hint: "faq_title"
+          - name: "about"
+            label: "Über-uns-Seite"
+            widget: object
+            i18n: true
+            collapsed: true
+            fields:
+              - name: "img_alt"
+                label: "Img alt"
+                widget: string
+                i18n: true
+                hint: "about_img_alt"
+              - name: "kicker"
+                label: "Kleiner Titel"
+                widget: string
+                i18n: true
+                hint: "about_kicker"
+              - name: "mission_kicker"
+                label: "Mission kicker"
+                widget: string
+                i18n: true
+                hint: "about_mission_kicker"
+              - name: "mission_p1"
+                label: "Mission — Absatz 1"
+                widget: text
+                i18n: true
+                hint: "about_mission_p1"
+              - name: "mission_p2"
+                label: "Mission — Absatz 2"
+                widget: text
+                i18n: true
+                hint: "about_mission_p2"
+              - name: "mission_title"
+                label: "Mission title"
+                widget: string
+                i18n: true
+                hint: "about_mission_title"
+              - name: "story_kicker"
+                label: "Story kicker"
+                widget: string
+                i18n: true
+                hint: "about_story_kicker"
+              - name: "story_title"
+                label: "Story title"
+                widget: string
+                i18n: true
+                hint: "about_story_title"
+              - name: "team_desc"
+                label: "Team desc"
+                widget: text
+                i18n: true
+                hint: "about_team_desc"
+              - name: "team_title"
+                label: "Team title"
+                widget: string
+                i18n: true
+                hint: "about_team_title"
+              - name: "title"
+                label: "Titel"
+                widget: string
+                i18n: true
+                hint: "about_title"
+              - name: "tl_2018"
+                label: "Zeitleiste 2018"
+                widget: string
+                i18n: true
+                hint: "about_tl_2018"
+              - name: "tl_2020"
+                label: "Zeitleiste 2020"
+                widget: string
+                i18n: true
+                hint: "about_tl_2020"
+              - name: "tl_2021"
+                label: "Zeitleiste 2021"
+                widget: string
+                i18n: true
+                hint: "about_tl_2021"
+              - name: "tl_2022"
+                label: "Zeitleiste 2022"
+                widget: string
+                i18n: true
+                hint: "about_tl_2022"
+              - name: "tl_2023"
+                label: "Zeitleiste 2023"
+                widget: string
+                i18n: true
+                hint: "about_tl_2023"
+              - name: "tl_2024"
+                label: "Zeitleiste 2024"
+                widget: string
+                i18n: true
+                hint: "about_tl_2024"
+              - name: "tl_2025"
+                label: "Zeitleiste 2025"
+                widget: string
+                i18n: true
+                hint: "about_tl_2025"
+              - name: "tl_2026"
+                label: "Zeitleiste 2026"
+                widget: string
+                i18n: true
+                hint: "about_tl_2026"
           - name: "team"
             label: "Team-Seite"
             widget: object

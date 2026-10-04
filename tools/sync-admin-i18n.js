@@ -31,7 +31,7 @@ var GROUP_ORDER = [
   'pillars', 'pillar1', 'pillar2', 'pillar3',
   'photo1', 'photo2', 'photo3',
   'apply', 'social', 'newsletter', 'btn', 'copy', 'quote', 'learn', 'read',
-  'prog', 'blog', 'faq', 'team', 'area', 'role',
+  'prog', 'blog', 'faq', 'about', 'team', 'area', 'role',
   'join', 'way1', 'way2', 'way3', 'way4', 'way5',
   'contact', 'title', 'footer',
   'resources', 'resource1', 'resource2', 'resource3', 'error404'
@@ -66,6 +66,7 @@ var GROUP_LABELS = {
   prog: 'Programm-Seite',
   blog: 'Blog-Seite',
   faq: 'FAQ-Seite',
+  about: 'Über-uns-Seite',
   team: 'Team-Seite',
   area: 'Fachbereiche',
   role: 'Rollen (Team & Kontakt)',
@@ -100,6 +101,10 @@ var FIELD_LABELS = {
 
 function humanize(name) {
   if (FIELD_LABELS[name]) return FIELD_LABELS[name];
+  // tl_2018 -> "Zeitleiste 2018", mission_p2 -> "Mission — Absatz 2"
+  if (/^tl_\d{4}$/.test(name)) return 'Zeitleiste ' + name.slice(3);
+  var mp = name.match(/^mission_p(\d+)$/);
+  if (mp) return 'Mission — Absatz ' + mp[1];
   // article1_title -> "Artikel 1 — Titel", q2 -> "Frage 2", btn3 -> "Button 3"
   var m = name.match(/^(article|q|a|btn|way|resource|pillar|photo|card|member|value|section|stat|nav|prog|team|faq)(\d+)_(title|desc|tag|cap)$/) ||
           name.match(/^(q|a|btn|way|resource|pillar|photo|card|member|value|section|stat)(\d+)$/);
