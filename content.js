@@ -195,6 +195,47 @@
     observeReveal(host);
   }
 
+
+  // ---- application block: closes itself after c.apply_until (Europe/Zurich) --
+  function zurichToday() {
+    try { return new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Zurich' }).format(new Date()); }
+    catch (e) { return new Date().toISOString().slice(0, 10); }
+  }
+
+  function applyExpiry(c) {
+    if (!c || !c.apply_until || zurichToday() <= c.apply_until) return;
+    var swap = { apply_status: 'apply_closed_status', apply_title: 'apply_closed_title', apply_desc: 'apply_closed_desc' };
+    Object.keys(swap).forEach(function (key) {
+      Array.prototype.forEach.call(document.querySelectorAll('[data-i18n="' + key + '"]'), function (el) {
+        el.setAttribute('data-i18n', swap[key]);
+      });
+    });
+    ['.apply-deadline', '.apply-qr', 'a[data-i18n="apply_btn"]'].forEach(function (sel) {
+      Array.prototype.forEach.call(document.querySelectorAll(sel), function (el) { el.hidden = true; });
+    });
+    Array.prototype.forEach.call(document.querySelectorAll('.apply-status'), function (el) { el.classList.add('is-closed'); });
+    if (window.I18N) I18N.setLanguage(I18N.getLang());
+  }
+
+  // ---- newsletter: with a Notion form link configured, the inline form becomes a button
+  function renderNewsletter(c) {
+    var form = document.getElementById('newsletter-form');
+    if (!form || !c || !c.newsletter_url || !isSafeUrl(c.newsletter_url) || form.__notion) return;
+    form.__notion = true;
+    var btn = form.querySelector('button[type="submit"]');
+    Array.prototype.forEach.call(form.querySelectorAll('input'), function (i) { i.hidden = true; });
+    if (btn) btn.hidden = true;
+    var a = document.createElement('a');
+    a.className = 'btn btn-primary';
+    a.href = c.newsletter_url;
+    a.target = '_blank';
+    a.rel = 'noopener';
+    a.setAttribute('data-i18n', 'newsletter_btn');
+    a.textContent = I18N.get('newsletter_btn') || 'Newsletter';
+    form.insertBefore(a, form.firstChild);
+    form.addEventListener('submit', function (e) { e.preventDefault(); }, true);
+  }
+
   // ---- homepage texts, stats, application link ---------------------------
   function apply(c) {
     // Texts: hand them to the i18n layer so language switches keep them.
@@ -219,6 +260,8 @@
       });
     }
 
+    applyExpiry(c);
+    renderNewsletter(c);
     renderTeam(c);
   }
 

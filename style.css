@@ -1667,3 +1667,19 @@ section {
 .footer-legal { display: inline-flex; gap: 1.25rem; }
 .blog-note { margin-top: 2rem; }
 a.chip { text-decoration: none; }
+
+/* articles: language blocks, media, note; closed application state */
+.lang-block { display: none; }
+html[lang="de"] .lang-block[data-lang="de"],
+html[lang="en"] .lang-block[data-lang="en"],
+html[lang="fr"] .lang-block[data-lang="fr"] { display: block; }
+html:not([lang="en"]):not([lang="fr"]) .lang-block[data-lang="de"] { display: block; }
+.article .entry-content img { max-width: 100%; height: auto; border-radius: 14px; }
+.article .entry-content figure { margin: 1.5rem 0; }
+.article .entry-content figcaption { font-size: .9rem; color: var(--muted, #667); margin-top: .4rem; }
+.article .entry-content blockquote { border-left: 4px solid var(--violet, #5b3df5); margin: 1.5rem 0; padding: .25rem 0 .25rem 1.25rem; font-style: italic; }
+.article-media { margin-bottom: 2rem; }
+.article-media img { width: 100%; height: auto; border-radius: 18px; }
+.article-note { opacity: .75; }
+.apply-status.is-closed .dot { background: #9aa0b4; box-shadow: none; animation: none; }
+[hidden] { display: none !important; }

@@ -262,5 +262,7 @@
         }
       ]
     }
-  ]
+  ],
+  "apply_until": "2026-10-15",
+  "newsletter_url": ""
 }

@@ -41,3 +41,14 @@ python3 -m http.server 8000
   Decap CMS from unpkg.com.
 - The blog cards link to the original articles on seet.ch (`content/blog.json`, `link`).
 - The newsletter form has no backend. Without `SEET_NEWSLETTER_ENDPOINT` it points people to communication@seet.ch.
+
+## Blog articles, application deadline, Notion
+
+- The 27 articles from seet.ch (German; English where seet.ch had it) live in `content/articles.json`, images in `img/blog/`, linked PDFs
+  in `docs/`. Run `node tools/build-articles.js && node tools/sync-partials.js` to regenerate `blog-<slug>.html` and `content/blog.json`.
+  To add an article, append an entry to `articles.json` (body is HTML; `{{IMG:file}}`, `{{POST:slug}}`, `{{PAGE:mitmachen#mentoring}}` placeholders)
+  and re-run. Editing cards in `/admin/` only changes the list, not the article text.
+- The application block closes itself after `apply_until` in `content/site.json` (last open day, Europe/Zurich): it then shows the "closed" texts
+  (`apply_closed_*` in `i18n.json`) and hides button, QR code and deadline line. Set the next date there when a new round opens.
+- Forms run on Notion: `apply_url` is the application form, `newsletter_url` (empty for now) is a public Notion form for newsletter sign-ups.
+  While it is empty the newsletter box points to communication@seet.ch.

@@ -26,7 +26,7 @@
     "hero": {
       "btn1": "Das Programm",
       "btn2": "Mitmachen",
-      "kicker": "Gemeinnütziger Verein · Thalwil, Schweiz",
+      "kicker": "Gemeinnütziger Verein · Zürich, Schweiz",
       "sub": "SEET unterstützt geflüchtete Menschen in der Schweiz auf dem Weg an die Hochschule — mit Mentoring, Netzwerk und gezielter finanzieller Hilfe. Seit 2018.",
       "title": "Bildung ist ein Recht.<br>Wir öffnen den Weg."
     },
@@ -74,6 +74,9 @@
     },
     "apply": {
       "btn": "Zum Bewerbungsformular",
+      "closed_desc": "Die Bewerbungsfrist ist abgelaufen. Die nächste Runde kündigen wir hier, im Newsletter und auf unseren Social-Media-Kanälen an.",
+      "closed_status": "Bewerbungen aktuell geschlossen",
+      "closed_title": "Das Bewerbungsfenster ist geschlossen",
       "deadline": "Mentor:innen: <strong>15. Oktober 2026</strong> · Mentees: Frist abgelaufen",
       "desc": "Die Frist für Mentees des nächsten Jahrgangs ist Mitte September 2026 abgelaufen. Mentor:innen können sich noch bis zum 15. Oktober 2026 bewerben; das Formular dauert rund 15 Minuten. Für spätere Runden melden wir uns hier und per E-Mail.",
       "faq_link": "Häufige Fragen",
@@ -350,7 +353,7 @@
       "team": "Unser Team — SEET"
     },
     "footer": {
-      "address": "Verein SEET · 8800 Thalwil, Schweiz",
+      "address": "Verein SEET · 8045 Zürich, Schweiz",
       "contact": "Kontakt",
       "copyright": "© 2026 Verein SEET — Support Education, Empower Together",
       "impressum": "Impressum",
@@ -379,6 +382,11 @@
       "home": "Zur Startseite",
       "kicker": "Hoppla",
       "text": "Diese Seite gibt es nicht (mehr) — vielleicht führt einer dieser Wege weiter."
+    },
+    "article": {
+      "back": "← Alle Beiträge",
+      "note_en": "This article is only available in German.",
+      "note_fr": "Cet article n'est disponible qu'en allemand."
     },
     "awards": {
       "caritas": "Eine jährliche Auszeichnung für das Engagement junger Menschen in der Schweiz. SEET gewann 2020 mit dem Studienförderprogramm den Preis für besonders nachhaltige Projekte.",
@@ -422,7 +430,7 @@
       "h_rep": "Vertretungsberechtigte Personen",
       "kicker": "Rechtliches",
       "links": "Für Inhalte verlinkter Websites Dritter ist ausschliesslich deren Betreiber verantwortlich. Der Zugriff erfolgt auf eigene Gefahr.",
-      "op": "Verein SEET – Support Education, Empower Together<br>8800 Thalwil, Schweiz<br>E-Mail: <a href=\"mailto:seet@seet.ch\">seet@seet.ch</a><br>UID: CHE-186.232.800",
+      "op": "Verein SEET – Support Education, Empower Together<br>c/o Nora Diethelm, Manessestrasse 130<br>8045 Zürich, Schweiz<br>E-Mail: <a href=\"mailto:seet@seet.ch\">seet@seet.ch</a><br>UID: CHE-186.232.800",
       "privacy_link": "Datenschutzerklärung ansehen →",
       "rep": "Anna-Sophie Hach und Nora Diethelm (Co-Präsidium)",
       "title": "Impressum"
@@ -439,7 +447,7 @@
     "privacy": {
       "h1": "1. Verantwortliche Stelle",
       "kicker": "Rechtliches",
-      "p1": "Verantwortlich für die Datenbearbeitung auf dieser Website ist der Verein SEET – Support Education, Empower Together, 8800 Thalwil, Schweiz, <a href=\"mailto:seet@seet.ch\">seet@seet.ch</a>. Wir bearbeiten Personendaten nach dem schweizerischen Datenschutzgesetz (DSG) und, soweit anwendbar, der EU-Datenschutz-Grundverordnung (DSGVO).",
+      "p1": "Verantwortlich für die Datenbearbeitung auf dieser Website ist der Verein SEET – Support Education, Empower Together, c/o Nora Diethelm, Manessestrasse 130, 8045 Zürich, Schweiz, <a href=\"mailto:seet@seet.ch\">seet@seet.ch</a>. Wir bearbeiten Personendaten nach dem schweizerischen Datenschutzgesetz (DSG) und, soweit anwendbar, der EU-Datenschutz-Grundverordnung (DSGVO).",
       "h2": "2. Hosting und Server-Protokolle",
       "p2": "Die Website wird bei einem externen Anbieter gehostet (derzeit GitHub Pages, GitHub Inc., USA). Beim Aufruf verarbeitet der Anbieter technisch notwendige Daten wie IP-Adresse, Datum und Uhrzeit, aufgerufene Seite und Browsertyp, um die Seite auszuliefern und den Betrieb zu sichern. Wir selbst werten diese Daten nicht aus. Dabei kann es zu einer Übermittlung in die USA kommen.",
       "h3": "3. Cookies, Tracking und Schriften",
@@ -447,9 +455,9 @@
       "h4": "4. Kontaktaufnahme per E-Mail",
       "p4": "Wenn du uns schreibst, bearbeiten wir deine Angaben (E-Mail-Adresse, Inhalt der Nachricht), um dein Anliegen zu beantworten. Wir geben sie nicht ohne deine Einwilligung weiter und löschen sie, sobald sie für den Zweck nicht mehr nötig sind.",
       "h5": "5. Newsletter",
-      "p5": "Die Anmeldung zum Newsletter erfolgt aktuell per E-Mail an <a href=\"mailto:communication@seet.ch\">communication@seet.ch</a>. Das Formular auf der Website überträgt keine Daten an einen Server. Falls wir künftig einen Versanddienst einsetzen, nennen wir ihn hier und holen deine Einwilligung ein. Du kannst dich jederzeit abmelden.",
+      "p5": "Für den Newsletter nutzen wir ein Formular, das bei Notion Labs, Inc. (USA) gehostet wird, oder du schreibst uns an <a href=\"mailto:communication@seet.ch\">communication@seet.ch</a>. Dabei werden Name und E-Mail-Adresse erfasst, um dir den Newsletter zu senden; es kann zu einer Übermittlung in die USA kommen. Du kannst dich jederzeit abmelden.",
       "h6": "6. Bewerbungsformular (Notion)",
-      "p6": "Für Bewerbungen als Mentee oder Mentor:in verlinken wir auf ein Formular, das bei Notion Labs, Inc. (USA) gehostet wird. Die Angaben, die du dort eingibst, werden von uns zur Durchführung des Auswahlverfahrens und des Programms bearbeitet und gehen dabei auch an Notion. Dabei kann es zu einer Übermittlung in die USA kommen. Die Bewerbung ist freiwillig; wir bewahren die Daten nur so lange auf, wie es für das Programm und gesetzliche Pflichten nötig ist.",
+      "p6": "Für Bewerbungen als Mentee oder Mentor:in verlinken wir auf ein Formular, das bei Notion Labs, Inc. (USA) gehostet wird. Die Angaben, die du dort eingibst, werden von uns zur Durchführung des Auswahlverfahrens und des Programms bearbeitet und liegen dabei auch bei Notion. Dabei kann es zu einer Übermittlung in die USA kommen. Die Bewerbung ist freiwillig; wir bewahren die Daten nur so lange auf, wie es für das Programm und gesetzliche Pflichten nötig ist.",
       "h7": "7. Spenden",
       "p7": "Spenden sind per Banküberweisung möglich. Auf dieser Website findet keine Online-Zahlung statt. Bankdaten, die bei einer Überweisung bei uns eingehen, bearbeiten wir für Buchhaltung und Spendenbestätigungen.",
       "h8": "8. Externe Links und soziale Netzwerke",
@@ -495,7 +503,7 @@
     "hero": {
       "btn1": "Learn More",
       "btn2": "Get Involved",
-      "kicker": "Non-profit Association · Thalwil, Switzerland",
+      "kicker": "Non-profit Association · Zürich, Switzerland",
       "sub": "SEET supports refugees in Switzerland on their path to higher education — with mentoring, networking, and targeted financial support. Since 2018.",
       "title": "Education is a Right.<br>We Open the Way."
     },
@@ -543,6 +551,9 @@
     },
     "apply": {
       "btn": "Go to application form",
+      "closed_desc": "The application deadline has passed. We will announce the next round here, in our newsletter and on our social media channels.",
+      "closed_status": "Applications currently closed",
+      "closed_title": "The application window is closed",
       "deadline": "Mentors: <strong>15 October 2026</strong> · Mentees: deadline passed",
       "desc": "The deadline for mentees of the next cohort expired in mid-September 2026. Mentors can still apply until 15 October 2026; the form takes about 15 minutes. We will announce later rounds here and by email.",
       "faq_link": "Frequently asked questions",
@@ -819,7 +830,7 @@
       "team": "Our team — SEET"
     },
     "footer": {
-      "address": "SEET Association · 8800 Thalwil, Switzerland",
+      "address": "SEET Association · 8045 Zürich, Switzerland",
       "contact": "Contact",
       "copyright": "© 2026 SEET Association — Support Education, Empower Together",
       "impressum": "Legal notice",
@@ -848,6 +859,11 @@
       "home": "Back to the homepage",
       "kicker": "Oops",
       "text": "This page does not exist (anymore) — one of these links may lead you on."
+    },
+    "article": {
+      "back": "← All posts",
+      "note_en": "This article is only available in German.",
+      "note_fr": "Cet article n'est disponible qu'en allemand."
     },
     "awards": {
       "caritas": "An annual award for the commitment of young people in Switzerland. In 2020 SEET won the prize for particularly sustainable projects with its study support programme.",
@@ -891,7 +907,7 @@
       "h_rep": "Authorised representatives",
       "kicker": "Legal",
       "links": "The operators of linked third-party websites are solely responsible for their content. Access is at your own risk.",
-      "op": "Verein SEET – Support Education, Empower Together<br>8800 Thalwil, Switzerland<br>Email: <a href=\"mailto:seet@seet.ch\">seet@seet.ch</a><br>UID: CHE-186.232.800",
+      "op": "Verein SEET – Support Education, Empower Together<br>c/o Nora Diethelm, Manessestrasse 130<br>8045 Zürich, Switzerland<br>Email: <a href=\"mailto:seet@seet.ch\">seet@seet.ch</a><br>UID: CHE-186.232.800",
       "privacy_link": "View the privacy policy →",
       "rep": "Anna-Sophie Hach and Nora Diethelm (co-presidents)",
       "title": "Legal notice"
@@ -908,7 +924,7 @@
     "privacy": {
       "h1": "1. Controller",
       "kicker": "Legal",
-      "p1": "The controller for data processing on this website is Verein SEET – Support Education, Empower Together, 8800 Thalwil, Switzerland, <a href=\"mailto:seet@seet.ch\">seet@seet.ch</a>. We process personal data in accordance with the Swiss Federal Act on Data Protection (FADP) and, where applicable, the EU General Data Protection Regulation (GDPR).",
+      "p1": "The controller for data processing on this website is Verein SEET – Support Education, Empower Together, c/o Nora Diethelm, Manessestrasse 130, 8045 Zürich, Switzerland, <a href=\"mailto:seet@seet.ch\">seet@seet.ch</a>. We process personal data in accordance with the Swiss Federal Act on Data Protection (FADP) and, where applicable, the EU General Data Protection Regulation (GDPR).",
       "h2": "2. Hosting and server logs",
       "p2": "The website is hosted by an external provider (currently GitHub Pages, GitHub Inc., USA). When you visit it, the provider processes technically necessary data such as IP address, date and time, requested page and browser type in order to deliver the page and keep it secure. We do not analyse this data ourselves. This may involve a transfer to the USA.",
       "h3": "3. Cookies, tracking and fonts",
@@ -916,9 +932,9 @@
       "h4": "4. Contacting us by email",
       "p4": "If you write to us, we process your details (email address, content of your message) to answer your request. We do not pass them on without your consent and delete them once they are no longer needed for that purpose.",
       "h5": "5. Newsletter",
-      "p5": "Subscription to the newsletter currently takes place by email to <a href=\"mailto:communication@seet.ch\">communication@seet.ch</a>. The form on the website does not transmit any data to a server. If we use a mailing service in future, we will name it here and ask for your consent. You can unsubscribe at any time.",
+      "p5": "For the newsletter we use a form hosted by Notion Labs, Inc. (USA), or you can write to us at <a href=\"mailto:communication@seet.ch\">communication@seet.ch</a>. Your name and email address are collected to send you the newsletter; this may involve a transfer to the USA. You can unsubscribe at any time.",
       "h6": "6. Application form (Notion)",
-      "p6": "For applications as a mentee or mentor we link to a form hosted by Notion Labs, Inc. (USA). The information you enter there is processed by us to run the selection process and the programme, and is also processed by Notion. This may involve a transfer to the USA. Applying is voluntary; we keep the data only as long as needed for the programme and legal obligations.",
+      "p6": "For applications as a mentee or mentor we link to a form hosted by Notion Labs, Inc. (USA). The information you enter there is processed by us to run the selection process and the programme and is also stored with Notion. This may involve a transfer to the USA. Applying is voluntary; we keep the data only as long as needed for the programme and legal obligations.",
       "h7": "7. Donations",
       "p7": "Donations are made by bank transfer. No online payment takes place on this website. Bank details that reach us with a transfer are processed for accounting and donation receipts.",
       "h8": "8. External links and social networks",
@@ -964,7 +980,7 @@
     "hero": {
       "btn1": "En Savoir Plus",
       "btn2": "S'Impliquer",
-      "kicker": "Association à But Non Lucratif · Thalwil, Suisse",
+      "kicker": "Association à But Non Lucratif · Zürich, Suisse",
       "sub": "SEET soutient les réfugiés en Suisse dans leur parcours vers l'enseignement supérieur — avec du mentorat, du réseautage et une aide financière ciblée. Depuis 2018.",
       "title": "L'Éducation est un Droit.<br>Nous Ouvrons la Voie."
     },
@@ -1012,6 +1028,9 @@
     },
     "apply": {
       "btn": "Aller au formulaire de candidature",
+      "closed_desc": "Le délai de candidature est expiré. Nous annoncerons le prochain tour ici, dans notre newsletter et sur nos réseaux sociaux.",
+      "closed_status": "Candidatures actuellement closes",
+      "closed_title": "La période de candidature est terminée",
       "deadline": "Mentors : <strong>15 octobre 2026</strong> · Mentorés : délai expiré",
       "desc": "Le délai pour les mentorés de la prochaine promotion a expiré à la mi-septembre 2026. Les mentors peuvent encore postuler jusqu'au 15 octobre 2026 ; le formulaire prend environ 15 minutes. Nous annoncerons les prochains tours ici et par e-mail.",
       "faq_link": "Questions fréquentes",
@@ -1288,7 +1307,7 @@
       "team": "Notre équipe — SEET"
     },
     "footer": {
-      "address": "Association SEET · 8800 Thalwil, Suisse",
+      "address": "Association SEET · 8045 Zürich, Suisse",
       "contact": "Contact",
       "copyright": "© 2026 Association SEET — Support Education, Empower Together",
       "impressum": "Mentions légales",
@@ -1317,6 +1336,11 @@
       "home": "Retour à l'accueil",
       "kicker": "Oups",
       "text": "Cette page n'existe pas (plus) — l'un de ces liens vous orientera peut-être."
+    },
+    "article": {
+      "back": "← Tous les articles",
+      "note_en": "This article is only available in German.",
+      "note_fr": "Cet article n'est disponible qu'en allemand."
     },
     "awards": {
       "caritas": "Une distinction annuelle pour l'engagement des jeunes en Suisse. En 2020, SEET a remporté avec son programme de soutien aux études le prix des projets particulièrement durables.",
@@ -1360,7 +1384,7 @@
       "h_rep": "Personnes habilitées à représenter l'association",
       "kicker": "Mentions",
       "links": "Les exploitants des sites tiers liés sont seuls responsables de leur contenu. L'accès se fait à vos propres risques.",
-      "op": "Verein SEET – Support Education, Empower Together<br>8800 Thalwil, Suisse<br>E-mail : <a href=\"mailto:seet@seet.ch\">seet@seet.ch</a><br>IDE : CHE-186.232.800",
+      "op": "Verein SEET – Support Education, Empower Together<br>c/o Nora Diethelm, Manessestrasse 130<br>8045 Zürich, Suisse<br>E-mail : <a href=\"mailto:seet@seet.ch\">seet@seet.ch</a><br>IDE : CHE-186.232.800",
       "privacy_link": "Voir la politique de confidentialité →",
       "rep": "Anna-Sophie Hach et Nora Diethelm (co-présidence)",
       "title": "Mentions légales"
@@ -1377,7 +1401,7 @@
     "privacy": {
       "h1": "1. Responsable du traitement",
       "kicker": "Mentions",
-      "p1": "Le responsable du traitement des données sur ce site est l'association SEET – Support Education, Empower Together, 8800 Thalwil, Suisse, <a href=\"mailto:seet@seet.ch\">seet@seet.ch</a>. Nous traitons les données personnelles conformément à la loi suisse sur la protection des données (LPD) et, le cas échéant, au règlement général de l'UE sur la protection des données (RGPD).",
+      "p1": "Le responsable du traitement des données sur ce site est l'association SEET – Support Education, Empower Together, c/o Nora Diethelm, Manessestrasse 130, 8045 Zürich, Suisse, <a href=\"mailto:seet@seet.ch\">seet@seet.ch</a>. Nous traitons les données personnelles conformément à la loi suisse sur la protection des données (LPD) et, le cas échéant, au règlement général de l'UE sur la protection des données (RGPD).",
       "h2": "2. Hébergement et journaux du serveur",
       "p2": "Le site est hébergé par un prestataire externe (actuellement GitHub Pages, GitHub Inc., États-Unis). Lors de la consultation, le prestataire traite des données techniquement nécessaires telles que l'adresse IP, la date et l'heure, la page demandée et le type de navigateur afin de délivrer la page et d'assurer la sécurité. Nous n'analysons pas ces données nous-mêmes. Un transfert vers les États-Unis est possible.",
       "h3": "3. Cookies, suivi et polices",
@@ -1385,9 +1409,9 @@
       "h4": "4. Contact par e-mail",
       "p4": "Si vous nous écrivez, nous traitons vos données (adresse e-mail, contenu du message) pour répondre à votre demande. Nous ne les transmettons pas sans votre consentement et les supprimons dès qu'elles ne sont plus nécessaires.",
       "h5": "5. Newsletter",
-      "p5": "L'inscription à la newsletter se fait actuellement par e-mail à <a href=\"mailto:communication@seet.ch\">communication@seet.ch</a>. Le formulaire du site ne transmet aucune donnée à un serveur. Si nous utilisons à l'avenir un service d'envoi, nous l'indiquerons ici et demanderons votre consentement. Vous pouvez vous désabonner à tout moment.",
+      "p5": "Pour la newsletter, nous utilisons un formulaire hébergé par Notion Labs, Inc. (États-Unis), ou vous pouvez nous écrire à <a href=\"mailto:communication@seet.ch\">communication@seet.ch</a>. Votre nom et votre adresse e-mail sont collectés pour l'envoi de la newsletter ; un transfert vers les États-Unis est possible. Vous pouvez vous désabonner à tout moment.",
       "h6": "6. Formulaire de candidature (Notion)",
-      "p6": "Pour les candidatures de mentoré ou de mentor, nous renvoyons vers un formulaire hébergé par Notion Labs, Inc. (États-Unis). Les informations saisies sont traitées par nous pour mener la sélection et le programme, et également par Notion. Un transfert vers les États-Unis est possible. La candidature est volontaire ; nous ne conservons les données que le temps nécessaire au programme et aux obligations légales.",
+      "p6": "Pour les candidatures de mentoré ou de mentor, nous renvoyons vers un formulaire hébergé par Notion Labs, Inc. (États-Unis). Les informations saisies sont traitées par nous pour mener la sélection et le programme et sont aussi stockées chez Notion. Un transfert vers les États-Unis est possible. La candidature est volontaire ; nous ne conservons les données que le temps nécessaire au programme et aux obligations légales.",
       "h7": "7. Dons",
       "p7": "Les dons se font par virement bancaire. Aucun paiement en ligne n'a lieu sur ce site. Les coordonnées bancaires qui nous parviennent lors d'un virement sont traitées pour la comptabilité et les attestations de dons.",
       "h8": "8. Liens externes et réseaux sociaux",

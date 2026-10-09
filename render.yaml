@@ -79,37 +79,148 @@ services:
         source: /datenschutzerklaerung
         destination: /datenschutz.html
       - type: redirect
-        source: /die-teilnahme-an-diesem-seet-programm-hat-meine-erwartungen-uebertroffen
-        destination: /blog.html#die-teilnahme-an-diesem-seet-programm-hat-meine-erwartungen-uebertroffen
-      - type: redirect
-        source: /eine-kleine-aber-bedeutungsvolle-moeglichkeit-etwas-zurckzugeben
-        destination: /blog.html#eine-kleine-aber-bedeutungsvolle-moeglichkeit-etwas-zurckzugeben
-      - type: redirect
-        source: /der-seet-jahrgang-202627-startet-seine-mentoring-reise
-        destination: /blog.html#der-seet-jahrgang-202627-startet-seine-mentoring-reise
-      - type: redirect
-        source: /der-jahresbericht-2025-von-seet-ist-jetzt-online-verfuegbar
-        destination: /blog.html#der-jahresbericht-2025-von-seet-ist-jetzt-online-verfuegbar
-      - type: redirect
-        source: /das-mentoring-programm-ist-anspruchsvoll-aber-sehr-bereichernd
-        destination: /blog.html#das-mentoring-programm-ist-anspruchsvoll-aber-sehr-bereichernd
-      - type: redirect
-        source: /seets-vergangenheit-gegenwart-und-zukunft-vereinen-sich-an-einem-besonderen-abend
-        destination: /blog.html#seets-vergangenheit-gegenwart-und-zukunft-vereinen-sich-an-einem-besonderen-abend
-      - type: redirect
-        source: /seet-richtet-sich-an-zukuenftige-study-support-mentorinnen-bei-eth-diversity-veranstaltung
-        destination: /blog.html#seet-richtet-sich-an-zukuenftige-study-support-mentorinnen-bei-eth-diversity-veranstaltung
-      - type: redirect
-        source: /teilnehmende-des-seet-studienfoerderprogramms-halten-inne
-        destination: /blog.html#teilnehmende-des-seet-studienfoerderprogramms-halten-inne
-      - type: redirect
-        source: /trauma-verstehen-seet-workshop-zu-trauma-und-ptsd
-        destination: /blog.html#trauma-verstehen-seet-workshop-zu-trauma-und-ptsd
-      - type: redirect
-        source: /wiedersehen-mit-freunden-am-kick-off-2025-26
-        destination: /blog.html#wiedersehen-mit-freunden-am-kick-off-2025-26
-      - type: redirect
         source: /en
         destination: /?lang=en
+      - type: redirect
+        source: /die-teilnahme-an-diesem-seet-programm-hat-meine-erwartungen-uebertroffen
+        destination: /blog-die-teilnahme-an-diesem-seet-programm-hat-meine-erwartungen-uebertroffen.html
+      - type: redirect
+        source: /en/i-can-say-enrolling-in-this-programme-has-exceeded-my-expectations
+        destination: /blog-die-teilnahme-an-diesem-seet-programm-hat-meine-erwartungen-uebertroffen.html
+      - type: redirect
+        source: /eine-kleine-aber-bedeutungsvolle-moeglichkeit-etwas-zurckzugeben
+        destination: /blog-eine-kleine-aber-bedeutungsvolle-moeglichkeit-etwas-zurckzugeben.html
+      - type: redirect
+        source: /en/a-small-but-meaningful-way-to-give-back
+        destination: /blog-eine-kleine-aber-bedeutungsvolle-moeglichkeit-etwas-zurckzugeben.html
+      - type: redirect
+        source: /der-seet-jahrgang-202627-startet-seine-mentoring-reise
+        destination: /blog-der-seet-jahrgang-202627-startet-seine-mentoring-reise.html
+      - type: redirect
+        source: /en/seets-class-of-2026-27-kick-off-their-mentorship-journey
+        destination: /blog-der-seet-jahrgang-202627-startet-seine-mentoring-reise.html
+      - type: redirect
+        source: /der-jahresbericht-2025-von-seet-ist-jetzt-online-verfuegbar
+        destination: /blog-der-jahresbericht-2025-von-seet-ist-jetzt-online-verfuegbar.html
+      - type: redirect
+        source: /en/the-2025-seet-annual-report-is-now-available-online
+        destination: /blog-der-jahresbericht-2025-von-seet-ist-jetzt-online-verfuegbar.html
+      - type: redirect
+        source: /das-mentoring-programm-ist-anspruchsvoll-aber-sehr-bereichernd
+        destination: /blog-das-mentoring-programm-ist-anspruchsvoll-aber-sehr-bereichernd.html
+      - type: redirect
+        source: /en/the-mentoring-programme-is-challenging-but-very-enriching
+        destination: /blog-das-mentoring-programm-ist-anspruchsvoll-aber-sehr-bereichernd.html
+      - type: redirect
+        source: /seets-vergangenheit-gegenwart-und-zukunft-vereinen-sich-an-einem-besonderen-abend
+        destination: /blog-seets-vergangenheit-gegenwart-und-zukunft-vereinen-sich-an-einem-besonderen-abend.html
+      - type: redirect
+        source: /en/seets-past-present-and-future-come-together-on-a-special-evening
+        destination: /blog-seets-vergangenheit-gegenwart-und-zukunft-vereinen-sich-an-einem-besonderen-abend.html
+      - type: redirect
+        source: /seet-richtet-sich-an-zukuenftige-study-support-mentorinnen-bei-eth-diversity-veranstaltung
+        destination: /blog-seet-richtet-sich-an-zukuenftige-study-support-mentorinnen-bei-eth-diversity-veranstaltung.html
+      - type: redirect
+        source: /en/seet-target-future-study-support-mentors-at-eth-diversity-event
+        destination: /blog-seet-richtet-sich-an-zukuenftige-study-support-mentorinnen-bei-eth-diversity-veranstaltung.html
+      - type: redirect
+        source: /teilnehmende-des-seet-studienfoerderprogramms-halten-inne
+        destination: /blog-teilnehmende-des-seet-studienfoerderprogramms-halten-inne.html
+      - type: redirect
+        source: /en/seet-study-support-programme-participants-pause-for-reflection
+        destination: /blog-teilnehmende-des-seet-studienfoerderprogramms-halten-inne.html
+      - type: redirect
+        source: /trauma-verstehen-seet-workshop-zu-trauma-und-ptsd
+        destination: /blog-trauma-verstehen-seet-workshop-zu-trauma-und-ptsd.html
+      - type: redirect
+        source: /en/understanding-trauma-seet-workshop
+        destination: /blog-trauma-verstehen-seet-workshop-zu-trauma-und-ptsd.html
+      - type: redirect
+        source: /wiedersehen-mit-freunden-am-kick-off-2025-26
+        destination: /blog-wiedersehen-mit-freunden-am-kick-off-2025-26.html
+      - type: redirect
+        source: /en/friends-reunited-at-2025-kick-off-event
+        destination: /blog-wiedersehen-mit-freunden-am-kick-off-2025-26.html
+      - type: redirect
+        source: /massnahme-gegen-fachkraeftemangel
+        destination: /blog-massnahme-gegen-fachkraeftemangel.html
+      - type: redirect
+        source: /en/easing-the-shortage-of-skilled-labour-through-higher-education-for-refugees
+        destination: /blog-massnahme-gegen-fachkraeftemangel.html
+      - type: redirect
+        source: /der-fruehling-ist-bei-seet-eingezogen
+        destination: /blog-der-fruehling-ist-bei-seet-eingezogen.html
+      - type: redirect
+        source: /en/spring-has-sprung-at-seet
+        destination: /blog-der-fruehling-ist-bei-seet-eingezogen.html
+      - type: redirect
+        source: /ich-werde-nicht-aufhoeren-bis-ich-alle-meine-ziele-erreicht-habe
+        destination: /blog-ich-werde-nicht-aufhoeren-bis-ich-alle-meine-ziele-erreicht-habe.html
+      - type: redirect
+        source: /en/i-will-not-stop-until-i-achieve-all-my-goals
+        destination: /blog-ich-werde-nicht-aufhoeren-bis-ich-alle-meine-ziele-erreicht-habe.html
+      - type: redirect
+        source: /unsere-reise-mit-seet
+        destination: /blog-unsere-reise-mit-seet.html
+      - type: redirect
+        source: /en/our-journey-with-seet
+        destination: /blog-unsere-reise-mit-seet.html
+      - type: redirect
+        source: /wrap-up-2023-ein-weiteres-programmjahr-geht-zu-ende-copy-copy-2-copy-copy
+        destination: /blog-wrap-up-2023-ein-weiteres-programmjahr-geht-zu-ende-copy-copy-2-copy-copy.html
+      - type: redirect
+        source: /en/we-were-both-fishes-out-of-water-in-a-new-country
+        destination: /blog-wrap-up-2023-ein-weiteres-programmjahr-geht-zu-ende-copy-copy-2-copy-copy.html
+      - type: redirect
+        source: /wrap-up-2023-ein-weiteres-programmjahr-geht-zu-ende-copy-copy-2-copy
+        destination: /blog-wrap-up-2023-ein-weiteres-programmjahr-geht-zu-ende-copy-copy-2-copy.html
+      - type: redirect
+        source: /en/seet-re-structure-sets-path-for-continued-success
+        destination: /blog-wrap-up-2023-ein-weiteres-programmjahr-geht-zu-ende-copy-copy-2-copy.html
+      - type: redirect
+        source: /wrap-up-2023-ein-weiteres-programmjahr-geht-zu-ende-copy-copy-2
+        destination: /blog-wrap-up-2023-ein-weiteres-programmjahr-geht-zu-ende-copy-copy-2.html
+      - type: redirect
+        source: /en/seet-reflection-workshop-marks-six-month-milestone
+        destination: /blog-wrap-up-2023-ein-weiteres-programmjahr-geht-zu-ende-copy-copy-2.html
+      - type: redirect
+        source: /wrap-up-2023-ein-weiteres-programmjahr-geht-zu-ende-copy-copy
+        destination: /blog-wrap-up-2023-ein-weiteres-programmjahr-geht-zu-ende-copy-copy.html
+      - type: redirect
+        source: /en/mentorship-and-migration-a-profile-on-one-of-our-mentors
+        destination: /blog-wrap-up-2023-ein-weiteres-programmjahr-geht-zu-ende-copy-copy.html
+      - type: redirect
+        source: /wrap-up-2023-ein-weiteres-programmjahr-geht-zu-ende-copy
+        destination: /blog-wrap-up-2023-ein-weiteres-programmjahr-geht-zu-ende-copy.html
+      - type: redirect
+        source: /en/support-education-for-all
+        destination: /blog-wrap-up-2023-ein-weiteres-programmjahr-geht-zu-ende-copy.html
+      - type: redirect
+        source: /wrap-up-2023-ein-weiteres-programmjahr-geht-zu-ende
+        destination: /blog-wrap-up-2023-ein-weiteres-programmjahr-geht-zu-ende.html
+      - type: redirect
+        source: /kick-off-2022
+        destination: /blog-kick-off-2022.html
+      - type: redirect
+        source: /halbzeit-unser-reflexionstreffen
+        destination: /blog-halbzeit-unser-reflexionstreffen.html
+      - type: redirect
+        source: /workshop-dein-weg-zum-studium-support-und-huerden
+        destination: /blog-workshop-dein-weg-zum-studium-support-und-huerden.html
+      - type: redirect
+        source: /seet-launch
+        destination: /blog-seet-launch.html
+      - type: redirect
+        source: /halbzeittreffen
+        destination: /blog-halbzeittreffen.html
+      - type: redirect
+        source: /unsere-ersten-beiden-mentoring-schulungen
+        destination: /blog-unsere-ersten-beiden-mentoring-schulungen.html
+      - type: redirect
+        source: /vereinsgruendung-und-kickoff
+        destination: /blog-vereinsgruendung-und-kickoff.html
+      - type: redirect
+        source: /seetlinge/halbzeit-unser-reflexionstreffen-fuer-den-blick-zurueck-und-nach-vorne
+        destination: /blog-halbzeit-unser-reflexionstreffen.html
 
 # Old seet.ch URLs -> new pages (so existing links and search results keep working after the switch).

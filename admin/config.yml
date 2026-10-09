@@ -357,6 +357,21 @@ collections:
                 widget: string
                 i18n: true
                 hint: "apply_btn"
+              - name: "closed_desc"
+                label: "Closed desc"
+                widget: text
+                i18n: true
+                hint: "apply_closed_desc"
+              - name: "closed_status"
+                label: "Closed status"
+                widget: string
+                i18n: true
+                hint: "apply_closed_status"
+              - name: "closed_title"
+                label: "Closed title"
+                widget: string
+                i18n: true
+                hint: "apply_closed_title"
               - name: "deadline"
                 label: "Frist"
                 widget: string
@@ -1774,6 +1789,27 @@ collections:
                 widget: string
                 i18n: true
                 hint: "error404_text"
+          - name: "article"
+            label: "Article"
+            widget: object
+            i18n: true
+            collapsed: true
+            fields:
+              - name: "back"
+                label: "Back"
+                widget: string
+                i18n: true
+                hint: "article_back"
+              - name: "note_en"
+                label: "Note en"
+                widget: string
+                i18n: true
+                hint: "article_note_en"
+              - name: "note_fr"
+                label: "Note fr"
+                widget: string
+                i18n: true
+                hint: "article_note_fr"
           - name: "awards"
             label: "Awards"
             widget: object
@@ -2294,7 +2330,9 @@ collections:
             fields:
               - { name: label, label: "Etiket", widget: string }
               - { name: value, label: "Sayı", widget: number, value_type: int, min: 0 }
-          - { name: apply_url, label: "Başvuru formu linki", widget: string }
+          - { name: apply_url, label: "Başvuru formu linki (Notion)", widget: string }
+          - { name: apply_until, label: "Başvuru son günü (YYYY-AA-GG) — sonrasında blok otomatik kapanır", widget: string }
+          - { name: newsletter_url, label: "Bülten formu linki (Notion form, boş bırakılırsa e-posta)", widget: string, required: false }
           - name: photos
             label: "Fotos-Leiste (Startseite) — Bildunterschriften hier pflegen"
             hint: "photo1_cap–photo3_cap in den Texten sind nur der Rückfall, falls die Liste leer ist."
