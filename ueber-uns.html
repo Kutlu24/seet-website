@@ -16,9 +16,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://kutlu24.github.io/seet-website/img/og-cover.jpg">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%235b3df5'/%3E%3Cstop offset='1' stop-color='%23c084fc'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='45' font-family='Arial,sans-serif' font-size='38' font-weight='bold' fill='white' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="fonts.css">
 <link rel="stylesheet" href="style.css">
 <script type="application/ld+json">
 {
@@ -151,6 +149,21 @@
   </div>
 </section>
 
+<section class="section-alt">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="kicker" data-i18n="about_more_kicker">Mehr über SEET</span>
+      <h2 data-i18n="about_more_title">Geschichte, Auszeichnungen und Unterstützer:innen</h2>
+    </div>
+    <div class="chips reveal">
+      <a class="chip" href="geschichte.html" data-i18n="about_more_history">Unsere Geschichte</a>
+      <a class="chip" href="awards.html" data-i18n="about_more_awards">Unsere Awards</a>
+      <a class="chip" href="partner.html" data-i18n="about_more_partners">Unsere Partner:innen</a>
+      <a class="chip" href="goenner.html" data-i18n="about_more_donors">Unsere Gönner:innen</a>
+    </div>
+  </div>
+</section>
+
 <!-- footer:begin (generated — edit partials/footer.html) -->
 <footer class="site-footer">
   <div class="wrap">
@@ -171,6 +184,8 @@
           <a data-i18n="nav_faq" href="faqs.html">FAQ</a>
           <a data-i18n="nav_team" href="team.html">Team</a>
           <a data-i18n="nav_contact" href="kontakt.html">Kontakt</a>
+          <a data-i18n="footer_impressum" href="impressum.html">Impressum</a>
+          <a data-i18n="footer_privacy" href="datenschutz.html">Datenschutz</a>
         </div>
       </div>
       <div>
@@ -189,7 +204,7 @@
     </div>
     <div class="footer-bottom">
       <span data-i18n="footer_copyright">© 2026 Verein SEET — Support Education, Empower Together</span>
-      <a data-i18n="footer_legal" href="kontakt.html#impressum">Impressum &amp; Datenschutz</a>
+      <span class="footer-legal"><a data-i18n="footer_impressum" href="impressum.html">Impressum</a><a data-i18n="footer_privacy" href="datenschutz.html">Datenschutz</a></span>
     </div>
   </div>
 </footer>

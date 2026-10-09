@@ -1,6 +1,8 @@
 // i18n system
 var I18N = (function() {
   var lang = localStorage.getItem('seet_lang') || 'de';
+  var qLang = (new URLSearchParams(location.search)).get('lang');
+  if (qLang === 'de' || qLang === 'en' || qLang === 'fr') { lang = qLang; localStorage.setItem('seet_lang', lang); }
   var translations = {};
   var cmsTexts = {};      // overrides from content/site.json (CMS), language-agnostic
   var ready = false;

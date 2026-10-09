@@ -1656,3 +1656,14 @@ section {
 }
 .dept-card { padding: 1.6rem; }
 .emoji-icon { font-size: 3rem; margin-bottom: 0.5rem; }
+
+/* sub-pages: name lists, legal text, footer legal links */
+.lead { font-size: 1.15rem; max-width: 60ch; margin-bottom: 2rem; }
+.name-list { list-style: none; padding: 0; margin: 1.5rem 0 3rem; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: .75rem; }
+.name-list li { padding: .85rem 1.1rem; border: 1px solid rgba(0,0,0,.08); border-radius: 12px; background: #fff; }
+.award-links a { margin-right: 1rem; font-weight: 600; }
+.legal { max-width: 760px; }
+.legal h2 { margin-top: 2rem; font-size: 1.25rem; }
+.footer-legal { display: inline-flex; gap: 1.25rem; }
+.blog-note { margin-top: 2rem; }
+a.chip { text-decoration: none; }

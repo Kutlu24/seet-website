@@ -710,41 +710,26 @@ collections:
             i18n: true
             collapsed: true
             fields:
-              - name: "article1_desc"
-                label: "Artikel 1 — Beschreibung"
-                widget: text
-                i18n: true
-                hint: "blog_article1_desc"
-              - name: "article1_title"
-                label: "Artikel 1 — Titel"
+              - name: "all"
+                label: "All"
                 widget: string
                 i18n: true
-                hint: "blog_article1_title"
-              - name: "article2_desc"
-                label: "Artikel 2 — Beschreibung"
-                widget: text
-                i18n: true
-                hint: "blog_article2_desc"
-              - name: "article2_title"
-                label: "Artikel 2 — Titel"
-                widget: string
-                i18n: true
-                hint: "blog_article2_title"
-              - name: "article3_desc"
-                label: "Artikel 3 — Beschreibung"
-                widget: text
-                i18n: true
-                hint: "blog_article3_desc"
-              - name: "article3_title"
-                label: "Artikel 3 — Titel"
-                widget: string
-                i18n: true
-                hint: "blog_article3_title"
+                hint: "blog_all"
               - name: "kicker"
                 label: "Kleiner Titel"
                 widget: string
                 i18n: true
                 hint: "blog_kicker"
+              - name: "note"
+                label: "Note"
+                widget: string
+                i18n: true
+                hint: "blog_note"
+              - name: "original"
+                label: "Original"
+                widget: string
+                i18n: true
+                hint: "blog_original"
               - name: "sub"
                 label: "Untertitel"
                 widget: text
@@ -927,6 +912,36 @@ collections:
                 widget: string
                 i18n: true
                 hint: "about_mission_title"
+              - name: "more_awards"
+                label: "More awards"
+                widget: string
+                i18n: true
+                hint: "about_more_awards"
+              - name: "more_donors"
+                label: "More donors"
+                widget: string
+                i18n: true
+                hint: "about_more_donors"
+              - name: "more_history"
+                label: "More history"
+                widget: string
+                i18n: true
+                hint: "about_more_history"
+              - name: "more_kicker"
+                label: "More kicker"
+                widget: string
+                i18n: true
+                hint: "about_more_kicker"
+              - name: "more_partners"
+                label: "More partners"
+                widget: string
+                i18n: true
+                hint: "about_more_partners"
+              - name: "more_title"
+                label: "More title"
+                widget: string
+                i18n: true
+                hint: "about_more_title"
               - name: "story_kicker"
                 label: "Story kicker"
                 widget: string
@@ -1568,6 +1583,11 @@ collections:
                 widget: string
                 i18n: true
                 hint: "title_about"
+              - name: "awards"
+                label: "Awards"
+                widget: string
+                i18n: true
+                hint: "title_awards"
               - name: "blog"
                 label: "Blog"
                 widget: string
@@ -1578,16 +1598,41 @@ collections:
                 widget: string
                 i18n: true
                 hint: "title_contact"
+              - name: "donors"
+                label: "Donors"
+                widget: string
+                i18n: true
+                hint: "title_donors"
               - name: "faq"
                 label: "FAQ"
                 widget: string
                 i18n: true
                 hint: "title_faq"
+              - name: "history"
+                label: "History"
+                widget: string
+                i18n: true
+                hint: "title_history"
+              - name: "impressum"
+                label: "Impressum"
+                widget: string
+                i18n: true
+                hint: "title_impressum"
               - name: "join"
                 label: "Mitmachen"
                 widget: string
                 i18n: true
                 hint: "title_join"
+              - name: "partners"
+                label: "Partners"
+                widget: string
+                i18n: true
+                hint: "title_partners"
+              - name: "privacy"
+                label: "Privacy"
+                widget: string
+                i18n: true
+                hint: "title_privacy"
               - name: "program"
                 label: "Programm"
                 widget: string
@@ -1619,16 +1664,21 @@ collections:
                 widget: string
                 i18n: true
                 hint: "footer_copyright"
-              - name: "legal"
-                label: "Legal"
+              - name: "impressum"
+                label: "Impressum"
                 widget: string
                 i18n: true
-                hint: "footer_legal"
+                hint: "footer_impressum"
               - name: "nav"
                 label: "Nav"
                 widget: string
                 i18n: true
                 hint: "footer_nav"
+              - name: "privacy"
+                label: "Privacy"
+                widget: string
+                i18n: true
+                hint: "footer_privacy"
               - name: "tagline"
                 label: "Tagline"
                 widget: text
@@ -1724,6 +1774,387 @@ collections:
                 widget: string
                 i18n: true
                 hint: "error404_text"
+          - name: "awards"
+            label: "Awards"
+            widget: object
+            i18n: true
+            collapsed: true
+            fields:
+              - name: "caritas"
+                label: "Caritas"
+                widget: text
+                i18n: true
+                hint: "awards_caritas"
+              - name: "grad"
+                label: "Grad"
+                widget: text
+                i18n: true
+                hint: "awards_grad"
+              - name: "intro"
+                label: "Intro"
+                widget: string
+                i18n: true
+                hint: "awards_intro"
+              - name: "kicker"
+                label: "Kleiner Titel"
+                widget: string
+                i18n: true
+                hint: "awards_kicker"
+              - name: "link_cert"
+                label: "Link cert"
+                widget: string
+                i18n: true
+                hint: "awards_link_cert"
+              - name: "link_project"
+                label: "Link project"
+                widget: string
+                i18n: true
+                hint: "awards_link_project"
+              - name: "sia"
+                label: "Sia"
+                widget: text
+                i18n: true
+                hint: "awards_sia"
+              - name: "title"
+                label: "Titel"
+                widget: string
+                i18n: true
+                hint: "awards_title"
+          - name: "donors"
+            label: "Donors"
+            widget: object
+            i18n: true
+            collapsed: true
+            fields:
+              - name: "cta_btn"
+                label: "Cta btn"
+                widget: string
+                i18n: true
+                hint: "donors_cta_btn"
+              - name: "cta_text"
+                label: "Cta text"
+                widget: string
+                i18n: true
+                hint: "donors_cta_text"
+              - name: "cta_title"
+                label: "Cta title"
+                widget: string
+                i18n: true
+                hint: "donors_cta_title"
+              - name: "intro"
+                label: "Intro"
+                widget: string
+                i18n: true
+                hint: "donors_intro"
+              - name: "kicker"
+                label: "Kleiner Titel"
+                widget: string
+                i18n: true
+                hint: "donors_kicker"
+              - name: "title"
+                label: "Titel"
+                widget: string
+                i18n: true
+                hint: "donors_title"
+          - name: "history"
+            label: "History"
+            widget: object
+            i18n: true
+            collapsed: true
+            fields:
+              - name: "2018"
+                label: "2018"
+                widget: text
+                i18n: true
+                hint: "history_2018"
+              - name: "2020"
+                label: "2020"
+                widget: text
+                i18n: true
+                hint: "history_2020"
+              - name: "2021"
+                label: "2021"
+                widget: string
+                i18n: true
+                hint: "history_2021"
+              - name: "2022"
+                label: "2022"
+                widget: text
+                i18n: true
+                hint: "history_2022"
+              - name: "2023"
+                label: "2023"
+                widget: string
+                i18n: true
+                hint: "history_2023"
+              - name: "2024"
+                label: "2024"
+                widget: text
+                i18n: true
+                hint: "history_2024"
+              - name: "2025"
+                label: "2025"
+                widget: text
+                i18n: true
+                hint: "history_2025"
+              - name: "2026"
+                label: "2026"
+                widget: text
+                i18n: true
+                hint: "history_2026"
+              - name: "intro"
+                label: "Intro"
+                widget: string
+                i18n: true
+                hint: "history_intro"
+              - name: "kicker"
+                label: "Kleiner Titel"
+                widget: string
+                i18n: true
+                hint: "history_kicker"
+              - name: "reports"
+                label: "Reports"
+                widget: string
+                i18n: true
+                hint: "history_reports"
+              - name: "title"
+                label: "Titel"
+                widget: string
+                i18n: true
+                hint: "history_title"
+          - name: "impressum"
+            label: "Impressum"
+            widget: object
+            i18n: true
+            collapsed: true
+            fields:
+              - name: "acc"
+                label: "Acc"
+                widget: text
+                i18n: true
+                hint: "impressum_acc"
+              - name: "copy"
+                label: "Copy"
+                widget: text
+                i18n: true
+                hint: "impressum_copy"
+              - name: "h_acc"
+                label: "H acc"
+                widget: string
+                i18n: true
+                hint: "impressum_h_acc"
+              - name: "h_copy"
+                label: "H copy"
+                widget: string
+                i18n: true
+                hint: "impressum_h_copy"
+              - name: "h_links"
+                label: "H links"
+                widget: string
+                i18n: true
+                hint: "impressum_h_links"
+              - name: "h_op"
+                label: "H op"
+                widget: string
+                i18n: true
+                hint: "impressum_h_op"
+              - name: "h_rep"
+                label: "H rep"
+                widget: string
+                i18n: true
+                hint: "impressum_h_rep"
+              - name: "kicker"
+                label: "Kleiner Titel"
+                widget: string
+                i18n: true
+                hint: "impressum_kicker"
+              - name: "links"
+                label: "Links"
+                widget: text
+                i18n: true
+                hint: "impressum_links"
+              - name: "op"
+                label: "Op"
+                widget: text
+                i18n: true
+                hint: "impressum_op"
+              - name: "privacy_link"
+                label: "Privacy link"
+                widget: string
+                i18n: true
+                hint: "impressum_privacy_link"
+              - name: "rep"
+                label: "Rep"
+                widget: string
+                i18n: true
+                hint: "impressum_rep"
+              - name: "title"
+                label: "Titel"
+                widget: string
+                i18n: true
+                hint: "impressum_title"
+          - name: "partners"
+            label: "Partners"
+            widget: object
+            i18n: true
+            collapsed: true
+            fields:
+              - name: "how_text"
+                label: "How text"
+                widget: text
+                i18n: true
+                hint: "partners_how_text"
+              - name: "how_title"
+                label: "How title"
+                widget: string
+                i18n: true
+                hint: "partners_how_title"
+              - name: "intro"
+                label: "Intro"
+                widget: text
+                i18n: true
+                hint: "partners_intro"
+              - name: "kicker"
+                label: "Kleiner Titel"
+                widget: string
+                i18n: true
+                hint: "partners_kicker"
+              - name: "orgs"
+                label: "Orgs"
+                widget: string
+                i18n: true
+                hint: "partners_orgs"
+              - name: "private"
+                label: "Private"
+                widget: string
+                i18n: true
+                hint: "partners_private"
+              - name: "title"
+                label: "Titel"
+                widget: string
+                i18n: true
+                hint: "partners_title"
+          - name: "privacy"
+            label: "Privacy"
+            widget: object
+            i18n: true
+            collapsed: true
+            fields:
+              - name: "h1"
+                label: "H1"
+                widget: string
+                i18n: true
+                hint: "privacy_h1"
+              - name: "kicker"
+                label: "Kleiner Titel"
+                widget: string
+                i18n: true
+                hint: "privacy_kicker"
+              - name: "p1"
+                label: "P1"
+                widget: text
+                i18n: true
+                hint: "privacy_p1"
+              - name: "h2"
+                label: "H2"
+                widget: string
+                i18n: true
+                hint: "privacy_h2"
+              - name: "p2"
+                label: "P2"
+                widget: text
+                i18n: true
+                hint: "privacy_p2"
+              - name: "h3"
+                label: "H3"
+                widget: string
+                i18n: true
+                hint: "privacy_h3"
+              - name: "p3"
+                label: "P3"
+                widget: text
+                i18n: true
+                hint: "privacy_p3"
+              - name: "h4"
+                label: "H4"
+                widget: string
+                i18n: true
+                hint: "privacy_h4"
+              - name: "p4"
+                label: "P4"
+                widget: text
+                i18n: true
+                hint: "privacy_p4"
+              - name: "h5"
+                label: "H5"
+                widget: string
+                i18n: true
+                hint: "privacy_h5"
+              - name: "p5"
+                label: "P5"
+                widget: text
+                i18n: true
+                hint: "privacy_p5"
+              - name: "h6"
+                label: "H6"
+                widget: string
+                i18n: true
+                hint: "privacy_h6"
+              - name: "p6"
+                label: "P6"
+                widget: text
+                i18n: true
+                hint: "privacy_p6"
+              - name: "h7"
+                label: "H7"
+                widget: string
+                i18n: true
+                hint: "privacy_h7"
+              - name: "p7"
+                label: "P7"
+                widget: text
+                i18n: true
+                hint: "privacy_p7"
+              - name: "h8"
+                label: "H8"
+                widget: string
+                i18n: true
+                hint: "privacy_h8"
+              - name: "p8"
+                label: "P8"
+                widget: text
+                i18n: true
+                hint: "privacy_p8"
+              - name: "h9"
+                label: "H9"
+                widget: string
+                i18n: true
+                hint: "privacy_h9"
+              - name: "p9"
+                label: "P9"
+                widget: text
+                i18n: true
+                hint: "privacy_p9"
+              - name: "h10"
+                label: "H10"
+                widget: string
+                i18n: true
+                hint: "privacy_h10"
+              - name: "p10"
+                label: "P10"
+                widget: text
+                i18n: true
+                hint: "privacy_p10"
+              - name: "title"
+                label: "Titel"
+                widget: string
+                i18n: true
+                hint: "privacy_title"
+              - name: "updated"
+                label: "Updated"
+                widget: string
+                i18n: true
+                hint: "privacy_updated"
           # single keys without a group
           - name: "pillar1"
             label: "Wert 1"

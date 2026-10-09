@@ -16,9 +16,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://kutlu24.github.io/seet-website/img/og-cover.jpg">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%235b3df5'/%3E%3Cstop offset='1' stop-color='%23c084fc'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='45' font-family='Arial,sans-serif' font-size='38' font-weight='bold' fill='white' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="fonts.css">
 <link rel="stylesheet" href="style.css">
 <script type="application/ld+json">
 {
@@ -113,10 +111,10 @@
       </div>
     </div>
     <div class="stats">
-      <div class="stat"><span class="num" data-count="41">0</span><span class="lbl" data-i18n="stats_mentees">Mentees</span></div>
-      <div class="stat"><span class="num" data-count="35">0</span><span class="lbl" data-i18n="stats_mentors">Mentor:innen</span></div>
-      <div class="stat"><span class="num" data-count="9">0</span><span class="lbl" data-i18n="stats_cantons">Kantone</span></div>
-      <div class="stat"><span class="num" data-count="7">0</span><span class="lbl" data-i18n="stats_nationalities">Nationalitäten</span></div>
+      <div class="stat"><span class="num" data-count="41">41</span><span class="lbl" data-i18n="stats_mentees">Mentees</span></div>
+      <div class="stat"><span class="num" data-count="35">35</span><span class="lbl" data-i18n="stats_mentors">Mentor:innen</span></div>
+      <div class="stat"><span class="num" data-count="9">9</span><span class="lbl" data-i18n="stats_cantons">Kantone</span></div>
+      <div class="stat"><span class="num" data-count="7">7</span><span class="lbl" data-i18n="stats_nationalities">Nationalitäten</span></div>
       <div class="stat"><span class="num">2018</span><span class="lbl" data-i18n="stats_since">seit</span></div>
     </div>
   </div>
@@ -137,7 +135,7 @@
           <span class="tag" data-i18n="card1_tag">Jahrgang 2026–27</span>
           <h3 data-i18n="card1_title">Jahrgang 2026–27 gestartet</h3>
           <p data-i18n="card1_desc">Im Mai 2026 sind 41 Mentees mit 35 Mentor:innen in die neue Mentoring-Runde gestartet.</p>
-          <a class="card-more" href="blog.html" data-i18n="read_more">Weiterlesen →</a>
+          <a class="card-more" href="https://seet.ch/der-seet-jahrgang-202627-startet-seine-mentoring-reise/" target="_blank" rel="noopener" data-i18n="read_more">Weiterlesen →</a>
         </div>
       </article>
       <article class="card card-visual reveal">
@@ -148,7 +146,7 @@
           <span class="tag" data-i18n="card2_tag">Bericht</span>
           <h3 data-i18n="card2_title">Jahresbericht 2025 erschienen</h3>
           <p data-i18n="card2_desc">Unser Jahresbericht dokumentiert Wirkung, Zahlen und Geschichten aus dem Programm.</p>
-          <a class="card-more" href="blog.html" data-i18n="read_more">Weiterlesen →</a>
+          <a class="card-more" href="https://seet.ch/der-jahresbericht-2025-von-seet-ist-jetzt-online-verfuegbar/" target="_blank" rel="noopener" data-i18n="read_more">Weiterlesen →</a>
         </div>
       </article>
       <article class="card card-visual reveal">
@@ -159,7 +157,7 @@
           <span class="tag" data-i18n="card3_tag">Netzwerk</span>
           <h3 data-i18n="card3_title">Alumni-Netzwerk gegründet</h3>
           <p data-i18n="card3_desc">Ehemalige Mentees blicken nun selbst zurück — und geben etwas weiter.</p>
-          <a class="card-more" href="blog.html" data-i18n="read_more">Weiterlesen →</a>
+          <a class="card-more" href="geschichte.html" data-i18n="read_more">Weiterlesen →</a>
         </div>
       </article>
     </div>
@@ -357,6 +355,8 @@
           <a data-i18n="nav_faq" href="faqs.html">FAQ</a>
           <a data-i18n="nav_team" href="team.html">Team</a>
           <a data-i18n="nav_contact" href="kontakt.html">Kontakt</a>
+          <a data-i18n="footer_impressum" href="impressum.html">Impressum</a>
+          <a data-i18n="footer_privacy" href="datenschutz.html">Datenschutz</a>
         </div>
       </div>
       <div>
@@ -375,7 +375,7 @@
     </div>
     <div class="footer-bottom">
       <span data-i18n="footer_copyright">© 2026 Verein SEET — Support Education, Empower Together</span>
-      <a data-i18n="footer_legal" href="kontakt.html#impressum">Impressum &amp; Datenschutz</a>
+      <span class="footer-legal"><a data-i18n="footer_impressum" href="impressum.html">Impressum</a><a data-i18n="footer_privacy" href="datenschutz.html">Datenschutz</a></span>
     </div>
   </div>
 </footer>

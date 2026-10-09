@@ -78,6 +78,7 @@
         var el = entry.target;
         cio.unobserve(el);
         var target = Number(el.dataset.count);
+        el.textContent = '0';
         var start = null;
         var duration = 1200;
         function tick(ts) {
