@@ -30,3 +30,14 @@ Live: https://kutlu24.github.io/seet-website/ (also deployable via `render.yaml`
 ```bash
 python3 -m http.server 8000
 ```
+
+## Legal pages, redirects, fonts
+
+- `impressum.html` and `datenschutz.html` are separate pages in DE/EN/FR (keys `impressum_*`, `privacy_*` in `i18n.json`).
+  Have the board check the privacy policy and the address in the Impressum against the commercial register before launch.
+- Old seet.ch URLs: `render.yaml` defines redirect routes for Render; on GitHub Pages `404.html` loads
+  `legacy-redirects.js`, which forwards the same paths. Blog article URLs forward to `blog.html#<slug>`.
+- Fonts are self-hosted (`fonts/`, `fonts.css`); the site makes no requests to Google. The admin panel (`/admin/`) still loads
+  Decap CMS from unpkg.com.
+- The blog cards link to the original articles on seet.ch (`content/blog.json`, `link`).
+- The newsletter form has no backend. Without `SEET_NEWSLETTER_ENDPOINT` it points people to communication@seet.ch.
