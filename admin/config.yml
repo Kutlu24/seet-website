@@ -83,6 +83,11 @@ collections:
                 widget: string
                 i18n: true
                 hint: "nav_program"
+              - name: "search"
+                label: "Search"
+                widget: string
+                i18n: true
+                hint: "nav_search"
               - name: "start"
                 label: "Start"
                 widget: string
@@ -1653,6 +1658,11 @@ collections:
                 widget: string
                 i18n: true
                 hint: "title_program"
+              - name: "search"
+                label: "Search"
+                widget: string
+                i18n: true
+                hint: "title_search"
               - name: "team"
                 label: "Team"
                 widget: string
@@ -2191,6 +2201,27 @@ collections:
                 widget: string
                 i18n: true
                 hint: "privacy_updated"
+          - name: "search"
+            label: "Search"
+            widget: object
+            i18n: true
+            collapsed: true
+            fields:
+              - name: "kicker"
+                label: "Kleiner Titel"
+                widget: string
+                i18n: true
+                hint: "search_kicker"
+              - name: "sub"
+                label: "Untertitel"
+                widget: string
+                i18n: true
+                hint: "search_sub"
+              - name: "title"
+                label: "Titel"
+                widget: string
+                i18n: true
+                hint: "search_title"
           # single keys without a group
           - name: "pillar1"
             label: "Wert 1"

@@ -82,6 +82,63 @@ services:
         source: /en
         destination: /?lang=en
       - type: redirect
+        source: /en/support
+        destination: /programm.html
+      - type: redirect
+        source: /en/support/support-programme
+        destination: /programm.html
+      - type: redirect
+        source: /en/support/application-procedure
+        destination: /programm.html
+      - type: redirect
+        source: /en/support/application-form
+        destination: /mitmachen.html
+      - type: redirect
+        source: /en/support-us
+        destination: /mitmachen.html
+      - type: redirect
+        source: /en/support-us/become-a-mentor
+        destination: /mitmachen.html#mentoring
+      - type: redirect
+        source: /en/support-us/become-a-volunteer
+        destination: /mitmachen.html#team
+      - type: redirect
+        source: /en/support-us/become-seet-member
+        destination: /mitmachen.html#mitglied
+      - type: redirect
+        source: /en/support-us/become-a-donor
+        destination: /mitmachen.html#spenden
+      - type: redirect
+        source: /en/support-us/become-a-partner
+        destination: /mitmachen.html#partner
+      - type: redirect
+        source: /en/about-us
+        destination: /ueber-uns.html
+      - type: redirect
+        source: /en/about-us/our-mission
+        destination: /ueber-uns.html
+      - type: redirect
+        source: /en/about-us/our-history
+        destination: /geschichte.html
+      - type: redirect
+        source: /en/about-us/our-team
+        destination: /team.html
+      - type: redirect
+        source: /en/about-us/our-awards
+        destination: /awards.html
+      - type: redirect
+        source: /en/about-us/our-partners
+        destination: /partner.html
+      - type: redirect
+        source: /en/about-us/our-donors
+        destination: /goenner.html
+      - type: redirect
+        source: /en/about-us/faqs
+        destination: /faqs.html
+      - type: redirect
+        source: /en/contact
+        destination: /kontakt.html
+      - type: redirect
         source: /die-teilnahme-an-diesem-seet-programm-hat-meine-erwartungen-uebertroffen
         destination: /blog-die-teilnahme-an-diesem-seet-programm-hat-meine-erwartungen-uebertroffen.html
       - type: redirect

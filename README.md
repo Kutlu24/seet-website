@@ -25,6 +25,8 @@ Live: https://kutlu24.github.io/seet-website/ (also deployable via `render.yaml`
   de/en/fr have the same keys and regenerates the admin panel's field list.
 - **Content (blog, FAQ, homepage stats, team):** via `/admin/` or directly in `content/*.json`.
 
+- **Search:** `suche.html` uses [Pagefind](https://pagefind.app) (static index, no server). After changing page/blog content run `tools/build-search.sh` and commit `pagefind/`.
+
 ## Preview locally
 
 ```bash

@@ -8,6 +8,7 @@
       "faq": "FAQ",
       "join": "Mitmachen",
       "program": "Programm",
+      "search": "Suche",
       "start": "Start",
       "team": "Team"
     },
@@ -350,6 +351,7 @@
       "partners": "Unsere Partner:innen — SEET",
       "privacy": "Datenschutzerklärung — SEET",
       "program": "Studienförderprogramm — SEET",
+      "search": "Suche — SEET",
       "team": "Unser Team — SEET"
     },
     "footer": {
@@ -469,6 +471,11 @@
       "title": "Datenschutzerklärung",
       "updated": "Stand: Oktober 2026"
     },
+    "search": {
+      "kicker": "Finden",
+      "sub": "Suche in allen Seiten und Blogbeiträgen von SEET.",
+      "title": "Seite durchsuchen"
+    },
     "tagline": "Support Education, Empower Together",
     "pillar1": "Individuelles Mentoring — ein Jahr, eine feste Begleitperson",
     "pillar2": "Netzwerk & Skills — Workshops, Kontakte, Orientierung",
@@ -485,6 +492,7 @@
       "faq": "FAQ",
       "join": "Get Involved",
       "program": "Program",
+      "search": "Search",
       "start": "Start",
       "team": "Team"
     },
@@ -827,6 +835,7 @@
       "partners": "Our Partners — SEET",
       "privacy": "Privacy Policy — SEET",
       "program": "Scholarship Programme — SEET",
+      "search": "Search — SEET",
       "team": "Our team — SEET"
     },
     "footer": {
@@ -946,6 +955,11 @@
       "title": "Privacy policy",
       "updated": "As of: October 2026"
     },
+    "search": {
+      "kicker": "Find",
+      "sub": "Search all SEET pages and blog posts.",
+      "title": "Search this site"
+    },
     "tagline": "Support Education, Empower Together",
     "pillar1": "Individual Mentoring — one year with a dedicated mentor",
     "pillar2": "Network & Skills — workshops, connections, guidance",
@@ -962,6 +976,7 @@
       "faq": "FAQ",
       "join": "S'Impliquer",
       "program": "Programme",
+      "search": "Recherche",
       "start": "Accueil",
       "team": "Équipe"
     },
@@ -1304,6 +1319,7 @@
       "partners": "Nos partenaires — SEET",
       "privacy": "Politique de confidentialité — SEET",
       "program": "Programme de soutien aux études — SEET",
+      "search": "Recherche — SEET",
       "team": "Notre équipe — SEET"
     },
     "footer": {
@@ -1422,6 +1438,11 @@
       "p10": "Nous adaptons cette politique lorsque le site ou la situation juridique change. La version publiée ici fait foi.",
       "title": "Politique de confidentialité",
       "updated": "État : octobre 2026"
+    },
+    "search": {
+      "kicker": "Trouver",
+      "sub": "Rechercher dans toutes les pages et articles de SEET.",
+      "title": "Rechercher sur le site"
     },
     "tagline": "Support Education, Empower Together",
     "pillar1": "Mentorat Individuel — un an avec un mentor dédié",
